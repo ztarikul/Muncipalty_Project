@@ -57,7 +57,7 @@
                                 <div class="navbar-brand">
                                     <a href="">
                                     <img src="logo_images/logo.png" alt="" >
-                                    <span>সাভার পৌরসভা</span>
+                                    <span>ডেমো পৌরসভা</span>
                                     </a>
                                 </div>
                             </div>
@@ -297,7 +297,7 @@
           <h5 class="widgetheading">ম্যাপ</h5>
         </div>
 			<div class="important-links">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5412020837734!2d90.25771301456365!3d23.83490848454777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755ebca86bc4381%3A0x1662672f0c3af7f3!2sSavar+Municipality+Building!5e0!3m2!1sen!2sbd!4v1512019666931" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
+						<iframe src="https://maps.google.com/maps?q=Spandan%20IT%20dhaka&t=&z=19&ie=UTF8&iwloc=&output=embed" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>	
 			</div>
 		</div>
     </div>
