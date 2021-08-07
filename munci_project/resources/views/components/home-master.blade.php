@@ -11,35 +11,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <meta name="robots" content="noodp">
     <title>ডেমো পৌরসভা</title>
-    <link rel="shortcut icon" href="design/img/favicon.ico" type="image/x-icon"/>
-    <link href="design/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{asset('design/img/favicon.ico')}}" type="image/x-icon"/>
+    <link href="{{asset('design/css/bootstrap.min.css')}}" rel="stylesheet"/>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="design/css/flexslider.css" rel="stylesheet"/>
-    <link href="design/css/animate.css" rel="stylesheet"/>
-    <link href="design/css/slick.css" rel="stylesheet">
-    <link href="design/css/slick-theme.css" rel="stylesheet">
-    <link href="design/css/jquery.fs.boxer.css" rel="stylesheet">
-    <link rel="stylesheet" href="design/css/mobilenav.css">
+    <link href="{{asset('design/css/flexslider.css')}}" rel="stylesheet"/>
+    <link href="{{asset('design/css/animate.css')}}" rel="stylesheet"/>
+    <link href="{{asset('design/css/slick.css')}}" rel="stylesheet">
+    <link href="{{asset('design/css/slick-theme.css')}}" rel="stylesheet">
+    <link href="{{asset('design/css/jquery.fs.boxer.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('design/css/mobilenav.css')}}">
     <!-- Theme skin -->
-    <link href="design/skins/default.css" rel="stylesheet"/>
-    <link href="design/css/style.css" rel="stylesheet"/>
+    <link href="{{asset('design/themes/main.css')}}" rel="stylesheet"/>
+    <link href="{{asset('design/css/style.css')}}" rel="stylesheet"/>
    
-	<link rel="stylesheet" media="screen,projection" type="text/css" href="datepicker/jquery-ui.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="{{asset('datepicker/jquery-ui.css')}}" />
 	<!--<script src="datepicker/jquery-1.9.1.js"></script>--> 
-	<script src="datepicker/jquery-ui.js"></script>
+	<script src="{{asset('datepicker/jquery-ui.js')}}"></script>
 	
  <!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="{{asset('owl-carousel/owl.carousel.css')}}" rel="stylesheet">
+    <link href="{{asset('owl-carousel/owl.theme.css')}}" rel="stylesheet">
 	
 	<!--- picture uplaod js ---->
-	<script type="text/javascript" src="library/upload/ajaxupload.js"></script>
+	<script type="text/javascript" src="{{asset('library/upload/ajaxupload.js')}}"></script>
 	
 	<!--- ajax request function for data serching----->
-	<script type="text/javascript" src="library/ajax_req.js"></script>
+	<script type="text/javascript" src="{{asset('library/ajax_req.js')}}"></script>
 	
 
-	<script src="js/google.js"></script>
+	<script src="{{asset('js/google.js')}}"></script>
 
 	<style>
 		body{color:font-family:solaimanlipi, "Times New Roman", Times, serif !important; color:black !important;}
@@ -234,7 +234,7 @@
 <footer>
 <div class="container">
     <div class="row">
-        <!-- <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+        <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
               <div class="left-boxes-content">
                   <div class="widget">
                     <h5 class="widgetheading">ই-সেবা</h5>
@@ -251,8 +251,8 @@
                       </ul>
                   </div>
               </div>
-          </div> -->
-        <!-- <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+          </div>
+        <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
               <div class="left-boxes-content">
                   <div class="widget">
                     <h5 class="widgetheading">গুরুত্বপূর্ন লিংক</h5>
@@ -272,7 +272,7 @@
                       </ul>
                   </div>
               </div>
-          </div> -->
+          </div>
         <div class="col-md-3 wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
               <div class="left-boxes-content">
                   <div class="widget">
@@ -331,23 +331,23 @@
   <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
   <!-- javascript ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="design/js/jquery.js"></script>
-    <script src="design/js/jquery.lazyload.min.js"></script>
-    <script src="design/js/jquery.easing.1.3.js"></script>
-    <script src="design/js/bootstrap.min.js"></script>
-    <script src="design/js/jquery.fs.boxer.js"></script>
-    <script src="design/js/jquery.fitvids.js"></script>
-    <script src="design/js/jquery.flexnav.js"></script>
+    <script src="{{asset('design/js/jquery.js')}}"></script>
+    <script src="{{asset('design/js/jquery.lazyload.min.js')}}"></script>
+    <script src="{{asset('design/js/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('design/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('design/js/jquery.fs.boxer.js')}}"></script>
+    <script src="{{asset('design/js/jquery.fitvids.js')}}"></script>
+    <script src="{{asset('design/js/jquery.flexnav.js')}}"></script>
    
-    <script src="design/js/slick.min.js"></script>
-    <script src="design/js/google-code-prettify/prettify.js"></script>
-    <script src="design/js/jquery.flexslider.js"></script>
-    <script src="design/js/wow.js"></script>
+    <script src="{{asset('design/js/slick.min.js')}}"></script>
+    <script src="{{asset('design/js/google-code-prettify/prettify.js')}}"></script>
+    <script src="{{asset('design/js/jquery.flexslider.js')}}"></script>
+    <script src="{{asset('design/js/wow.js')}}"></script>
 	
     <script>
       new WOW().init();
   </script>
-  <script src="design/js/custom.js"></script>
+  <script src="{{asset('design/js/custom.js')}}"></script>
   <script>
     /*  - Boxer 
     ---------------------------------------------------*/
