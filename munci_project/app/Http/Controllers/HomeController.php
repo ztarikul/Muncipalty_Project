@@ -25,4 +25,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function nagorik()
+    {
+        return view('nagorik.jateyo_sanad_application');
+    }
 }
