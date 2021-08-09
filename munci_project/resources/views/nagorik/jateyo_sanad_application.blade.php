@@ -63,51 +63,51 @@
 	});
 
 	
-	function parsonalinfo_insert()
-	{
-			// this function call submit button onclick event
-		document.getElementById('submit_button').disabled = 'disabled';
-		$.post(
-			"index.php",
-			$("#info").serialize(),
-		function(data){
-			if(data !=1){
-				document.getElementById('submit_button').disabled = false;
-			}
-			if(data==1)
-			{
-				alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার  পৌরসভায় যোগাযোগ করুন');
-				window.location=''; 
+	// function parsonalinfo_insert()
+	// {
+	// 		// this function call submit button onclick event
+	// 	document.getElementById('submit_button').disabled = 'disabled';
+	// 	$.post(
+	// 		"index.php",
+	// 		$("#info").serialize(),
+	// 	function(data){
+	// 		if(data !=1){
+	// 			document.getElementById('submit_button').disabled = false;
+	// 		}
+	// 		if(data==1)
+	// 		{
+	// 			alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার  পৌরসভায় যোগাযোগ করুন');
+	// 			window.location=''; 
 				
-			} 
-			else if(data==2)
-			{
-				alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য পৌরসভায় যোগাযোগ করুন');
-			}
-			else if(data==3)
-			{
-				alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনারপৌরসভায় যোগাযোগ করুন');
-			}
-			else if(data==4)
-			{
-				alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
-			}
-			else if(data==6)
-			{
-				alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-			}
-			else if(data==5)
-			{
-				alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
-			}
-			else
-			{
-				alert(data);
-			}
-		});
+	// 		} 
+	// 		else if(data==2)
+	// 		{
+	// 			alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য পৌরসভায় যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==3)
+	// 		{
+	// 			alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনারপৌরসভায় যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==4)
+	// 		{
+	// 			alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
+	// 		}
+	// 		else if(data==6)
+	// 		{
+	// 			alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==5)
+	// 		{
+	// 			alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+	// 		}
+	// 		else
+	// 		{
+	// 			alert(data);
+	// 		}
+	// 	});
 
-		return false;
-	}
+	// 	return false;
+	// }
 
 	 function onload_hide_fun(){
 		  $("#wife").hide();
@@ -236,7 +236,8 @@
 							 </div>
 							</div>
 						<div class="panel-body all-input-form">
-							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							<form action="{{route('cityzen.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							@csrf
 								<div class="row" >
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -257,7 +258,7 @@
 									</div>
 								</div>
 								
-																<input type="hidden" name="delivery_type" value="3" checked="checked">
+								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -265,7 +266,7 @@
 											<div class="col-sm-3">
 												<select name="seba_type" class="form-control"  required disabled >
 													<option value='' >চিহ্নিত করুন</option>
-													<option value='1' >নাগরিকত্ব সনদ</option>
+													<option value='1' selected >নাগরিকত্ব সনদ</option>
 													<option value='2' >মৃত্যু সনদ</option>
 													<option value='3' >চারিত্রিক সনদ</option>
 													<option value='4' >অবিবাহিত সনদ</option>
@@ -288,10 +289,10 @@
 										
 									</div>
 								</div>
-																<div class="row">
+								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-																															</div>
+																																						</div>
 									</div>
 								</div>
 							<div class="row">
@@ -303,7 +304,7 @@
 											</div>
 											<label for="Birth-no" class="col-sm-3 control-label">জন্ম নিবন্ধন নং ( ইংরেজিতে ) <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="bcno" id="bcno" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" requiredও />
+												<input type="text" name="birth_certificate_no" id="bcno" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" requiredও />
 											</div>
 										</div>
 									</div>
@@ -314,7 +315,7 @@
 										<div class="form-group">
 											<label for="Passport-no" class="col-sm-3 control-label">পাসপোর্ট নং ( ইংরেজিতে ) </label>
 											<div class="col-sm-3">
-												<input type="text" name="pno" id="pno" class="form-control" maxlength='17' placeholder=""/>
+												<input type="text" name="passport_no" id="pno" class="form-control" maxlength='17' placeholder=""/>
 											</div>
 
 											<label for="Birth-date" class="col-sm-3 control-label">জম্ম  তারিখ   <span>*</span></label>
@@ -423,7 +424,7 @@
 											</div>
 											<label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="bmane" id="emane" class="form-control" placeholder="" required />
+												<input type="text" name="bmnane" id="mnane" class="form-control" placeholder="" required />
 											</div>
 										</div>
 									</div>
@@ -434,7 +435,7 @@
 										<div class="form-group">
 											<label for="profession" class="col-sm-3 control-label">পেশা</label>
 											<div class="col-sm-3">
-												<input type="text" name="ocupt" id="occupation" class="form-control" placeholder=""/>
+												<input type="text" name="occupation" id="occupation" class="form-control" placeholder=""/>
 											</div>
 											<label for="Education-qualification" class="col-sm-3 control-label">শিক্ষাগত যোগ্যতা</label>
 											<div class="col-sm-3">
@@ -452,11 +453,11 @@
 											<div class="col-sm-3">
 												<select name="religion" class="form-control" required >
 													<option value=''>চিহ্নিত করুন</option>
-													<option value='ইসলাম'>ইসলাম</option>
-													<option value='হিন্দু'>হিন্দু</option>
-													<option value='বৌদ্ধ ধর্ম'>বৌদ্ধ ধর্ম</option>
-													<option value='খ্রিস্ট ধর্ম'>খ্রিস্ট ধর্ম</option>
-													<option value='অন্যান্য'>অন্যান্য</option>
+													<option value='1'>ইসলাম</option>
+													<option value='2'>হিন্দু</option>
+													<option value='3'>বৌদ্ধ ধর্ম</option>
+													<option value='4'>খ্রিস্ট ধর্ম</option>
+													<option value='5'>অন্যান্য</option>
 												</select>
 											</div>
 											<label for="Resident" class="col-sm-3 control-label">বাসিন্দা    <span>*</span></label>
@@ -897,8 +898,8 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-									<input type="hidden" value="" name="seba"/>
-										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">জমা দিন</button>
+									<input type="hidden" value="applied" name="status"/>
+										<button type="submit" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">জমা দিন</button>
 									</div>
 								</div>
 							</form>

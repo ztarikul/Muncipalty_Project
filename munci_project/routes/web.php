@@ -22,3 +22,5 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/nagorik', [HomeController::class, 'nagorik'])->name('nagorik.form');
+
+Route::resource('cityzen', CityzenController::class);

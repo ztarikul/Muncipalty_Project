@@ -1,7 +1,6 @@
 <x-home-master>
 @section('homecontent')
-
-   <!-- end header --><style type="text/css"> 
+<style type="text/css"> 
 .app-heading{
 	margin-top:20px;
 	margin-bottom:20px;
@@ -54,7 +53,180 @@
 }
 
 </style>
+<script type="text/javascript"> 
+	/*========== reday function start ===========*/
+	$(document).reday(function(){
+		onload_hide_fun();
+	});
+	/*========== reday function  end===========*/
+	
+	/*============== ajax request function start =========*/
+	
+	// function parsonalinfo_insert()
+	// {
+	// 		// this function call submit button onclick event
+	// 	document.getElementById('submit_button').disabled = 'disabled';
+	// 	$.post(
+	// 		"index.php/home/nagorikapplication_action",
+	// 		$("#info").serialize(),
+	// 	function(data){
+	// 		if(data !=1){
+	// 			document.getElementById('submit_button').disabled = false;
+	// 		}
+	// 		if(data==1)
+	// 		{
+	// 			alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার  পৌরসভায় যোগাযোগ করুন');
+	// 			 //setTimeout(function() {
+	// 			window.location='index.php/home/ppreview'; //}, 1000)
+	// 			// window.open('index.php/home/ppreview','_blank');
+	// 		} 
+	// 		else if(data==2)
+	// 		{
+	// 			alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য পৌরসভায় যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==3)
+	// 		{
+	// 			alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনারপৌরসভায় যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==4)
+	// 		{
+	// 			alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
+	// 		}
+	// 		else if(data==6)
+	// 		{
+	// 			alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==5)
+	// 		{
+	// 			alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+	// 		}
+	// 		else
+	// 		{
+	// 			alert(data);
+	// 		}
+	// 	});
 
+	// 	return false;
+	// }
+	/*============== ajax request function end =========*/
+
+	
+	/*=========onload function start=============*/
+	 function onload_hide_fun(){
+		  // call this function body onload event
+		  $("#wife").hide();
+		  $("#husband").hide();
+		  $("#print").hide();
+		   $(".bname").bnKb({
+				'switchkey': {"webkit":"k","mozilla":"y","safari":"k","chrome":"k","msie":"y"},
+				'driver': phonetic
+			});
+		 }
+	/*=========onload function end=============*/
+	/*================== bashinda hide show function start ==========*/
+	function basinda_show_hide(v){
+		//alert(v);
+		if(v==2){
+			$("#permaHeading").hide();
+			$("#permanentAddress").hide();
+			$("#permanentAddress input:text").val('');
+		}
+		else{
+			$("#permaHeading").show();
+			$("#permanentAddress").show();
+		}
+		
+	}
+	/*================== bashinda hide show function end ==========*/
+	
+	/*========  bibhahik obstha hide show function start ============*/
+		/* 1st function */
+		function bybahik_obosthan_show(mstatus){
+			//alert(mstatus);
+			var gender=$("#gender:checked").val();
+			if(mstatus=='1' && gender=='male'){
+				//alert("wife id show");
+				$("#wife").show();
+				$("#husband input:text").val('');
+				$("#husband").hide();
+			}
+			else if(mstatus=='1' && gender=='female'){
+				//alert("husband id show");
+				$("#husband").show();
+				$("#wife input:text").val('');
+				$("#wife").hide();
+			}
+			else if(mstatus=='2' && gender=='female'){
+				//alert("father id show");
+				$("#husband input:text").val('');
+				$("#husband").hide();
+				$("#wife input:text").val('');
+				$("#wife").hide();
+			}
+			else if(mstatus=='2' && gender=='male'){
+				//alert("father id show");
+				$("#husband input:text").val('');
+				$("#husband").hide();
+				$("#wife input:text").val('');
+				$("#wife").hide();
+			}
+			else{
+				$("#husband input:text").val('');
+				$("#husband").hide();
+				$("#wife input:text").val('');
+				$("#wife").hide();
+			}
+		}
+		/* ===2nd function  ===*/
+		function bybahik_obosthan_show1(gender){
+			var mstatus= $("#mstatus:checked").val();
+			if(mstatus=='1' && gender=='male'){
+				//alert("wife id show");
+				$("#wife").show();
+				$("#husband input:text").val('');
+				$("#husband").hide();
+			}
+			else if(mstatus=='1' && gender=='female'){
+				//alert("husband id show");
+				$("#husband").show();
+				$("#wife input:text").val('');
+				$("#wife").hide();
+			}
+			else if(mstatus=='2' && gender=='female'){
+				//alert("father id show");
+				$("#husband").hide();
+				$("#wife").hide();
+			}
+			else if(mstatus=='2' && gender=='male'){
+				//alert("father id show");
+				$("#husband").hide();
+				$("#wife").hide();
+			}
+			else{
+				$("#husband").hide();
+				$("#wife").hide();
+			}
+		}
+		
+	/*========  bibhahik obstha hide show function end ============*/
+	
+	
+	
+	/*============ number test function start ===============*/
+	function numtest(){
+		return event.charCode >= 48 && event.charCode <= 57;
+	}
+	function checkaccnumber(evt){
+		evt = (evt) ? evt : window.event;
+		var charCode = (evt.which) ? evt.which : evt.keyCode;
+		if (charCode > 31 && (charCode < 48 || charCode > 57)){
+			return false;
+		}
+		return true;
+	}
+	/*============ number test function end===============*/
+</script>
+<!-- some information query -->
 
 <div class="main_con"><!--Content Start-->
 	<div class="row"><!--- row start--->
@@ -62,13 +234,13 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">নাগরিক আবেদন</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#004884;text-align:center;">নাগরিক আবেদন</div>
 						<div class="row" >
 							 <div class="col-sm-12"> 
 							  <div style="margin-top:20px;">
 							   <label class="col-sm-3"></label>
 							   <label class="col-sm-1"style="color:red;">নিয়মাবলিঃ</label>
-							   <div class="col-sm-4" style="color:green;">
+							   <div class="col-sm-4" style="color:blue;">
 								<p><span>**</span>  বাংলায় সার্টিফিকেট পেতে শুধুমাত্র বাংলায় ঘর  পূরণ করুন ।<br/> ইংরেজি সার্টিফিকেট পেতে বাংলা এবং ইংরেজি উভয় ঘর পূরণ করুন ।</p>
 							   </div>
 							   <div class="clearfix"> </div>
@@ -76,7 +248,7 @@
 							 </div>
 							</div>
 						<div class="panel-body all-input-form">
-							<form action="" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
 								<div class="row" >
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -89,15 +261,30 @@
 										</div>
 									</div>
 								</div>
-							
+							</form>
+						
+							<form action="" method="post" id="info" class="form-horizontal">
 							
 								<div class="row"> 
 									<div class=" col-sm-offset-5 col-sm-7" id="UPLOAD">
 										
 									</div>
 								</div>
-								
-			        	<input type="hidden" name="delivery_type" value="3" checked="checked">
+								<!--
+								<div class="row"> 
+									<div class="col-sm-12" style="margin-bottom:10px;margin-top:10px;"> 
+										<div class="form-group">
+											<label for="Delivery-type" class="col-sm-3 control-label">সরবরাহের ধরণ  <span>*</span></label>
+											<div class="col-sm-9">
+												<label class="radio-inline"><input type="radio" name="delivery_type" value="1" >জরুরী</label>
+												<label class="radio-inline"><input type="radio" name="delivery_type" value="2">অতি জরুরী  </label>
+												<label class="radio-inline"><input type="radio" name="delivery_type" value="3" checked="checked"> সাধারন</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								-->
+								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -105,8 +292,8 @@
 											<div class="col-sm-3">
 												<select name="seba_type" class="form-control"  required disabled >
 													<option value=''>চিহ্নিত করুন</option>
-													<option value='1'>নাগরিকত্ব সনদ</option>
-													<option value='2' selected >মৃত্যু সনদ</option>
+													<option value='1' selected >নাগরিকত্ব সনদ</option>
+													<option value='2' SELECTED>মৃত্যু সনদ</option>
 													<option value='3' >চারিত্রিক সনদ</option>
 													<option value='4' >অবিবাহিত সনদ</option>
 													<option value='5' >ভূমিহীন সনদ</option>
@@ -128,10 +315,10 @@
 										
 									</div>
 								</div>
-																<div class="row">
+								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-																															</div>
+										</div>
 									</div>
 								</div>
 							<div class="row">
@@ -139,11 +326,11 @@
 										<div class="form-group">
 											<label for="National-id-english" class="col-sm-3 control-label">ন্যাশনাল আইডি (ইংরেজিতে)  </label>
 											<div class="col-sm-3">
-												<input type="text" name="nationid" id="nid" class="form-control" maxlength='17'   placeholder="" />
+												<input type="text" name="nationid" id="nid" class="form-control" maxlength='17' onkeypress="return checkaccnumber(event);"  placeholder="" />
 											</div>
 											<label for="Birth-no" class="col-sm-3 control-label">জন্ম নিবন্ধন নং ( ইংরেজিতে ) <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="bcno" id="bcno" class="form-control" maxlength="17"  placeholder="" requiredও />
+												<input type="text" name="birth_certificate_no" id="birth_certificate_no" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" requiredও />
 											</div>
 										</div>
 									</div>
@@ -154,10 +341,10 @@
 										<div class="form-group">
 											<label for="Passport-no" class="col-sm-3 control-label">পাসপোর্ট নং ( ইংরেজিতে ) </label>
 											<div class="col-sm-3">
-												<input type="text" name="pno" id="pno" class="form-control" maxlength='17' placeholder=""/>
+												<input type="text" name="passport_no" id="passport_no" class="form-control" maxlength='17' placeholder=""/>
 											</div>
 
-											<label for="Birth-date" class="col-sm-3 control-label">জম্ম  তারিখ   <span>*</span></label>
+											<label for="Birth-date" class="col-sm-3 control-label">মৃত্যু তারিখ <span>*</span></label>
 											<div class="col-sm-3">
 												<input type="text" name="dofb" id="dofb" class="form-control" placeholder="01-01-1980" required />
 											</div>
@@ -166,7 +353,22 @@
 										
 									</div>
 								</div>
-
+								<!--
+								<div class="row">
+									<div class="col-sm-12"> 
+										<div class="form-group">
+											<label for="Name-english" class="col-sm-3 control-label">হোল্ডিং নং( ইংরেজিতে )  <span>*</span></label>
+											<div class="col-sm-3">
+												<input type="text" name="holding_no" id="holding_no" class="form-control" placeholder="আপনার হোল্ডিং নং প্রদান করুন"  required/>
+											</div>
+											
+											<div class="col-sm-3">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								-->
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -188,13 +390,13 @@
 										<div class="form-group">
 											<label for="Gender" class="col-sm-3 control-label">লিঙ্গ   <span>*</span></label>
 											<div class="col-sm-3">
-												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="male" />পুরুষ </label>
-												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="female"  />মহিলা</label>
-												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="তৃতীয় লিঙ্গ"  />তৃতীয় লিঙ্গ</label>
+												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="male" onclick="bybahik_obosthan_show1(this.value);" />পুরুষ </label>
+												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="female" onclick="bybahik_obosthan_show1(this.value);" />মহিলা</label>
+												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="তৃতীয় লিঙ্গ" onclick="bybahik_obosthan_show1(this.value);" />তৃতীয় লিঙ্গ</label>
 											</div>
 											<label for="Marital-status" class="col-sm-3 control-label">বৈবাহিক সম্পর্ক   <span>*</span></label>
 											<div class="col-sm-3">		
-											<select name="mstatus" class="form-control"  required >
+											<select name="mstatus" class="form-control" onclick="bybahik_obosthan_show(this.value);" required >
 													<option value=''>চিহ্নিত করুন</option>
 													<option value='1'>বিবাহিত</option>
 													<option value='2'>অবিবাহিত</option>
@@ -274,7 +476,7 @@
 										<div class="form-group">
 											<label for="profession" class="col-sm-3 control-label">পেশা</label>
 											<div class="col-sm-3">
-												<input type="text" name="ocupt" id="occupation" class="form-control" placeholder=""/>
+												<input type="text" name="occupation" id="occupation" class="form-control" placeholder=""/>
 											</div>
 											<label for="Education-qualification" class="col-sm-3 control-label">শিক্ষাগত যোগ্যতা</label>
 											<div class="col-sm-3">
@@ -555,7 +757,7 @@
 												<div class="form-group">
 													<label for="Word-no-english" class="col-sm-6 control-label">ওয়ার্ড নং</label>
 													<div class="col-sm-6">
-														<input type="text" name="per_wordno" id="per_wordno" class="form-control"   placeholder=""/>
+														<input type="text" name="per_wordno" id="per_wordno" class="form-control" onkeypress="return numtest();"  placeholder=""/>
 													</div>
 												</div>
 											</div>
@@ -710,7 +912,7 @@
 										<div class="form-group">
 											<label for="Mobile" class="col-sm-3 control-label">মোবাইল    <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="mob" id="mob" class="form-control" maxlength="11" placeholder="ইংরেজিতে প্রদান করুন"  required />
+												<input type="text" name="mob" id="mob" class="form-control" maxlength="11" placeholder="ইংরেজিতে প্রদান করুন" onkeypress="return checkaccnumber(event);"  required />
 											</div>
 											<label for="Email" class="col-sm-3 control-label">ইমেল </label>
 											<div class="col-sm-3">
@@ -737,17 +939,16 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-									<input type="hidden" value="" name="seba"/>
-										<button type="submit" name="save" id="submit_button" class="btn btn-success">জমা দিন</button>
+									<input type="hidden" value="2" name="seba"/>
+										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">দাখিল করুন</button>
 									</div>
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</div><!-- row end--->
+		</div><!-- left Content End-->
 
-</div>
 @endsection
 </x-home-master>
