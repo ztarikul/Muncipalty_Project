@@ -66,9 +66,9 @@
                                         <li><a href="">হোম </a></li>
                                         <li><a href="javascript:void(0)">নাগরিক</a>
                                             <ul class="sub-menus">
-                                                <li><a href="citizen_apps">নাগরিকত্ব সনদের আবেদন</a></li>                                           
-                                                <li><a href="citizen_apps_verify">নাগরিকত্ব সনদের আবেদন যাচাই</a></li>                                           
-                                                <li><a href="citizen_cc_verify">নাগরিকত্ব সনদ পত্র  যাচাই</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form', 1)}}">নাগরিকত্ব সনদের আবেদন</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad_abedon_jacai.form')}}">নাগরিকত্ব সনদের আবেদন যাচাই</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad_jacai.form')}}">নাগরিকত্ব সনদ পত্র  যাচাই</a></li>                                           
                                             </ul>
                                         </li> 
 										<li><a href="javascript:void(0)">ওয়ারিশ</a>
@@ -104,17 +104,17 @@
 										
 										<li><a href="javascript:void(0)">অন্যান্য</a>
                                             <ul class="sub-menus menusextra">
-                                                <li><a href="citizen_apps?seba=2">মৃত্যু সনদ</a></li>                                           
-                                                <li><a href="citizen_apps?seba=3">চারিত্রিক সনদ</a></li>                                           
-                                                <li><a href="citizen_apps?seba=4">অবিবাহিত সনদ</a></li>                                           
-                                                <li><a href="citizen_apps?seba=5">ভূমিহীন সনদ</a></li>                                           
-                                                <li><a href="citizen_apps?seba=6">পুনঃ বিবাহ না হওয়া সনদ </a></li>                                         
-                                                <li><a href="citizen_apps?seba=7">বার্ষিক আয়ের প্রত্যয়ন </a></li>                                           
-                                                <li><a href="citizen_apps?seba=8">একই নামের প্রত্যয়ন</a></li>                                           
-                                               <li><a href="citizen_apps?seba=9">প্রকৃত বাঁক ও শ্রবণ প্রতিবন্ধী</a></li>                        
-                                                <li><a href="citizen_apps?seba=10">সনাতন ধর্ম  অবলম্বী</a></li>                                           
-                                                <li><a href="citizen_apps?seba=11">অনুমতি পত্র</a></li>                                           
-                                                <li><a href="citizen_apps?seba=12">প্রত্যয়ন পত্র</a>  
+                                                <li><a href="{{route('nagorik_sanad.form', 2)}}">মৃত্যু সনদ</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form', 3)}}">চারিত্রিক সনদ</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 4)}}">অবিবাহিত সনদ</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 5)}}">ভূমিহীন সনদ</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 6)}}">পুনঃ বিবাহ না হওয়া সনদ </a></li>                                         
+                                                <li><a href="{{route('nagorik_sanad.form' , 7)}}">বার্ষিক আয়ের প্রত্যয়ন </a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 8)}}">একই নামের প্রত্যয়ন</a></li>                                           
+                                               <li><a href="{{route('nagorik_sanad.form' , 9)}}">প্রকৃত বাঁক ও শ্রবণ প্রতিবন্ধী</a></li>                        
+                                                <li><a href="{{route('nagorik_sanad.form' , 10)}}">সনাতন ধর্ম  অবলম্বী</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 11)}}">অনুমতি পত্র</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 12)}}">প্রত্যয়ন পত্র</a>  
                                                 <li><a href="onapotti">অনাপত্তি সনদপত্র</a>  
                                            </ul>
                                         </li>

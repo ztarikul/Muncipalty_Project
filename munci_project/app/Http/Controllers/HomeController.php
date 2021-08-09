@@ -33,4 +33,68 @@ class HomeController extends Controller
     public function store(Request $request){
         dd($request);
     }
+
+    public function nagorik_sanad($id)
+    {   if($id == 1){
+        return view('nagorik.jateyo_sanad_application');
+    }
+       elseif($id == 2){
+        return view('nagorik.mritto_sanad_application');
+
+       }
+       elseif($id == 3){
+        return view('nagorik.charittik_sanad_application');
+
+       }
+       elseif($id == 4){
+        return view('nagorik.obibahito_sanad');
+
+       }
+       elseif($id == 5){
+        return view('nagorik.vumihin_sanad');
+
+       }
+       elseif($id == 6){
+        return view('nagorik.ponno_bibahito_sanad');
+
+       }
+       elseif($id == 7){
+        return view('nagorik.bashik_ayer_sanad');
+
+       }
+       elseif($id == 8){
+        return view('nagorik.ekoi_name_pottoyon');
+
+       }
+       elseif($id == 9){
+        return view('nagorik.protibondi');
+
+       }
+       elseif($id == 10){
+        return view('nagorik.shanatan_dormo_obolombon');
+
+       }
+       elseif($id == 11){
+        return view('nagorik.onomoti');
+
+       }
+       elseif($id == 12){
+        return view('nagorik.pottoyan_potro');
+
+       }
+
+    }
+     
+    
+    
+    public function nagorik_sanad_abedon_jacai()
+    {
+        return view('nagorik.nagorik_sanad_abedon_jacai');
+    }
+    public function nagorik_sanad_jacai()
+    {
+        return view('nagorik.nagorik_sanad_jacai');
+    }
+
+
 }

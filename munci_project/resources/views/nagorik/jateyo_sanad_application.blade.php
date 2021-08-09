@@ -347,7 +347,7 @@
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-											<label for="Gender" class="col-sm-3 control-label">লিঙ্গ   <span>*</span></label>
+											<label for="Gender" class="col-sm-3 control-label">লিঙ্গ<span>*</span></label>
 											<div class="col-sm-3">
 												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="male" onclick="bybahik_obosthan_show1(this.value);" />পুরুষ </label>
 												<label class="radio-inline"><input type="radio" name="gender" id="gender" value="female" onclick="bybahik_obosthan_show1(this.value);" />মহিলা</label>

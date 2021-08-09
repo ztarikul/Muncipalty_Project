@@ -21,6 +21,14 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/nagorik', [HomeController::class, 'nagorik'])->name('nagorik.form');
+Route::get('nagorik_sanad/{id}', [HomeController::class, 'nagorik_sanad'])->name('nagorik_sanad.form');
+Route::get('/nagorik_sanad_abedon_jacai', [HomeController::class, 'nagorik_sanad_abedon_jacai'])->name('nagorik_sanad_abedon_jacai.form');
+Route::get('/nagorik_sanad_jacai', [HomeController::class, 'nagorik_sanad_jacai'])->name('nagorik_sanad_jacai.form');
+
+
+
+
+
+
 
 Route::resource('cityzen', CityzenController::class);
