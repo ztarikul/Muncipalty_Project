@@ -1,9 +1,8 @@
 <x-home-master>
-	@section('homecontent') 
+@section('homecontent')
 
-
-       
-   <style type="text/css"> 
+        
+   <!-- end header --><style type="text/css"> 
 .app-heading{
 	margin-top:20px;
 	margin-bottom:20px;
@@ -57,18 +56,20 @@
 
 </style>
 <script type="text/javascript"> 
-
+	/*========== reday function start ===========*/
 	$(document).reday(function(){
 		onload_hide_fun();
 	});
-
+	/*========== reday function  end===========*/
+	
+	/*============== ajax request function start =========*/
 	
 	function parsonalinfo_insert()
 	{
 			// this function call submit button onclick event
 		document.getElementById('submit_button').disabled = 'disabled';
 		$.post(
-			"index.php",
+			"index.php/home/nagorikapplication_action",
 			$("#info").serialize(),
 		function(data){
 			if(data !=1){
@@ -77,8 +78,9 @@
 			if(data==1)
 			{
 				alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার  পৌরসভায় যোগাযোগ করুন');
-				window.location=''; 
-				
+				 //setTimeout(function() {
+				window.location='index.php/home/ppreview'; //}, 1000)
+				// window.open('index.php/home/ppreview','_blank');
 			} 
 			else if(data==2)
 			{
@@ -108,8 +110,12 @@
 
 		return false;
 	}
+	/*============== ajax request function end =========*/
 
+	
+	/*=========onload function start=============*/
 	 function onload_hide_fun(){
+		  // call this function body onload event
 		  $("#wife").hide();
 		  $("#husband").hide();
 		  $("#print").hide();
@@ -118,8 +124,10 @@
 				'driver': phonetic
 			});
 		 }
-
+	/*=========onload function end=============*/
+	/*================== bashinda hide show function start ==========*/
 	function basinda_show_hide(v){
+		//alert(v);
 		if(v==2){
 			$("#permaHeading").hide();
 			$("#permanentAddress").hide();
@@ -131,8 +139,10 @@
 		}
 		
 	}
+	/*================== bashinda hide show function end ==========*/
 	
-	
+	/*========  bibhahik obstha hide show function start ============*/
+		/* 1st function */
 		function bybahik_obosthan_show(mstatus){
 			//alert(mstatus);
 			var gender=$("#gender:checked").val();
@@ -169,7 +179,7 @@
 				$("#wife").hide();
 			}
 		}
-		
+		/* ===2nd function  ===*/
 		function bybahik_obosthan_show1(gender){
 			var mstatus= $("#mstatus:checked").val();
 			if(mstatus=='1' && gender=='male'){
@@ -179,18 +189,18 @@
 				$("#husband").hide();
 			}
 			else if(mstatus=='1' && gender=='female'){
-				
+				//alert("husband id show");
 				$("#husband").show();
 				$("#wife input:text").val('');
 				$("#wife").hide();
 			}
 			else if(mstatus=='2' && gender=='female'){
-				
+				//alert("father id show");
 				$("#husband").hide();
 				$("#wife").hide();
 			}
 			else if(mstatus=='2' && gender=='male'){
-				
+				//alert("father id show");
 				$("#husband").hide();
 				$("#wife").hide();
 			}
@@ -200,7 +210,11 @@
 			}
 		}
 		
-
+	/*========  bibhahik obstha hide show function end ============*/
+	
+	
+	
+	/*============ number test function start ===============*/
 	function numtest(){
 		return event.charCode >= 48 && event.charCode <= 57;
 	}
@@ -212,9 +226,9 @@
 		}
 		return true;
 	}
-	
+	/*============ number test function end===============*/
 </script>
-
+<!-- some information query -->
 
 <div class="main_con"><!--Content Start-->
 	<div class="row"><!--- row start--->
@@ -250,13 +264,28 @@
 									</div>
 								</div>
 						
+						
+							
 							
 								<div class="row"> 
 									<div class=" col-sm-offset-5 col-sm-7" id="UPLOAD">
 										
 									</div>
 								</div>
-								
+								<!--
+								<div class="row"> 
+									<div class="col-sm-12" style="margin-bottom:10px;margin-top:10px;"> 
+										<div class="form-group">
+											<label for="Delivery-type" class="col-sm-3 control-label">সরবরাহের ধরণ  <span>*</span></label>
+											<div class="col-sm-9">
+												<label class="radio-inline"><input type="radio" name="delivery_type" value="1" >জরুরী</label>
+												<label class="radio-inline"><input type="radio" name="delivery_type" value="2">অতি জরুরী  </label>
+												<label class="radio-inline"><input type="radio" name="delivery_type" value="3" checked="checked"> সাধারন</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								-->
 																<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12"> 
@@ -264,14 +293,14 @@
 											<label for="National-id-english" class="col-sm-3 control-label">সেবা সমূহ  <span>*</span></label>
 											<div class="col-sm-3">
 												<select name="seba_type" class="form-control"  required disabled >
-													<option value='' >চিহ্নিত করুন</option>
-													<option value='1' >নাগরিকত্ব সনদ</option>
+													<option value=''>চিহ্নিত করুন</option>
+													<option value='1' selected >নাগরিকত্ব সনদ</option>
 													<option value='2' >মৃত্যু সনদ</option>
 													<option value='3' >চারিত্রিক সনদ</option>
 													<option value='4' >অবিবাহিত সনদ</option>
 													<option value='5' >ভূমিহীন সনদ</option>
 													<option value='6' >পুনঃ বিবাহ না হওয়া সনদ </option>
-													<option value='7' >বার্ষিক আয়ের প্রত্যয়ন </option>
+													<option value='7' SELECTED>বার্ষিক আয়ের প্রত্যয়ন </option>
 													<option value='8' >একই নামের প্রত্যয়ন </option>
 													<option value='9' >প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</option>
 													<option value='10' >সনাতন ধর্ম  অবলম্বী</option>
@@ -286,6 +315,26 @@
 										</div>
 										
 										
+									</div>
+								</div>
+																<div class="row">
+									<div class="col-sm-12"> 
+										<div class="form-group">
+										
+											<label for="incometype" class="col-sm-3 control-label">আয়ের ধরণ <span>*</span></label>
+											<div class="col-sm-3">
+												<select name="earn_type" class="form-control"  required >
+													<option value=''>চিহ্নিত করুন</option>
+													<option value='মাসিক' >মাসিক</option>
+													<option value='বার্ষিক'>বার্ষিক</option>
+												</select>
+											</div>
+											
+											<label for="yearly_income" class="col-sm-3 control-label">আয়ের পরিমান( ইংরেজিতে ) <span>*</span></label>
+											<div class="col-sm-3">
+												<input type="text" name="yearly_income" id="yearly_income" class="form-control" onkeypress="return checkaccnumber(event);"   placeholder="বার্ষিক আয়ের প্রত্যয়ন ক্ষেত্রে প্রযোজ্য" />
+											</div>
+										</div>
 									</div>
 								</div>
 																<div class="row">
@@ -326,7 +375,22 @@
 										
 									</div>
 								</div>
-
+								<!--
+								<div class="row">
+									<div class="col-sm-12"> 
+										<div class="form-group">
+											<label for="Name-english" class="col-sm-3 control-label">হোল্ডিং নং( ইংরেজিতে )  <span>*</span></label>
+											<div class="col-sm-3">
+												<input type="text" name="holding_no" id="holding_no" class="form-control" placeholder="আপনার হোল্ডিং নং প্রদান করুন"  required/>
+											</div>
+											
+											<div class="col-sm-3">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								-->
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -897,8 +961,8 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-									<input type="hidden" value="" name="seba"/>
-										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">জমা দিন</button>
+									<input type="hidden" value="7" name="seba"/>
+										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">দাখিল করুন</button>
 									</div>
 								</div>
 							</form>
@@ -907,7 +971,6 @@
 				</div>
 			</div><!-- row end--->
 		</div><!-- left Content End-->
-	</div>
-</div>
+
 @endsection
 </x-home-master>

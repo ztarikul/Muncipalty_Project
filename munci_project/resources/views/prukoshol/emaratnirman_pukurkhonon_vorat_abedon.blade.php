@@ -1,56 +1,6 @@
+<x-home-master>
+@section('homecontent')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="x-author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-    <meta name="robots" content="noodp">
-    <title>ডেমো পৌরসভা</title>
-    <link rel="shortcut icon" href="assets_one/img/favicon.ico" type="image/x-icon"/>
-    <link href="assets_one/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="assets_one/css/flexslider.css" rel="stylesheet"/>
-    <link href="assets_one/css/animate.css" rel="stylesheet"/>
-    <link href="assets_one/css/slick.css" rel="stylesheet">
-    <link href="assets_one/css/slick-theme.css" rel="stylesheet">
-    <link href="assets_one/css/jquery.fs.boxer.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets_one/css/mobilenav.css">
-    <!-- Theme skin -->
-    <link href="assets_one/skins/default.css" rel="stylesheet"/>
-    <link href="assets_one/css/style.css" rel="stylesheet"/>
-    <!-- <link rel="stylesheet" href="assets_one/css/bn.css"> -->
-            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-	<link rel="stylesheet" media="screen,projection" type="text/css" href="datepicker/jquery-ui.css" />
-	<!--<script src="datepicker/jquery-1.9.1.js"></script>--> 
-	<script src="datepicker/jquery-ui.js"></script>
-	
- <!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
-	
-	<!--- picture uplaod js ---->
-	<script type="text/javascript" src="library/upload/ajaxupload.js"></script>
-	
-	<!--- ajax request function for data serching----->
-	<script type="text/javascript" src="library/ajax_req.js"></script>
-	
-<!--	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-	<script src="js/google.js"></script>
-
-	<style>
-		body{color:font-family:solaimanlipi, "Times New Roman", Times, serif !important; color:black !important;}
-	</style>
-
-</head>
-<body onload="onload_hide_fun();">
-    <div id="wrapper">
-        <!-- start header -->
        <style type="text/css"> 
 .app-heading{
 	margin-top:20px;
@@ -217,24 +167,11 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#004884;text-align:center;">ইমারত নির্মাণ/সীমানা দেয়াল/বিবিধ নির্মাণ/পূণঃ নির্মাণ এবং পুকুর খনন/ভরাট/পাহাড় কর্তণ আবেদন পত্র</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ইমারত নির্মাণ/সীমানা দেয়াল/বিবিধ নির্মাণ/পূণঃ নির্মাণ এবং পুকুর খনন/ভরাট/পাহাড় কর্তণ আবেদন পত্র</div>
 						<div class="panel-body all-input-form">
 							<form action="javascript:void(0)" method="post" id="info" class="form-horizontal">
 								
-								<!--
-								<div class="row"> 
-									<div class="col-sm-12" style="margin-bottom:10px;margin-top:10px;"> 
-										<div class="form-group">
-											<label for="Delivery-type" class="col-sm-3 control-label">সরবরাহের ধরণ  <span>*</span></label>
-											<div class="col-sm-9">
-												<label class="radio-inline"><input type="radio" name="delivery_type" value="1" >জরুরী</label>
-												<label class="radio-inline"><input type="radio" name="delivery_type" value="2">অতি জরুরী  </label>
-												<label class="radio-inline"><input type="radio" name="delivery_type" value="3" checked="checked"> সাধারন</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								-->
+								
 								
 								<div class="row">
 									<div class="col-sm-12">
@@ -702,51 +639,5 @@
 		</div><!-- left Content End-->
 
 </div>
-  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-  <!-- javascript ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets_one/js/jquery.js"></script>
-    <script src="assets_one/js/jquery.lazyload.min.js"></script>
-    <script src="assets_one/js/jquery.easing.1.3.js"></script>
-    <script src="assets_one/js/bootstrap.min.js"></script>
-    <script src="assets_one/js/jquery.fs.boxer.js"></script>
-    <script src="assets_one/js/jquery.fitvids.js"></script>
-    <script src="assets_one/js/jquery.flexnav.js"></script>
-    <!-- <script src="assets_one/js/jquery.fancybox-media.js"></script> -->
-    <!-- <script src="assets_one/js/jquery.newsTicker.js"></script> -->
-    <script src="assets_one/js/slick.min.js"></script>
-    <script src="assets_one/js/google-code-prettify/prettify.js"></script>
-    <script src="assets_one/js/jquery.flexslider.js"></script>
-    <script src="assets_one/js/wow.js"></script>
-	
-    <script>
-      new WOW().init();
-  </script>
-  <script src="assets_one/js/custom.js"></script>
-  <script>
-    /*  - Boxer 
-    ---------------------------------------------------*/
-      jQuery(document).ready(function(){
-      jQuery(".boxer").boxer({ 
-        margin:100,
-        fixed: true
-      }); 
-      })
-    /*   - Boxer end 
-    ---------------------------------------------------*/
-
-  </script>
-<script>
-$(function() {
-    $("img.lazy").lazyload({
-            threshold : 200,
-            effect : "fadeIn"
-        });
-});
-</script>
-  <script>
-
-    $(".flexnav").flexNav();
-  </script>
-</body>
-</html>
+@endsection
+</x-home-master> 

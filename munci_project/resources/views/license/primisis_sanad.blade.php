@@ -1,46 +1,8 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="x-author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-    <meta name="robots" content="noodp">
-    <title>ডেমো পৌরসভা</title>
-    <link rel="shortcut icon" href="assets_one/img/favicon.ico" type="image/x-icon"/>
-    <link href="assets_one/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="assets_one/css/flexslider.css" rel="stylesheet"/>
-    <link href="assets_one/css/animate.css" rel="stylesheet"/>
-    <link href="assets_one/css/slick.css" rel="stylesheet">
-    <link href="assets_one/css/slick-theme.css" rel="stylesheet">
-    <link href="assets_one/css/jquery.fs.boxer.css" rel="stylesheet">
 
-    <link href="assets_one/skins/default.css" rel="stylesheet"/>
-    <link href="assets_one/css/style.css" rel="stylesheet"/>
 
-	<link rel="stylesheet" media="screen,projection" type="text/css" href="datepicker/jquery-ui.css" />
-
-	<script src="datepicker/jquery-ui.js"></script>
-
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
-
-	<script type="text/javascript" src="library/upload/ajaxupload.js"></script>
-
-	<script type="text/javascript" src="library/ajax_req.js"></script>
-
-	<script src="js/google.js"></script>
-
-	<style>
-		body{color:font-family:solaimanlipi, "Times New Roman", Times, serif !important; color:black !important;}
-	</style>
-
-</head>
-<body onload="onload_hide_fun();">
-    <div id="wrapper">
- <style type="text/css"> 
+       
+   <!-- end header --><style type="text/css"> 
 .app-heading{
 	margin-top:20px;
 	margin-bottom:20px;
@@ -93,11 +55,11 @@
         padding-bottom: 1px;
     }
 }
-
+/* mozila fire fox file input code end */
 
 </style>
 
-<script type="text/javascript">
+<script type="text/javascript"> 
 	function clear_form_elements(id_name) {
 		jQuery("#"+id_name).find(':input').each(function() {
 			switch(this.type) {
@@ -116,7 +78,7 @@
 	}
 </script>
 <script type="text/javascript"> 
-
+	
 		$(document).ready(function(){
 			$(".samir_nam").hide();
 			$("#other_owner").hide();
@@ -125,6 +87,7 @@
 			$('#info').submit(function() {
 				document.getElementById('submit_button').disabled = 'disabled';
 				$.post(
+			
 				$("#info").serialize(),
 				function(data){
 					if(data !=1){
@@ -134,7 +97,8 @@
 					{
 						alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
 
-		
+					
+						
 					} 
 					else if(data==2)
 					{
@@ -203,10 +167,12 @@
 					
 				}
 			}); 	
-				
+				/*====== Institie owner type change function end ============*/
 		});
 	
-
+	/*======= ready function end ==========*/
+	
+	/*======== bibhahik obstha function start ==========*/
 	function bybahik_obosthan_show(mstatus){
 		//alert(mstatus);
 		var gender=$("#gender:checked").val();
@@ -238,7 +204,7 @@
 			
 		}
 	}
-	
+	/*======== 2nd function ======*/
 	function bybahik_obosthan_show1(gender){
 		var mstatus=$("#mstatus:checked").val();
 		if(mstatus=='বিবাহিত' && gender=='male'){
@@ -269,7 +235,9 @@
 			
 		}
 	}
-
+	/*======== bibhahik obstha function end ==========*/
+	
+	/*====== other owner Add row functon start =========*/
 	var rowNum = 0;
 	function addRow(frm){
 		var bwname=document.getElementById("bwname").value;
@@ -279,7 +247,9 @@
 		if(bwname==''){
 			alert("নতুন মালিকের নাম বাংলায় প্রদান করুন");
 		}
-
+		else if(ewname==''){
+			alert("নতুন মালিকের নাম ইংরেজিতে প্রদান করুন ");
+		}
 		else{
 			rowNum ++;
 			if(gender=='female' && mstatus=='বিবাহিত'){
@@ -299,13 +269,17 @@
 	function removeRow(rnum){
 		jQuery('#rowNum'+rnum).remove();
 	}
-
+	/*====== other owner Add row functon end =========*/
+	
+	/*========= rew new settion start ===========*/
 	 function getType(x)
 	{
 		//alert(x);
 		document.getElementById("dtype").value=x;	
 	}
-
+	/*========= rew new settion end ===========*/
+	
+	/*============ number test function start ===============*/
 	function numtest(){
 		return event.charCode >= 48 && event.charCode <= 57;
 	}
@@ -317,17 +291,17 @@
 		}
 		return true;
 	}
-	
+	/*============ number test function end===============*/
 </script>
 
 
-<div class="main_con">
-	<div class="row">
-		<div class="col-md-12 left_con">
+<div class="main_con"><!--Content Start-->
+	<div class="row"><!--- row start--->
+		<div class="col-md-12 left_con"><!-- left Content Start-->
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#004884;text-align:center;">ট্রেড লাইসেন্স আবেদন</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">প্রিমিসেস লাইসেন্স আবেদন</div>
 						<div class="panel-body all-input-form">
 							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
 								<div class="row"  style="margin-top: 10px;">
@@ -338,7 +312,7 @@
 												<input type="file" name="file" class="form-control input-file-sm" />
 											</div>
 											<div class="col-sm-3" style="margin-top:3px;">
-												<button  onclick="return ajaxUpload(this.form,'index.php/home/profile_upload', '&lt;br&gt;Uploading image please wait.....&lt;br&gt;'); return false;" name='upload' class="btn btn-primary">আপলোড</button>
+												<button  onclick="return ajaxUpload(this.form,'', ''); return false;" name='upload' class="btn btn-success">আপলোড</button>
 											</div>
 											<div class="clearfix"> </div>
 										</div>
@@ -346,7 +320,7 @@
 								</div>
 							</form>
 						
-							<form action="index.php/home/tradelicenseapplication_action" method="post" id="info" enctype="multipart/form-data" class="form-horizontal">
+							<form action="" method="post" id="info" enctype="multipart/form-data" class="form-horizontal">
 							
 								<div class="row"> 
 									<div class=" col-sm-offset-5 col-sm-7" id="UPLOAD">
@@ -354,7 +328,7 @@
 									</div>
 								</div>
 								
-						
+								
 								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								
 								<div class="row">
@@ -363,7 +337,11 @@
 											<label for="Owner-type" class="col-sm-3 control-label">প্রতিষ্ঠানের মালিকানার ধরণ <span>*</span></label>
 											<div class="col-sm-3">
 												<select name="ownertype" id="type_val" class="form-control">
-                                                    >
+																										<option value="">চিহ্নিত করুন</option>
+																										<option value="1">ব্যক্তি মালিকানাধীন</option>
+																										<option value="2">যৌথ মালিকানা</option>
+																										<option value="3">কোম্পানী</option>
+																									</select>
 											</div>
 											<label for="holding_no" class="col-sm-3 control-label">হোল্ডিং নং </label>
 											<div class="col-sm-3">
@@ -387,19 +365,18 @@
 										</div>
 										
 									</div>
-								</div>
-		
+					
 								<div id="clearall">
 									<div class="row">
 										<div class="col-sm-12"> 
 											<div class="form-group">
 												<label for="Owner-name-english" class="col-sm-3 control-label">মালিকের নাম ( ইংরেজিতে ) </label>
 												<div class="col-sm-3">
-													<input type="text" name="ewname[]" id="ewname" class="form-control" placeholder=""  />
+													<input type="text" name="ewname[]" id="ewname" class="form-control" placeholder="" />
 												</div>
 												<label for="Owner-name-bangla" class="col-sm-3 control-label">মালিকের নাম ( বাংলায় )  <span>*</span></label>
 												<div class="col-sm-3">
-													<input type="text" name="bwname[]" id="bwname" class="form-control" placeholder=""  />
+													<input type="text" name="bwname[]" id="bwname" class="form-control" placeholder="" />
 												</div>
 											</div>
 										</div>
@@ -484,6 +461,7 @@
 										</div>
 									</div>
 									
+									
 									<div class="row">
 										<div class="col-sm-12"> 
 											<div class="form-group">
@@ -499,6 +477,7 @@
 										</div>
 									</div>
 									
+									
 									<div class="row">
 										<div class="col-sm-12"> 
 											<div class="form-group">
@@ -506,19 +485,20 @@
 												<div class="col-sm-3">
 													<input type="text" name="nationid" id="nationid" class="form-control" placeholder="" required />
 												</div>
-												<label for="Mother-name-bangla" class="col-sm-3 control-label">জন্ম নিবন্ধন নং (ইংরেজিতে)<span></span> </label>
+												<label for="Mother-name-bangla" class="col-sm-3 control-label">জন্ম নিবন্ধন নং (ইংরেজিতে)</label>
 												<div class="col-sm-3">
-													<input type="text" name="bcno" id="bcno" class="form-control" placeholder=""   />
+													<input type="text" name="bcno" id="bcno" class="form-control" placeholder=""  />
 												</div>
 											</div>
 										</div>
 									</div>
+
 								</div>
 								<div class="row" id="other_owner">
 									<div class="col-sm-12"> 
 										<div class="form-group">
 											<div class="col-sm-3 col-sm-offset-9">
-												<input type="button" class="btn btn-primary" id='natun' name="ncompany" onclick="addRow(this.form);" value='অন্যান্য মালিক' />
+												<input type="button" class="btn btn-primary" id='natun' name="ncompany" onclick="addRow(this.form);" value='বিভিন্ন মালিক' />
 											</div>
 										</div>
 									</div>
@@ -528,24 +508,21 @@
 									
 								</div>
 
-
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
 											<label for="Vat-id" class="col-sm-3 control-label">ভ্যাট  আয়কর</label>
 											<div class="col-sm-3">
-												<input type="text" name="vatkor" id="vatkor" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  onkeypress="return checkaccnumber(event);"  />
+												<input type="text" name="vatid" id="vatid" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  onkeypress="return checkaccnumber(event);"  />
 											</div>
 											<label for="Tax-id" class="col-sm-3 control-label">টি,আই,নং</label>
 											<div class="col-sm-3">
-												<input type="text" name="tino" id="tino" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  onkeypress="return checkaccnumber(event);" />
+												<input type="text" name="taxid" id="taxid" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  onkeypress="return checkaccnumber(event);" />
 											</div>
 										</div>
 										
 									</div>
 								</div>
-								
-								
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -571,6 +548,38 @@
 											<label for="Tax-id" class="col-sm-3 control-label">আলোক সজ্জিত সাইনবোর্ড</label>
 											<div class="col-sm-3">
 												<input type="text" name="light_sign" id="light_sign" class="form-control"  placeholder="সরকারি জমি/ভবন বেসরকারি জমি/ভবন"/>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-12"> 
+										<div class="form-group">
+											<label for="Vat-id" class="col-sm-3 control-label">জয়েন্ট স্টক কোম্পানীর ক্ষেত্রে ডাইরেক্টর/ম্যানেজিং এজেন্টের নাম</label>
+											<div class="col-sm-3">
+												<input type="text" name="agent_name" id="agent_name" class="form-control"  placeholder="ম্যানেজিং এজেন্টের নাম"/>
+											</div>
+											<label for="Tax-id" class="col-sm-3 control-label">ভবন/গৃহের আয়তন</label>
+											<div class="col-sm-3">
+												<input type="text" name="house_amount" id="house_amount" class="form-control"  placeholder="ভবন/গৃহের আয়তন"/>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-12"> 
+										<div class="form-group">
+											<label for="Vat-id" class="col-sm-3 control-label">ব্যবসা আরম্ভের তারিখ</label>
+											<div class="col-sm-3">
+												<input type="text" name="bus_start" id="bus_start" class="form-control"  placeholder="D-M-Y"/>
+											</div>
+											<label for="Tax-id" class="col-sm-3 control-label">পূর্বে লাইসেন্স নবায়নের তারিখ</label>
+											<div class="col-sm-3">
+												<input type="text" name="prev_lice_date" id="prev_lice_date" class="form-control"  placeholder="D-M-Y"/>
 											</div>
 										</div>
 										
@@ -624,7 +633,7 @@
 										<div class="row">
 											<div class="col-sm-12"> 
 												<div class="form-group">
-													<label for="Village-english" class="col-sm-6 control-label">পাড়া/মহল্লা </label>
+													<label for="Village-english" class="col-sm-6 control-label">গ্রাম/মহল্লা </label>
 													<div class="col-sm-6">
 														<input type="text" name="be_gram" id="begram" class="form-control" placeholder=""/>
 													</div>
@@ -646,11 +655,10 @@
 										<div class="row">
 											<div class="col-sm-12"> 
 												<div class="form-group">
-													<label for="Word-no-english" class="col-sm-6 control-label">ওয়ার্ড নং</label>
+													<label for="Word-no" class="col-sm-6 control-label">ওয়ার্ড নং</label>
 													<div class="col-sm-6">
-
 														<select name="be_wordno" class="form-control">
-															<option value="" >select</option>
+															<option value="">select</option>
 															<option value="1">1</option>
 															<option value="2">2</option>
 															<option value="3">3</option>
@@ -723,7 +731,7 @@
 										<div class="row">
 											<div class="col-sm-12"> 
 												<div class="form-group">
-													<label for="Village-bangla" class="col-sm-6 control-label">পাড়া/মহল্লা </label>
+													<label for="Village-bangla" class="col-sm-6 control-label">গ্রাম/মহল্লা </label>
 													<div class="col-sm-6">
 														<input type="text" name="bb_gram" id="bb_gram" class="form-control" placeholder=""/>
 													</div>
@@ -745,7 +753,7 @@
 										<div class="row">
 											<div class="col-sm-12"> 
 												<div class="form-group">
-													<label for="Word-no-bangla" class="col-sm-6 control-label">ওয়ার্ড নং <span>*<span></label>
+													<label for="Word-no-bangla" class="col-sm-6 control-label">ওয়ার্ড নং <span>*</span></label>
 													<div class="col-sm-6">
 														<select name="bb_wordno" class="form-control" required>
 															<option value="">select</option>
@@ -840,7 +848,7 @@
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-											<label for="Email" class="col-sm-3 control-label">ইমেল</label>
+											<label for="Email" class="col-sm-3 control-label">ইমেল (যদি থাকে )</label>
 											<div class="col-sm-3">
 												<input type="text" name="email" id="email" class="form-control" placeholder=""/>
 											</div>
@@ -851,61 +859,15 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="save" id="submit_button" class="btn btn-primary">দাখিল করুন</button>
+										<button type="submit" name="save" id="submit_button" class="btn btn-success">জমা দিন</button>
 									</div>
 								</div>
 							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-<footer>
-<
-</footer>
+						</div><!-- panel-body-end---->
+					</div><!--- end of panel primary--->
+				</div><!-- end of col-md-12---->
+			</div><!-- row end--->
+		</div><!-- left Content End-->
+		
 </div>
-  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-
-    <script src="assets_one/js/jquery.js"></script>
-    <script src="assets_one/js/jquery.lazyload.min.js"></script>
-    <script src="assets_one/js/jquery.easing.1.3.js"></script>
-    <script src="assets_one/js/bootstrap.min.js"></script>
-    <script src="assets_one/js/jquery.fs.boxer.js"></script>
-    <script src="assets_one/js/jquery.fitvids.js"></script>
-    <script src="assets_one/js/jquery.flexnav.js"></script>
-
-    <script src="assets_one/js/slick.min.js"></script>
-    <script src="assets_one/js/google-code-prettify/prettify.js"></script>
-    <script src="assets_one/js/jquery.flexslider.js"></script>
-    <script src="assets_one/js/wow.js"></script>
-	
-    <script>
-      new WOW().init();
-  </script>
-  <script src="assets_one/js/custom.js"></script>
-  <script>
-    /*  - Boxer 
-    ---------------------------------------------------*/
-      jQuery(document).ready(function(){
-      jQuery(".boxer").boxer({ 
-        margin:100,
-        fixed: true
-      }); 
-      })
- 
-
-  </script>
-<script>
-$(function() {
-    $("img.lazy").lazyload({
-            threshold : 200,
-            effect : "fadeIn"
-        });
-});
-</script>
-  <script>
-
-    $(".flexnav").flexNav();
-  </script>
-</body>
-</html>
+  

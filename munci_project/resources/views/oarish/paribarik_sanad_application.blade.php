@@ -340,23 +340,7 @@
 										</div>
 										
 									</div>
-								</div>
-							<!--
-								<div class="row">
-									<div class="col-sm-12"> 
-										<div class="form-group">
-											<label for="Name-english" class="col-sm-3 control-label">হোল্ডিং নং( ইংরেজিতে )  <span>*</span></label>
-											<div class="col-sm-3">
-												<input type="text" name="holding_no" id="holding_no" class="form-control" placeholder="আপনার হোল্ডিং নং প্রদান করুন"  required/>
-											</div>
-											
-											<div class="col-sm-3">
-												
-											</div>
-										</div>
-									</div>
-								</div>
-								-->			
+							
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
