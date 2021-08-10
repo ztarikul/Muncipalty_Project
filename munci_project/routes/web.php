@@ -31,14 +31,26 @@ Route::get('/oarish_sanader_abedon_jachai', [HomeController::class, 'oarish_sana
 Route::get('/oarish_sonodpotro_jachai', [HomeController::class, 'oarish_sonodpotro_jachai'])->name('oarish_sonodpotro_jachai.form');
 
 Route::get('/paribarik_sanad_application', [HomeController::class, 'paribarik_sanad_application'])->name('paribarik_sanad_application.form');
-Route::get('/parabarik_sonoder_abedon_jachai', [HomeController::class, 'parabarik_sonoder_abedon_jachai'])->name('parabarik_sonoder_abedon_jachai.form');
-Route::get('/parabarik_sonodpotro_jachai', [HomeController::class, 'parabarik_sonodpotro_jachai'])->name('parabarik_sonodpotro_jachai.form');
+Route::get('/paribarik_sonoder_abedon_jachai', [HomeController::class, 'paribarik_sonoder_abedon_jachai'])->name('paribarik_sonoder_abedon_jachai.form');
+Route::get('/paribarik_sonodpotro_jachai', [HomeController::class, 'paribarik_sonodpotro_jachai'])->name('paribarik_sonodpotro_jachai.form');
+
+Route::get('/trade_license_application', [HomeController::class, 'trade_license_application'])->name('trade_license_application.form');
+Route::get('/trade_license_abedon_jacai', [HomeController::class, 'trade_license_abedon_jacai'])->name('trade_license_abedon_jacai.form');
+Route::get('/trade_license_nabayon_abedon', [HomeController::class, 'trade_license_nabayon_abedon'])->name('trade_license_nabayon_abedon.form');
+Route::get('/trade_license_jacai', [HomeController::class, 'trade_license_jacai'])->name('trade_license_jacai.form');
 
 
+Route::get('/primisis_sanad', [HomeController::class, 'primisis_sanad'])->name('primisis_sanad.form');
+Route::get('/posha_pranir_license', [HomeController::class, 'posha_pranir_license'])->name('posha_pranir_license.form');
 
 
-
-
+Route::get('/rasta_khonon_er_onumoti', [HomeController::class, 'rasta_khonon_er_onumoti'])->name('rasta_khonon_er_onumoti.form');
+Route::get('/emaratnirman_pukurkhonon_vorat_abedon', [HomeController::class, 'emaratnirman_pukurkhonon_vorat_abedon'])->name('emaratnirman_pukurkhonon_vorat_abedon.form');
+Route::get('/vumi_bebohar_char_potrer_abedon', [HomeController::class, 'vumi_bebohar_char_potrer_abedon'])->name('vumi_bebohar_char_potrer_abedon.form');
+Route::get('/notun_holding_abedon', [HomeController::class, 'notun_holding_abedon'])->name('notun_holding_abedon.form');
+Route::get('/holding_naam_jari_abedon', [HomeController::class, 'holding_naam_jari_abedon'])->name('holding_naam_jari_abedon.form');
 
 
 Route::resource('cityzen', CityzenController::class);
+
+Route::resource('paribarik', ParibarikController::class);

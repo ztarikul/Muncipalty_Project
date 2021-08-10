@@ -77,28 +77,28 @@
                                                 <li><a href="{{route('oarish_sanader_abedon_jachai.form')}}">ওয়ারিশ সনদের আবেদন যাচাই</a></li>                                           
                                                 <li><a href="{{route('oarish_sonodpotro_jachai.form')}}">ওয়ারিশ সনদ পত্র  যাচাই</a></li>
 												</li><li><a href="{{route('paribarik_sanad_application.form')}}">পারিবারিক সনদের আবেদন</a></li>
-												<li><a href="{{route('parabarik_sonoder_abedon_jachai.form')}}">পারিবারিক সনদের আবেদন যাচাই</a></li>
-												<li><a href="{{route('parabarik_sonodpotro_jachai.form')}}">পারিবারিক সনদ পত্র  যাচাই</a></li>                                           
+												<li><a href="{{route('paribarik_sonoder_abedon_jachai.form')}}">পারিবারিক সনদের আবেদন যাচাই</a></li>
+												<li><a href="{{route('paribarik_sonodpotro_jachai.form')}}">পারিবারিক সনদ পত্র  যাচাই</a></li>                                           
                                             </ul>
                                         </li>
 										<li><a href="javascript:void(0)">লাইসেন্স সমূহ</a>
                                             <ul class="sub-menus">
-                                                <li><a href="trade_license_apps">ট্রেড লাইসেন্স আবেদন</a></li>                                           
-                                                <li><a href="trade_license_apps_verify">ট্রেড লাইসেন্স আবেদন যাচাই</a></li>                                         
-                                                <li><a href="renew_apps">ট্রেড লাইসেন্স নবায়ন</a></li>                                         
-                                                <li><a href="trade_license_cc_verify">ট্রেড লাইসেন্স  যাচাই</a></li>
-												<li><a href="primises_license_apps">প্রিমিসেস লাইসেন্স</a></li>  
-                                                 <li><a href="dog_license_apps">পোষা প্রাণীর লাইসেন্স</a></li>                                             
+                                                <li><a href="{{route('trade_license_application.form')}}">ট্রেড লাইসেন্স আবেদন</a></li>                                           
+                                                <li><a href="{{route('trade_license_abedon_jacai.form')}}">ট্রেড লাইসেন্স আবেদন যাচাই</a></li>                                         
+                                                <li><a href="{{route('trade_license_nabayon_abedon.form')}}">ট্রেড লাইসেন্স নবায়ন</a></li>                                         
+                                                <li><a href="{{route('trade_license_jacai.form')}}">ট্রেড লাইসেন্স  যাচাই</a></li>
+												<li><a href="{{route('primisis_sanad.form')}}">প্রিমিসেস লাইসেন্স</a></li>  
+                                                 <li><a href="{{route('posha_pranir_license.form')}}">পোষা প্রাণীর লাইসেন্স</a></li>                                             
                                             </ul>
                                         </li>
 										<li><a href="javascript:void(0)">প্রকৌশল সংক্রান্ত</a>
                                             <ul class="sub-menus">
-                                               <li><a href="index.php/Home/roadpermit">রাস্তা খননের অনুমতি পত্র</a></li>  
-												  <li><a href="Home/imarotShimanaBibidoNirman">ইমারত নির্মাণ/ পুকুর খনন/ভরাট আবেদন পত্র</a></li>  
-                                                 <li><a href="Home/bhumiusecerti">ভূমি ব্যবহার ছাড়পত্রের আবেদন</a></li>  
+                                               <li><a href="{{route('rasta_khonon_er_onumoti.form')}}">রাস্তা খননের অনুমতি পত্র</a></li>  
+												  <li><a href="{{route('emaratnirman_pukurkhonon_vorat_abedon.form')}}">ইমারত নির্মাণ/ পুকুর খনন/ভরাট আবেদন পত্র</a></li>  
+                                                 <li><a href="{{route('vumi_bebohar_char_potrer_abedon.form')}}">ভূমি ব্যবহার ছাড়পত্রের আবেদন</a></li>  
                                                  
-                                                 <li><a href="new_holding_apps">নতুন হোল্ডিং আবেদন</a></li>  
-                                                 <li><a href="holding_namjari_apps">হোল্ডিং নামজারি আবেদন</a></li>                                             
+                                                 <li><a href="{{route('notun_holding_abedon.form')}}">নতুন হোল্ডিং আবেদন</a></li>  
+                                                 <li><a href="{{route('holding_naam_jari_abedon.form')}}">হোল্ডিং নামজারি আবেদন</a></li>                                             
                                             </ul>
                                         </li>
 										

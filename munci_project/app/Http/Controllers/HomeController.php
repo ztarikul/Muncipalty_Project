@@ -109,17 +109,71 @@ class HomeController extends Controller
         return view('oarish.oarish_sonodpotro_jachai');
     }
 
+    public function oarish_sanader_abedon_jachai()
+    {
+        return view('oarish.oarish_sanader_abedon_jachai');
+    }
+
     public function paribarik_sanad_application()
     {
         return view('oarish.paribarik_sanad_application');
     }
 
-    public function parabarik_sonoder_abedon_jachai()
+    public function paribarik_sonoder_abedon_jachai()
     {
-        return view('oarish.parabarik_sonoder_abedon_jachai');
+        return view('oarish.paribarik_sonoder_abedon_jachai');
     }
-    public function parabarik_sonodpotro_jachai()
+    public function paribarik_sonodpotro_jachai()
     {
-        return view('oarish.parabarik_sonodpotro_jachai');
+        return view('oarish.paribarik_sonodpotro_jachai');
+    }
+
+    // license
+    public function trade_license_application()
+    {
+        return view('license.trade_license_application');
+    }
+    public function trade_license_abedon_jacai()
+    {
+        return view('license.trade_license_abedon_jacai');
+    }
+    public function trade_license_nabayon_abedon()
+    {
+        return view('license.trade_license_nabayon_abedon');
+    }
+    public function trade_license_jacai()
+    {
+        return view('license.trade_license_jacai');
+    }
+    public function primisis_sanad()
+    {
+        return view('license.primisis_sanad');
+    }
+    public function posha_pranir_license()
+    {
+        return view('license.posha_pranir_license');
+    }
+
+    // prokusholi
+
+    public function rasta_khonon_er_onumoti()
+    {
+        return view('prukoshol.rasta_khonon_er_onumoti');
+    }
+    public function emaratnirman_pukurkhonon_vorat_abedon()
+    {
+        return view('prukoshol.emaratnirman_pukurkhonon_vorat_abedon');
+    }
+    public function vumi_bebohar_char_potrer_abedon()
+    {
+        return view('prukoshol.vumi_bebohar_char_potrer_abedon');
+    }
+    public function notun_holding_abedon()
+    {
+        return view('prukoshol.notun_holding_abedon');
+    }
+    public function holding_naam_jari_abedon()
+    {
+        return view('prukoshol.holding_naam_jari_abedon');
     }
 }

@@ -1,5 +1,6 @@
 
-
+<x-home-master>
+@section('homecontent')
 
        
    <!-- end header --><style type="text/css"> 
@@ -870,4 +871,5 @@
 		</div><!-- left Content End-->
 		
 </div>
-  
+@endsection
+</x-home-master>
