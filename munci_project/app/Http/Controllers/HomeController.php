@@ -86,7 +86,7 @@ class HomeController extends Controller
     }
      
     
-    
+    // nagorik
     public function nagorik_sanad_abedon_jacai()
     {
         return view('nagorik.nagorik_sanad_abedon_jacai');
@@ -97,4 +97,29 @@ class HomeController extends Controller
     }
 
 
+    //  oarish
+    public function oarish_sanad_application()
+    {
+        return view('oarish.oarish_sanad_application');
+    }
+    
+    
+    public function oarish_sonodpotro_jachai()
+    {
+        return view('oarish.oarish_sonodpotro_jachai');
+    }
+
+    public function paribarik_sanad_application()
+    {
+        return view('oarish.paribarik_sanad_application');
+    }
+
+    public function parabarik_sonoder_abedon_jachai()
+    {
+        return view('oarish.parabarik_sonoder_abedon_jachai');
+    }
+    public function parabarik_sonodpotro_jachai()
+    {
+        return view('oarish.parabarik_sonodpotro_jachai');
+    }
 }

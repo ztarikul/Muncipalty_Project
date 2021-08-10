@@ -26,6 +26,16 @@ Route::get('/nagorik_sanad_abedon_jacai', [HomeController::class, 'nagorik_sanad
 Route::get('/nagorik_sanad_jacai', [HomeController::class, 'nagorik_sanad_jacai'])->name('nagorik_sanad_jacai.form');
 
 
+Route::get('/oarish_sanad_application', [HomeController::class, 'oarish_sanad_application'])->name('oarish_sanad_application.form');
+Route::get('/oarish_sanader_abedon_jachai', [HomeController::class, 'oarish_sanader_abedon_jachai'])->name('oarish_sanader_abedon_jachai.form');
+Route::get('/oarish_sonodpotro_jachai', [HomeController::class, 'oarish_sonodpotro_jachai'])->name('oarish_sonodpotro_jachai.form');
+
+Route::get('/paribarik_sanad_application', [HomeController::class, 'paribarik_sanad_application'])->name('paribarik_sanad_application.form');
+Route::get('/parabarik_sonoder_abedon_jachai', [HomeController::class, 'parabarik_sonoder_abedon_jachai'])->name('parabarik_sonoder_abedon_jachai.form');
+Route::get('/parabarik_sonodpotro_jachai', [HomeController::class, 'parabarik_sonodpotro_jachai'])->name('parabarik_sonodpotro_jachai.form');
+
+
+
 
 
 

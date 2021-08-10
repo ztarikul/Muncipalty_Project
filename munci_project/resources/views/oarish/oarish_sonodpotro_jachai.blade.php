@@ -5,7 +5,7 @@
        <style type="text/css">
 	.color-style input[type="text"]{
 		color: black;
-		font-weight: normal;
+		font-weight: normal; 
 		font-size:14px;
 		letter-spacing: 1px;
 		opacity:1;
@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#004884;text-align:center;">ওয়ারিশ সনদপত্র যাচাই</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ওয়ারিশ সনদপত্র যাচাই</div>
 						<div class="panel-body all-input-form" style="min-height:310px;">
 							<form action="javascript:void(0);" method="post" enctype="multipart/form-data" class="form-horizontal">
 								<div class="row">

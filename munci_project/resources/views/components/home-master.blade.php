@@ -63,7 +63,7 @@
                             </div>
                             <nav id="elg-main-menu" role="navigation" class="elg-menu pull-right">
                                     <ul class="desktop-menu">
-                                        <li><a href="">হোম </a></li>
+                                        <li><a href="{{route('home')}}">হোম </a></li>
                                         <li><a href="javascript:void(0)">নাগরিক</a>
                                             <ul class="sub-menus">
                                                 <li><a href="{{route('nagorik_sanad.form', 1)}}">নাগরিকত্ব সনদের আবেদন</a></li>                                           
@@ -73,12 +73,12 @@
                                         </li> 
 										<li><a href="javascript:void(0)">ওয়ারিশ</a>
                                             <ul class="sub-menus">
-                                                <li><a href="successor_apps">ওয়ারিশ সনদের আবেদন</a></li>                                           
-                                                <li><a href="successor_apps_verify">ওয়ারিশ সনদের আবেদন যাচাই</a></li>                                           
-                                                <li><a href="successor_cc_verify">ওয়ারিশ সনদ পত্র  যাচাই</a></li>
-												</li><li><a href="familly_apps">পারিবারিক সনদের আবেদন</a></li>
-												<li><a href="family_apps_verify">পারিবারিক সনদের আবেদন যাচাই</a></li>
-												<li><a href="family_cc_verify">পারিবারিক সনদ পত্র  যাচাই</a></li>                                           
+                                                <li><a href="{{route('oarish_sanad_application.form')}}">ওয়ারিশ সনদের আবেদন</a></li>                                           
+                                                <li><a href="{{route('oarish_sanader_abedon_jachai.form')}}">ওয়ারিশ সনদের আবেদন যাচাই</a></li>                                           
+                                                <li><a href="{{route('oarish_sonodpotro_jachai.form')}}">ওয়ারিশ সনদ পত্র  যাচাই</a></li>
+												</li><li><a href="{{route('paribarik_sanad_application.form')}}">পারিবারিক সনদের আবেদন</a></li>
+												<li><a href="{{route('parabarik_sonoder_abedon_jachai.form')}}">পারিবারিক সনদের আবেদন যাচাই</a></li>
+												<li><a href="{{route('parabarik_sonodpotro_jachai.form')}}">পারিবারিক সনদ পত্র  যাচাই</a></li>                                           
                                             </ul>
                                         </li>
 										<li><a href="javascript:void(0)">লাইসেন্স সমূহ</a>
