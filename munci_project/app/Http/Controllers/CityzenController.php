@@ -36,10 +36,24 @@ class CityzenController extends Controller
     public function store(Request $request)
     {
         //
-        $inputs = $request->all();
-        $cityzens = new Cityzen($inputs);
-        $cityzens->save();
-        return redirect()->route('home');
+        
+        $validator = $request->validate([
+            'nationid' => 'nullable|unique:cityzens',
+            'birth_certificate_no' => 'required|unique:cityzens',
+            'passport_no' => 'nullable|unique:cityzens',
+            'mob' => 'required|unique:cityzens',
+            'email' => 'nullable|unique:cityzens'
+
+
+        ]);
+        dd($validator);
+
+        if(!$validator){
+            return response()->json(['status' => 0, 'error' => $validator]);
+        }
+        // $cityzens = new Cityzen($validator);
+        // $cityzens->save();
+        // return redirect()->route('home');
     }
 
     /**

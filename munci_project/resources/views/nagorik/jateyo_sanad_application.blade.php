@@ -301,10 +301,12 @@
 											<label for="National-id-english" class="col-sm-3 control-label">ন্যাশনাল আইডি (ইংরেজিতে)  </label>
 											<div class="col-sm-3">
 												<input type="text" name="nationid" id="nid" class="form-control" maxlength='17' onkeypress="return checkaccnumber(event);"  placeholder="" />
+												<span class="text-danger error-text nationid_error"></span>
 											</div>
 											<label for="Birth-no" class="col-sm-3 control-label">জন্ম নিবন্ধন নং ( ইংরেজিতে ) <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="birth_certificate_no" id="bcno" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" requiredও />
+												<input type="text" name="birth_certificate_no" id="bcno" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" required />
+												<span class="text-danger error-text birth_certificate_no_error"></span>
 											</div>
 										</div>
 									</div>
@@ -316,11 +318,12 @@
 											<label for="Passport-no" class="col-sm-3 control-label">পাসপোর্ট নং ( ইংরেজিতে ) </label>
 											<div class="col-sm-3">
 												<input type="text" name="passport_no" id="pno" class="form-control" maxlength='17' placeholder=""/>
+												<span class="text-danger error-text passport_no_error"></span>
 											</div>
 
 											<label for="Birth-date" class="col-sm-3 control-label">জম্ম  তারিখ   <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="dofb" id="dofb" class="form-control" placeholder="01-01-1980" required />
+												<input type="date" name="dofb" id="dofb" class="form-control"  required />
 											</div>
 
 										</div>
@@ -872,10 +875,12 @@
 											<label for="Mobile" class="col-sm-3 control-label">মোবাইল    <span>*</span></label>
 											<div class="col-sm-3">
 												<input type="text" name="mob" id="mob" class="form-control" maxlength="11" placeholder="ইংরেজিতে প্রদান করুন" onkeypress="return checkaccnumber(event);"  required />
+												<span class="text-danger error-text mob_error"></span>
 											</div>
 											<label for="Email" class="col-sm-3 control-label">ইমেল </label>
 											<div class="col-sm-3">
 												<input type="text" name="email" id="email" class="form-control" placeholder=""/>
+												<span class="text-danger error-text email_error"></span>
 											</div>
 										</div>
 									</div>
@@ -899,7 +904,7 @@
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
 									<input type="hidden" value="applied" name="status"/>
-										<button type="submit" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">জমা দিন</button>
+										<button type="submit" id="submit_button"  class="btn btn-primary">জমা দিন</button>
 									</div>
 								</div>
 							</form>
@@ -910,5 +915,45 @@
 		</div><!-- left Content End-->
 	</div>
 </div>
+
+
+
+<script src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+
+<script>
+$(function(){
+	$("#upform").on('submit', function(e){
+		e.preventDefault();
+		$.ajax({
+			url:$(this).attr('action'),
+			method:$(this).attr('method'),
+			data: new FormData(this),
+			processData:false,
+			dataType:'json',
+			contentType:false,
+			beforeSend:function(){
+				$(document).field('span.error-text').text('');
+
+			},
+			success:function(data){
+				if(data.status == 0){
+					console.log(data.val);
+					$.each(data.error, function(prefix, val){
+						$('span.' +prefix+ '_error').text(val[0]);
+
+					});
+				}else{
+					$('#upform')[0].reset();
+					alert(data.msg);
+				}
+
+			}
+		});
+	});
+});
+
+
+
+</script>
 @endsection
 </x-home-master>
