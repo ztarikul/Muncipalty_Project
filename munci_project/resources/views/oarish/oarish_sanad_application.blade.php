@@ -65,52 +65,52 @@
 </style>
 <script type="text/javascript"> 
 
-	$("document").ready(function(){
-		$('#warish').submit(function() {
-			document.getElementById('submit_button').disabled = 'disabled';
-			$.post(
-				// "oarishapplication_action URL",
-				$("#warish").serialize(),
-				function(data){
-					if(data !=1){
-						document.getElementById('submit_button').disabled = false;
-					}
-					if(data==1)
-					{
-						alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায় যোগাযোগ করুন'); 
-						window.location='';
+	// $("document").ready(function(){
+	// 	$('#warish').submit(function() {
+	// 		document.getElementById('submit_button').disabled = 'disabled';
+	// 		$.post(
+	// 			// "oarishapplication_action URL",
+	// 			$("#warish").serialize(),
+	// 			function(data){
+	// 				if(data !=1){
+	// 					document.getElementById('submit_button').disabled = false;
+	// 				}
+	// 				if(data==1)
+	// 				{
+	// 					alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায় যোগাযোগ করুন'); 
+	// 					window.location='';
 						
-					} 
-					else if(data==2)
-					{
-						alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
-					}
-					else if(data==3)
-					{
-						alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
-					}
-					else if(data==4)
-					{
-						alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
-					}
-					else if(data==6)
-					{
-						alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
-					}
-					else if(data==5)
-					{
-						alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
-					}
-					else{
-						alert(data);
-					}
-				});
-			return false;
-		});
-		onload_hide_fun();
+	// 				} 
+	// 				else if(data==2)
+	// 				{
+	// 					alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==3)
+	// 				{
+	// 					alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==4)
+	// 				{
+	// 					alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==6)
+	// 				{
+	// 					alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায়  যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==5)
+	// 				{
+	// 					alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+	// 				}
+	// 				else{
+	// 					alert(data);
+	// 				}
+	// 			});
+	// 		return false;
+	// 	});
+	// 	onload_hide_fun();
 		
 		
-	});
+	// });
 
 
 /*========= gender and bybahik obstha hide show function start ========*/
@@ -244,7 +244,7 @@
 		}
 		else{
 			rowNum ++;
-			var row = '<div id="rowNum'+rowNum+'" class="form-group"><div class=" col-sm-2  sub-extra-margin"><input type="text" name="winfo[]" value="'+frm.wname.value+'" class="form-control" /></div><div class=" col-sm-2  sub-extra-margin"><input type="text" name="winfo_en[]" value="'+frm.wname_en.value+'" class="form-control" /></div><div class="col-sm-2 sub-extra-margin"><input type="text" name="wrel[]" value="'+frm.wrel.value+'" class="form-control" /></div><div class="col-sm-2 sub-extra-margin"><input type="text" name="wrel_en[]" value="'+frm.wrel_en.value+'" class="form-control" /></div><div class="col-sm-2 sub-extra-margin"><input type="text" name="wage[]" value="'+frm.wage.value+'" class="form-control" /> </div> <div class="col-sm-2 sub-extra-margin"><input type="button" value="Remove" class="btn btn-danger btn-sm" onclick="removeRow('+rowNum+');" /></div></div>';
+			var row = '<div id="rowNum'+rowNum+'" class="form-group"><div class=" col-sm-2  sub-extra-margin"><input type="text" name="w_name[]" value="'+frm.wname.value+'" class="form-control" /></div><div class=" col-sm-2  sub-extra-margin"><input type="text" name="w_name_en[]" value="'+frm.wname_en.value+'" class="form-control" /></div><div class="col-sm-2 sub-extra-margin"><input type="text" name="w_relation[]" value="'+frm.wrel.value+'" class="form-control" /></div><div class="col-sm-2 sub-extra-margin"><input type="text" name="w_relation_en[]" value="'+frm.wrel_en.value+'" class="form-control" /></div><div class="col-sm-2 sub-extra-margin"><input type="text" name="w_age[]" value="'+frm.wage.value+'" class="form-control" /> </div> <div class="col-sm-2 sub-extra-margin"><input type="button" value="Remove" class="btn btn-danger btn-sm" onclick="removeRow('+rowNum+');" /></div></div>';
 			jQuery('#itemRows').append(row);
 			frm.wname.value = '';
 			frm.wname_en.value = '';
@@ -283,8 +283,8 @@
 						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ওয়ারিশ সনদের আবেদন </div>
 						<div class="panel-body all-input-form">
 						
-							<form action="javascript:void(0)" method="post" enctype="multipart/form-data" id="warish" class="form-horizontal">
-								
+							<form action="{{route('oarish.store')}}" method="post" enctype="multipart/form-data" id="warish" class="form-horizontal">
+								@csrf
 								
 								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								
@@ -312,7 +312,7 @@
 											</div>
 											<label for="birth_day" class="col-sm-3 control-label">জম্ম তারিখ  </label>
 											<div class="col-sm-3">
-												<input type="text" name="dofb" id="dofb" class="form-control" placeholder="01-01-1980" />
+												<input type="date" name="dofb" id="dofb" class="form-control"  />
 											</div>
 										</div>
 										
@@ -926,19 +926,19 @@
 									<div class="col-sm-12"> 
 										<div class="form-group">
 											<div class="col-sm-2   ">
-												<input type="text" name="w_name" id="wname" class="form-control" placeholder="নাম বাংলায়" />
+												<input type="text" name="w_name[]" id="wname" class="form-control" placeholder="নাম বাংলায়" />
 											</div>
 											<div class="col-sm-2  ">
-												<input type="text" name="w_name_en" id="wname_en" class="form-control" placeholder="নাম ইংরেজিতে" />
+												<input type="text" name="w_name_en[]" id="wname_en" class="form-control" placeholder="নাম ইংরেজিতে" />
 											</div>
 											<div class="col-sm-2 ">
-												<input type="text" name="w_relation" id="wrel" class="form-control"  placeholder="সম্পর্ক বাংলায়"/>
+												<input type="text" name="w_relation[]" id="wrel" class="form-control"  placeholder="সম্পর্ক বাংলায়"/>
 											</div>
 											<div class="col-sm-2 ">
-												<input type="text" name="w_relation_en" id="wrel_en" class="form-control" placeholder="সম্পর্ক ইংরেজিতে" />
+												<input type="text" name="w_relation_en[]" id="wrel_en" class="form-control" placeholder="সম্পর্ক ইংরেজিতে" />
 											</div>
 											<div class="col-sm-2 ">
-												<input type="text" name="w_age" minlength="0" maxlength="" id="wage" placeholder="" class="form-control"/>
+												<input type="text" name="w_age[]" minlength="0" maxlength="" id="wage" placeholder="" class="form-control"/>
 											</div>
 											<div class="col-sm-2 "> 
 												<input type="button" name="nwarish" onclick="addRow(this.form);" value='নতুন ওয়ারিশ' class="btn btn-info"/>
