@@ -54,3 +54,4 @@ Route::get('/holding_naam_jari_abedon', [HomeController::class, 'holding_naam_ja
 Route::resource('cityzen', CityzenController::class);
 
 Route::resource('paribarik', ParibarikController::class);
+Route::resource('oarish', OarishController::class);
