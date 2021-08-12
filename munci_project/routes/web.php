@@ -55,3 +55,4 @@ Route::resource('cityzen', CityzenController::class);
 
 Route::resource('paribarik', ParibarikController::class);
 Route::resource('oarish', OarishController::class);
+Route::resource('poshaprani', PoshaPraniController::class);

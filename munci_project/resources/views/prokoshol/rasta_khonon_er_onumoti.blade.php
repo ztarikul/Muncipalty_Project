@@ -55,61 +55,61 @@
 
 </style>
 <script type="text/javascript"> 
-	/*========== reday function start ===========*/
-	$(document).reday(function(){
-		onload_hide_fun();
-	});
-	/*========== reday function  end===========*/
+	// /*========== reday function start ===========*/
+	// $(document).reday(function(){
+	// 	onload_hide_fun();
+	// });
+	// /*========== reday function  end===========*/
 	
-	/*============== ajax request function start =========*/
+	// /*============== ajax request function start =========*/
 	
-	function parsonalinfo_insert()
-	{
-			// this function call submit button onclick event
-		document.getElementById('submit_button').disabled = 'disabled';
-		$.post(
-			"index.php/home/permitapplication_action",
-			$("#info").serialize(),
-		function(data){
-			if(data !=1){
-				document.getElementById('submit_button').disabled = false;
-			}
-			if(data==1)
-			{
-				alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
-				 //setTimeout(function() {
-				window.location='index.php/home/permit_preview'; //}, 1000)
-				//window.location='index.php/Applicant/nagorickapplicant?napply=new'; //}, 1000)
-				// window.open('index.php/home/ppreview','_blank');
-			} 
-			else if(data==2)
-			{
-				alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন');
-			}
-			else if(data==3)
-			{
-				alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন');
-			}
-			else if(data==4)
-			{
-				alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন পাসপোর্ট নং');
-			}
-			else if(data==6)
-			{
-				alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন');
-			}
-			else if(data==5)
-			{
-				alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
-			}
-			else
-			{
-				alert(data);
-			}
-		});
+	// function parsonalinfo_insert()
+	// {
+	// 		// this function call submit button onclick event
+	// 	document.getElementById('submit_button').disabled = 'disabled';
+	// 	$.post(
+	// 		"index.php/home/permitapplication_action",
+	// 		$("#info").serialize(),
+	// 	function(data){
+	// 		if(data !=1){
+	// 			document.getElementById('submit_button').disabled = false;
+	// 		}
+	// 		if(data==1)
+	// 		{
+	// 			alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
+	// 			 //setTimeout(function() {
+	// 			window.location='index.php/home/permit_preview'; //}, 1000)
+	// 			//window.location='index.php/Applicant/nagorickapplicant?napply=new'; //}, 1000)
+	// 			// window.open('index.php/home/ppreview','_blank');
+	// 		} 
+	// 		else if(data==2)
+	// 		{
+	// 			alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==3)
+	// 		{
+	// 			alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==4)
+	// 		{
+	// 			alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন পাসপোর্ট নং');
+	// 		}
+	// 		else if(data==6)
+	// 		{
+	// 			alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার ইউনিয়ন পরিষদ যোগাযোগ করুন');
+	// 		}
+	// 		else if(data==5)
+	// 		{
+	// 			alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+	// 		}
+	// 		else
+	// 		{
+	// 			alert(data);
+	// 		}
+	// 	});
 
-		return false;
-	}
+	// 	return false;
+	// }
 	/*============== ajax request function end =========*/
 
 	
@@ -241,20 +241,6 @@
 						<div class="panel-body all-input-form">
 							<form action="javascript:void(0)" method="post" id="info" class="form-horizontal">
 								
-								<!--
-								<div class="row"> 
-									<div class="col-sm-12" style="margin-bottom:10px;margin-top:10px;"> 
-										<div class="form-group">
-											<label for="Delivery-type" class="col-sm-3 control-label">সরবরাহের ধরণ  <span>*</span></label>
-											<div class="col-sm-9">
-												<label class="radio-inline"><input type="radio" name="delivery_type" value="1" >জরুরী</label>
-												<label class="radio-inline"><input type="radio" name="delivery_type" value="2">অতি জরুরী  </label>
-												<label class="radio-inline"><input type="radio" name="delivery_type" value="3" checked="checked"> সাধারন</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								-->
 								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12">
