@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EmarotPukur;
 use Illuminate\Http\Request;
 use App\Models\RastaKhonon;
 use App\Models\HoldingNaamJari;
 use App\Models\NotunHolding;
+use App\Models\VumiBeboharCharpotro;
 
 class ProkosholController extends Controller
 {
@@ -31,9 +33,32 @@ class ProkosholController extends Controller
    public function notun_holding(Request $request){
     // 
     // dd($request);
-  $inputs = $request->all();
-  $notun_holding = new NotunHolding($inputs);
-  $notun_holding->save();
-  return redirect()->route('home');
- }
+    $inputs = $request->all();
+    $notun_holding = new NotunHolding($inputs);
+    $notun_holding->save();
+    return redirect()->route('home');
+   }
+
+
+   public function emarot_pukur_application(Request $request){
+    // 
+    // dd($request);
+    $inputs = $request->all();
+    $emarot_pukur = new EmarotPukur($inputs);
+    $emarot_pukur->save();
+    return redirect()->route('home');
+   }
+
+
+   public function vumi_bebohar_charpto(Request $request){
+    // 
+    // dd($request);
+    $inputs = $request->all();
+    $vumi_bebohar = new VumiBeboharCharpotro($inputs);
+    $vumi_bebohar->save();
+    return redirect()->route('home');
+   }
+
+
+ 
 }

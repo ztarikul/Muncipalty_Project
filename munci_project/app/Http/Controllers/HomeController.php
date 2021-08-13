@@ -158,22 +158,22 @@ class HomeController extends Controller
 
     public function rasta_khonon_er_onumoti()
     {
-        return view('prukoshol.rasta_khonon_er_onumoti');
+        return view('prokoshol.rasta_khonon_er_onumoti');
     }
     public function emaratnirman_pukurkhonon_vorat_abedon()
     {
-        return view('prukoshol.emaratnirman_pukurkhonon_vorat_abedon');
+        return view('prokoshol.emaratnirman_pukurkhonon_vorat_abedon');
     }
     public function vumi_bebohar_char_potrer_abedon()
     {
-        return view('prukoshol.vumi_bebohar_char_potrer_abedon');
+        return view('prokoshol.vumi_bebohar_char_potrer_abedon');
     }
     public function notun_holding_abedon()
     {
-        return view('prukoshol.notun_holding_abedon');
+        return view('prokoshol.notun_holding_abedon');
     }
     public function holding_naam_jari_abedon()
     {
-        return view('prukoshol.holding_naam_jari_abedon');
+        return view('prokoshol.holding_naam_jari_abedon');
     }
 }
