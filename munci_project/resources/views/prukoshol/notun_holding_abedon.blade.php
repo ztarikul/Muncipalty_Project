@@ -77,58 +77,58 @@
 	}
 </script>
 <script type="text/javascript"> 
-	/*======= ready function start ==========*/
-		$(document).ready(function(){
-			$(".samir_nam").hide();
-			$("#other_owner").hide();
-			$("#inpucompany").hide();
+	// /*======= ready function start ==========*/
+	// 	$(document).ready(function(){
+	// 		$(".samir_nam").hide();
+	// 		$("#other_owner").hide();
+	// 		$("#inpucompany").hide();
 			
-			$('#info').submit(function() {
-				document.getElementById('submit_button').disabled = 'disabled';
-				$.post(
-				"newholdingapplication",
-				$("#info").serialize(),
-				function(data){
-					if(data !=1){
-						document.getElementById('submit_button').disabled = false;
-					}
-					if(data==1)
-					{
-						alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
+	// 		$('#info').submit(function() {
+	// 			document.getElementById('submit_button').disabled = 'disabled';
+	// 			$.post(
+	// 			"newholdingapplication",
+	// 			$("#info").serialize(),
+	// 			function(data){
+	// 				if(data !=1){
+	// 					document.getElementById('submit_button').disabled = false;
+	// 				}
+	// 				if(data==1)
+	// 				{
+	// 					alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
 
-						window.location='index.php/home/newholdinpreview';
-						<!-- window.open('index.php/home/tpreview','_blank');----->
-							//setTimeout(function() {
-						//}, 1000)
-					} 
-					else if(data==2)
-					{
-						alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==3)
-					{
-						alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==4)
-					{
-						alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
-					}
-					else if(data==6)
-					{
-						alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==5)
-					{
-						alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
-					}
-					else{
-						alert(data);
-					}
-				});
-					return false;
-			});
+	// 					window.location='index.php/home/newholdinpreview';
+	// 					<!-- window.open('index.php/home/tpreview','_blank');----->
+	// 						//setTimeout(function() {
+	// 					//}, 1000)
+	// 				} 
+	// 				else if(data==2)
+	// 				{
+	// 					alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==3)
+	// 				{
+	// 					alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==4)
+	// 				{
+	// 					alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
+	// 				}
+	// 				else if(data==6)
+	// 				{
+	// 					alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+	// 				}
+	// 				else if(data==5)
+	// 				{
+	// 					alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+	// 				}
+	// 				else{
+	// 					alert(data);
+	// 				}
+	// 			});
+	// 				return false;
+	// 		});
 	
-		});
+	// 	});
 	
 
 	function bybahik_obosthan_show(mstatus){
@@ -231,24 +231,26 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">নতুন হোল্ডিং আবেদন</div>
 						<div class="panel-body all-input-form">
-							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
-								<div class="row"  style="margin-top: 10px;">
+							<form action="{{route('notun_holding.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							@csrf	
+							
+							<div class="row"  style="margin-top: 10px;">
 									<div class="col-sm-12"> 
 										<div class="form-group">
 											<label for="Picture" class="col-sm-3 control-label">ছবি</label>
 											<div class="col-sm-5" style="margin-top:3px;">
 												<input type="file" name="file" class="form-control input-file-sm" />
 											</div>
-											<div class="col-sm-3" style="margin-top:3px;">
+											<!-- <div class="col-sm-3" style="margin-top:3px;">
 												<button  onclick="return ajaxUpload(this.form,'index.php/home/profile_upload', '&lt;br&gt;Uploading image please wait.....&lt;br&gt;'); return false;" name='upload' class="btn btn-primary">আপলোড</button>
-											</div>
+											</div> -->
 											<div class="clearfix"> </div>
 										</div>
 									</div>
 								</div>
-							</form>
+							
 						
-							<form action="index.php/home/newholdingapplication_action" method="post" id="info" enctype="multipart/form-data" class="form-horizontal">
+							
 							
 								<div class="row"> 
 									<div class=" col-sm-offset-5 col-sm-7" id="UPLOAD">
@@ -284,14 +286,14 @@
 											<div class="form-group">
 												<label for="Gender" class="col-sm-3 control-label">লিঙ্গ   <span>*</span></label>
 												<div class="col-sm-3">
-													<label class="radio-inline"><input type="radio" name="gender[]" id="gender" value="male" onclick="bybahik_obosthan_show1(this.value);">পুরুষ </label>
-													<label class="radio-inline"><input type="radio" name="gender[]" id="gender" value="female" onclick="bybahik_obosthan_show1(this.value);">মহিলা</label>
-													<label class="radio-inline"><input type="radio" name="gender[]" id="gender" value="তৃতীয় লিঙ্গ" onclick="bybahik_obosthan_show1(this.value);">তৃতীয় লিঙ্গ</label>
+													<label class="radio-inline"><input type="radio" name="gender" id="gender" value="male" onclick="bybahik_obosthan_show1(this.value);">পুরুষ </label>
+													<label class="radio-inline"><input type="radio" name="gender" id="gender" value="female" onclick="bybahik_obosthan_show1(this.value);">মহিলা</label>
+													<label class="radio-inline"><input type="radio" name="gender" id="gender" value="তৃতীয় লিঙ্গ" onclick="bybahik_obosthan_show1(this.value);">তৃতীয় লিঙ্গ</label>
 												</div>
 												<label for="Marital-status" class="col-sm-3 control-label">বৈবাহিক সম্পর্ক   <span>*</span></label>
 												<div class="col-sm-3">
-													<label class="radio-inline"><input type="radio" name="mstatus[]" id="mstatus" value="বিবাহিত" onclick="bybahik_obosthan_show('1');">বিবাহিত </label>
-													<label class="radio-inline"><input type="radio" name="mstatus[]" id="mstatus" value="অবিবাহিত" onclick="bybahik_obosthan_show('2');">অবিবাহিত</label>
+													<label class="radio-inline"><input type="radio" name="mstatus" id="mstatus" value="বিবাহিত" onclick="bybahik_obosthan_show('1');">বিবাহিত </label>
+													<label class="radio-inline"><input type="radio" name="mstatus" id="mstatus" value="অবিবাহিত" onclick="bybahik_obosthan_show('2');">অবিবাহিত</label>
 												</div>
 											</div>
 										</div>
@@ -303,11 +305,11 @@
 											<div class="form-group">
 												<label for="Father-name-english" class="col-sm-3 control-label">পিতার নাম (ইংরেজিতে)</label>
 												<div class="col-sm-3">
-													<input type="text" name="efname[]" id="efname" class="form-control" placeholder=""/>
+													<input type="text" name="efname" id="efname" class="form-control" placeholder=""/>
 												</div>
 												<label for="Father-name-bangla" class="col-sm-3 control-label">পিতার নাম (বাংলায়)  <span>*</span></label>
 												<div class="col-sm-3">
-													<input type="text" name="bfname[]" id="bfname" class="form-control" placeholder="" />
+													<input type="text" name="bfname" id="bfname" class="form-control" placeholder="" />
 												</div>
 											</div>
 										</div>
@@ -318,11 +320,11 @@
 											<div class="form-group">
 												<label for="Husband-name-english" class="col-sm-3 control-label">স্বামীর নাম (ইংরেজিতে)</label>
 												<div class="col-sm-3">
-													<input type="text" name="esname[]" id="esname" class="form-control" placeholder=""/>
+													<input type="text" name="esname" id="esname" class="form-control" placeholder=""/>
 												</div>
 												<label for="Husband-name-bangla" class="col-sm-3 control-label"> স্বামী নাম (বাংলায়)</label>
 												<div class="col-sm-3">
-													<input type="text" name="bsname[]" id="bsname" class="form-control" placeholder="" />
+													<input type="text" name="bsname" id="bsname" class="form-control" placeholder="" />
 												</div>
 											</div>
 										</div>
@@ -333,11 +335,11 @@
 											<div class="form-group">
 												<label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে)  </label>
 												<div class="col-sm-3">
-													<input type="text" name="emname[]" id="emname" class="form-control" placeholder=""/>
+													<input type="text" name="emname" id="emname" class="form-control" placeholder=""/>
 												</div>
 												<label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  <span>*</span></label>
 												<div class="col-sm-3">
-													<input type="text" name="bmname[]" id="bmname" class="form-control" placeholder="" />
+													<input type="text" name="bmname" id="bmname" class="form-control" placeholder="" />
 												</div>
 											</div>
 										</div>
@@ -383,7 +385,7 @@
 											</div>
 											<label for="Tax-id" class="col-sm-3 control-label">প্রস্তাবিত হোল্ডিং এর নির্মাণ তারিখ</label>
 											<div class="col-sm-3">
-												<input type="text" name="taxid" id="taxid" class="form-control"  placeholder="" />
+												<input type="date" name="taxid" id="taxid" class="form-control"  placeholder="" />
 											</div>
 										</div>
 										
@@ -466,7 +468,7 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="save" id="submit_button" class="btn btn-primary">জমা দিন</button>
+										<button type="submit" id="submit_button" class="btn btn-primary">জমা দিন</button>
 									</div>
 								</div>
 							</form>

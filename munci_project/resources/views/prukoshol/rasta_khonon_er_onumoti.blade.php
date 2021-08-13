@@ -239,8 +239,8 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">রাস্তা খননের অনুমতি </div>
 						<div class="panel-body all-input-form">
-							<form action="javascript:void(0)" method="post" id="info" class="form-horizontal">
-								
+							<form action="{{route('rasta_khonon.store')}}" method="post" id="info" class="form-horizontal">
+								@csrf
 								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12">
@@ -258,7 +258,7 @@
 												<div class="form-group">
 													<label  class="col-sm-4 control-label">পিতা/ স্বামীর নাম <span> *</span></label>
 													<div class="col-sm-6">
-														<input type="text" name="fatger_husband_name" id="fatger_husband_name" class="form-control" placeholder="পিতা/ স্বামী" required/>
+														<input type="text" name="father_husband_name" id="father_husband_name" class="form-control" placeholder="পিতা/ স্বামী" required/>
 													</div>
 												</div>
 										
@@ -389,7 +389,7 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">দাখিল করুন</button>
+										<button type="submit"  id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">দাখিল করুন</button>
 									</div>
 								</div>
 							</form>
