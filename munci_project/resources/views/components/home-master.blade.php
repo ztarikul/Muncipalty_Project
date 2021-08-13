@@ -135,7 +135,7 @@
                                         </li>
 										
                                         <li><a href="http://nothi.gov.bd/dak_nagoriks/NagorikAbedon" target='_blank'>অভিযোগ</a></li>
-                                        <li><a href="contact">যোগাযোগ</a></li>
+                                        <li><a href="{{route('jogajog.form')}}">যোগাযোগ</a></li>
                                                                          
                                 </ul>
                             </nav>

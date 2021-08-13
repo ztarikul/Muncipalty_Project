@@ -78,58 +78,58 @@
 </script>
 <script type="text/javascript"> 
 	/*======= ready function start ==========*/
-		$(document).ready(function(){
-			$(".samir_nam").hide();
-			$("#other_owner").hide();
-			$("#inpucompany").hide();
+		// $(document).ready(function(){
+		// 	$(".samir_nam").hide();
+		// 	$("#other_owner").hide();
+		// 	$("#inpucompany").hide();
 			
-			$('#info').submit(function() {
-				document.getElementById('submit_button').disabled = 'disabled';
-				$.post(
-				"holdnamjariapplication_action", //route()
-				$("#info").serialize(),
-				function(data){
-					if(data !=1){
-						document.getElementById('submit_button').disabled = false;
-					}
-					if(data==1)
-					{
-						alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
+		// 	$('#info').submit(function() {
+		// 		document.getElementById('submit_button').disabled = 'disabled';
+		// 		$.post(
+		// 		"holdnamjariapplication_action", //route()
+		// 		$("#info").serialize(),
+		// 		function(data){
+		// 			if(data !=1){
+		// 				document.getElementById('submit_button').disabled = false;
+		// 			}
+		// 			if(data==1)
+		// 			{
+		// 				alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
 
-						window.location='route_success';
-						<!-- window.open('success','_blank');----->
-							//setTimeout(function() {
-						//}, 1000)
-					} 
-					else if(data==2)
-					{
-						alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==3)
-					{
-						alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==4)
-					{
-						alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
-					}
-					else if(data==6)
-					{
-						alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==5)
-					{
-						alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
-					}
-					else{
-						alert(data);
-					}
-				});
-					return false;
-			});
+		// 				window.location='route_success';
+		// 				<!-- window.open('success','_blank');----->
+		// 					//setTimeout(function() {
+		// 				//}, 1000)
+		// 			} 
+		// 			else if(data==2)
+		// 			{
+		// 				alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+		// 			}
+		// 			else if(data==3)
+		// 			{
+		// 				alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+		// 			}
+		// 			else if(data==4)
+		// 			{
+		// 				alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
+		// 			}
+		// 			else if(data==6)
+		// 			{
+		// 				alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+		// 			}
+		// 			else if(data==5)
+		// 			{
+		// 				alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+		// 			}
+		// 			else{
+		// 				alert(data);
+		// 			}
+		// 		});
+		// 			return false;
+		// 	});
 	
 
-		});
+		// });
 	
 
 	 function getType(x)
@@ -161,8 +161,8 @@
 						<div class="panel-body all-input-form">
 							
 						
-							<form action="index.php/home/holdnamjariapplication_action" method="post" id="info" enctype="multipart/form-data" class="form-horizontal">
-
+							<form action="{{route('holding_naam_jari.store')}}" method="post" id="info" enctype="multipart/form-data" class="form-horizontal">
+                             @csrf
 								<input type="hidden" name="delivery_type" value="3" checked="checked">
 
 								<div class="row">
@@ -350,7 +350,7 @@
 											</div>
 											<label for="reg_date" class="col-sm-3 control-label">রেজিঃ তারিখ</label>
 											<div class="col-sm-3">
-												<input type="text" name="reg_date" id="reg_date" class="form-control"  placeholder=""/>
+												<input type="date" name="reg_date" id="reg_date" class="form-control"  placeholder=""/>
 											</div>
 										</div>
 									</div>
@@ -495,7 +495,7 @@
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-											<label for="Mobile" class="col-sm-3 control-label">মোবাইল    <span>*</span></label>
+											<label for="Mobile" class="col-sm-3 control-label">মোবাইল<span>*</span></label>
 											<div class="col-sm-3">
 												<input type="text" name="mobile" id="mob" class="form-control" maxlength="11" placeholder="ইংরেজিতে প্রদান করুন"  onkeypress="return checkaccnumber(event);" required />
 											</div>
@@ -522,15 +522,15 @@
 
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="save" id="submit_button" class="btn btn-primary">জমা দিন</button>
+										<button type="submit"  id="submit_button" class="btn btn-primary">জমা দিন</button>
 									</div>
 								</div>
 							</form>
-						</div><!-- panel-body-end---->
-					</div><!--- end of panel primary- submit_button-->
-				</div><!-- end of col-md-12---->
-			</div><!-- row end--->
-		</div><!-- left Content End-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 </div>
 @endsection

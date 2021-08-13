@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProkosholController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,8 +52,15 @@ Route::get('/notun_holding_abedon', [HomeController::class, 'notun_holding_abedo
 Route::get('/holding_naam_jari_abedon', [HomeController::class, 'holding_naam_jari_abedon'])->name('holding_naam_jari_abedon.form');
 
 
+
+Route::get('/jogajog', [HomeController::class, 'jogajog'])->name('jogajog.form');
+
 Route::resource('cityzen', CityzenController::class);
 
 Route::resource('paribarik', ParibarikController::class);
 Route::resource('oarish', OarishController::class);
 Route::resource('poshaprani', PoshaPraniController::class);
+
+Route::post('/rasta_khonon', [ProkosholController::class,'rasta_khonon_store'])->name('rasta_khonon.store'); 
+Route::post('/notun_holding', [ProkosholController::class,'notun_holding'])->name('notun_holding.store'); 
+Route::post('/holding_naam_jari', [ProkosholController::class,'holding_naam_jari_store'])->name('holding_naam_jari.store'); 
