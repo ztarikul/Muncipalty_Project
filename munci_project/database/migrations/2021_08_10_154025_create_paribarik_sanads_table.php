@@ -15,6 +15,7 @@ class CreateParibarikSanadsTable extends Migration
     {
         Schema::create('paribarik_sanads', function (Blueprint $table) {
             $table->id();
+            $table->string('tracking_id')->nullable();
             $table->string('delivery_type')->nullable();
             $table->string('nationid')->nullable();
             $table->string('bcno')->nullable();

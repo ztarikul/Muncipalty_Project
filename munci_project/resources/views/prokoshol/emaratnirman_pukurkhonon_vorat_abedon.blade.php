@@ -169,7 +169,8 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ইমারত নির্মাণ/সীমানা দেয়াল/বিবিধ নির্মাণ/পূণঃ নির্মাণ এবং পুকুর খনন/ভরাট/পাহাড় কর্তণ আবেদন পত্র</div>
 						<div class="panel-body all-input-form">
-							<form action="javascript:void(0)" method="post" id="info" class="form-horizontal">
+							<form action="{{route('prokoshol.emarot_pukur_application')}}" method="post" id="info" class="form-horizontal">
+								@csrf
 								
 								
 								
@@ -628,7 +629,7 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-primary">জমা দিন</button>
+										<button type="submit"  id="submit_button" class="btn btn-primary">জমা দিন</button>
 									</div>
 								</div>
 							</form>

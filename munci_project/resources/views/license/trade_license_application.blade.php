@@ -84,46 +84,46 @@
 			$("#other_owner").hide();
 			$("#inpucompany").hide();
 			
-			$('#info').submit(function() {
-				document.getElementById('submit_button').disabled = 'disabled';
-				$.post(
-				$("#info").serialize(),
-				function(data){
-					if(data !=1){
-						document.getElementById('submit_button').disabled = false;
-					}
-					if(data==1)
-					{
-						alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
+			// $('#info').submit(function() {
+			// 	document.getElementById('submit_button').disabled = 'disabled';
+			// 	$.post(
+			// 	$("#info").serialize(),
+			// 	function(data){
+			// 		if(data !=1){
+			// 			document.getElementById('submit_button').disabled = false;
+			// 		}
+			// 		if(data==1)
+			// 		{
+			// 			alert('আপনার আবেদনটি গৃহীত হয়েছে\n Tracking No টি নিয়ে আপনার পৌরসভায়\n যোগাযোগ করুন');
 
 		
-					} 
-					else if(data==2)
-					{
-						alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==3)
-					{
-						alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==4)
-					{
-						alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
-					}
-					else if(data==6)
-					{
-						alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
-					}
-					else if(data==5)
-					{
-						alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
-					}
-					else{
-						alert(data);
-					}
-				});
-					return false;
-			});
+			// 		} 
+			// 		else if(data==2)
+			// 		{
+			// 			alert('দুঃখিত আপানর জাতিয় পরিচয়পত্র নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+			// 		}
+			// 		else if(data==3)
+			// 		{
+			// 			alert('দুঃখিত আপানর জন্ম নিবধন নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+			// 		}
+			// 		else if(data==4)
+			// 		{
+			// 			alert('দুঃখিত আপানর পাসপোর্ট নং পূর্বে ব্যাবহার করা হয়েছে \nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন পাসপোর্ট নং');
+			// 		}
+			// 		else if(data==6)
+			// 		{
+			// 			alert('দুঃখিত আপানর মোবাইল নাম্বারটি পূর্বে ব্যাবহার করা হয়েছে.\nTracking No এর  জন্য আপনার পৌরসভায় যোগাযোগ করুন');
+			// 		}
+			// 		else if(data==5)
+			// 		{
+			// 			alert('দয়া করে আপনার সঠিক মোবাইল নাম্বারটি ব্যাবহার করুন');
+			// 		}
+			// 		else{
+			// 			alert(data);
+			// 		}
+			// 	});
+			// 		return false;
+			// });
 	
 	/*====== Institie owner type change function start ============*/
 			$("#type_val").change(function(){
@@ -180,8 +180,9 @@
 		}
 		else if(mstatus=='1' && gender=='female'){
 			//alert("husband name show");
+			("#pitar_nam").show();
 			$("#pitar_nam input:text").val("");
-			$("#pitar_nam").hide();
+			
 			$(".samir_nam").show();
 		}
 		else if(mstatus=='2' && gender=='female'){
@@ -203,25 +204,26 @@
 	
 	function bybahik_obosthan_show1(gender){
 		var mstatus=$("#mstatus:checked").val();
-		if(mstatus=='বিবাহিত' && gender=='male'){
+		if(mstatus=='1' && gender=='male'){
 			//alert('Fahter name show');
 			$("#pitar_nam").show();
 			$(".samir_nam input:text").val('');
 			$(".samir_nam").hide();
 		}
-		else if(mstatus=='বিবাহিত' && gender=='female'){
+		else if(mstatus=='1' && gender=='female'){
 			//alert('Husband name show');
+			$("#pitar_nam").show();
 			$("#pitar_nam input:text").val('');
-			$("#pitar_nam").hide();
+			
 			$(".samir_nam").show();
 		}
-		else if(mstatus=='অবিবাহিত' && gender=='female'){
+		else if(mstatus=='2' && gender=='female'){
 			//alert('Father name show');
 			$("#pitar_nam").show();
 			$(".samir_nam input:text").val('');
 			$(".samir_nam").hide();
 		}
-		else if(mstatus=='অবিবাহিত' && gender=='male'){
+		else if(mstatus=='2' && gender=='male'){
 			//alert('Father name show ');
 			$("#pitar_nam").show();
 			$(".samir_nam input:text").val('');
@@ -236,6 +238,8 @@
 	function addRow(frm){
 		var bwname=document.getElementById("bwname").value;
 		var ewname=document.getElementById("ewname").value;
+		var bsname=document.getElementById("bsname").value;
+		var esname=document.getElementById("esname").value;
 		var gender=$("#gender:checked").val();
 		var mstatus=$("#mstatus:checked").val();
 		if(bwname==''){
@@ -244,12 +248,12 @@
 
 		else{
 			rowNum ++;
-			if(gender=='female' && mstatus=='বিবাহিত'){
+			if(gender=='female' && mstatus=='1'){
 				//alert(mstatus);
-				var row='<div class="clear_all" id="rowNum'+rowNum+'"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Owner-name-english" class="col-sm-3 control-label">মালিকের নাম ( ইংরেজিতে ) </label><div class="col-sm-3"><input type="text" name="ewname[]" value="'+frm.ewname.value+'" class="form-control" /></div><label for="Owner-name-bangla" class="col-sm-3 control-label">মালিকের নাম ( বাংলায় ) </label><div class="col-sm-3"><input type="text" name="bwname[]" value="'+frm.bwname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Gender" class="col-sm-3 control-label">লিঙ্গ</label><div class="col-sm-3"><input type="text" name="gender[]" value="'+frm.gender.value+'" class="form-control" /></div><label for="Marital-status" class="col-sm-3 control-label"> বৈবাহিক সম্পর্ক </label><div class="col-sm-3"><input type="text" name="mstatus[]" value="'+frm.mstatus.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Husband-name-english" class="col-sm-3 control-label">স্বামীর নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="esname[]" value="'+frm.esname.value+'" class="form-control" /></div><label for="Husband-name-bangla" class="col-sm-3 control-label"> স্বামী নাম (বাংলায়) </label><div class="col-sm-3"><input type="text" name="bsname[]" value="'+frm.bsname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="emname[]" value="'+frm.emname.value+'" class="form-control" /></div><label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  </label><div class="col-sm-3"><input type="text" name="bmname[]" value="'+frm.bmname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><div class="col-sm-3 col-sm-offset-9"><input type="button" class="btn btn-danger btn-xs" value="Remove" onclick="removeRow('+rowNum+');" /></div></div></div></div></div>';
+				var row='<div class="clear_all" id="rowNum'+rowNum+'"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Owner-name-english" class="col-sm-3 control-label">মালিকের নাম ( ইংরেজিতে ) </label><div class="col-sm-3"><input type="text" name="ewname[]" value="'+frm.ewname.value+'" class="form-control" /></div><label for="Owner-name-bangla" class="col-sm-3 control-label">মালিকের নাম ( বাংলায় ) </label><div class="col-sm-3"><input type="text" name="bwname[]" value="'+frm.bwname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Gender" class="col-sm-3 control-label">লিঙ্গ</label><div class="col-sm-3"><input type="text" name="gender[]" value="'+frm.gender.value+'" class="form-control" /></div><label for="Marital-status" class="col-sm-3 control-label"> বৈবাহিক সম্পর্ক </label><div class="col-sm-3"><input type="text" name="mstatus[]" value="'+frm.mstatus.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Husband-name-english" class="col-sm-3 control-label">স্বামীর নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="esname[]" value="'+frm.esname.value+'" class="form-control" /></div><label for="Husband-name-bangla" class="col-sm-3 control-label"> স্বামী নাম (বাংলায়) </label><div class="col-sm-3"><input type="text" name="bsname[]" value="'+frm.bsname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Father-name-english" class="col-sm-3 control-label">পিতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="efname[]" value="'+frm.efname.value+'" class="form-control" /></div><label for="Father-name-bangla" class="col-sm-3 control-label"> পিতার নাম (বাংলায়) </label><div class="col-sm-3"><input type="text" name="bfname[]" value="'+frm.bfname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="emname[]" value="'+frm.emname.value+'" class="form-control" /></div><label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  </label><div class="col-sm-3"><input type="text" name="bmname[]" value="'+frm.bmname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><div class="col-sm-3 col-sm-offset-9"><input type="button" class="btn btn-danger btn-xs" value="Remove" onclick="removeRow('+rowNum+');" /></div></div></div></div></div>';
 			}
 			else{
-				var row='<div class="clear_all" id="rowNum'+rowNum+'"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Owner-name-english" class="col-sm-3 control-label">মালিকের নাম ( ইংরেজিতে ) </label><div class="col-sm-3"><input type="text" name="ewname[]" value="'+frm.ewname.value+'" class="form-control" /></div><label for="Owner-name-bangla" class="col-sm-3 control-label">মালিকের নাম ( বাংলায় ) </label><div class="col-sm-3"><input type="text" name="bwname[]" value="'+frm.bwname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Gender" class="col-sm-3 control-label">লিঙ্গ</label><div class="col-sm-3"><input type="text" name="gender[]" value="'+frm.gender.value+'" class="form-control" /></div><label for="Marital-status" class="col-sm-3 control-label"> বৈবাহিক সম্পর্ক </label><div class="col-sm-3"><input type="text" name="mstatus[]" value="'+frm.mstatus.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Father-name-english" class="col-sm-3 control-label">পিতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="efname[]" value="'+frm.efname.value+'" class="form-control" /></div><label for="Father-name-bangla" class="col-sm-3 control-label"> পিতার নাম (বাংলায়) </label><div class="col-sm-3"><input type="text" name="bfname[]" value="'+frm.bfname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="emname[]" value="'+frm.emname.value+'" class="form-control" /></div><label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  </label><div class="col-sm-3"><input type="text" name="bmname[]" value="'+frm.bmname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><div class="col-sm-3 col-sm-offset-9"><input type="button" class="btn btn-danger btn-xs" value="Remove" onclick="removeRow('+rowNum+');" /></div></div></div></div></div>';
+				var row='<div class="clear_all" id="rowNum'+rowNum+'"><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Owner-name-english" class="col-sm-3 control-label">মালিকের নাম ( ইংরেজিতে ) </label><div class="col-sm-3"><input type="text" name="ewname[]" value="'+frm.ewname.value+'" class="form-control" /></div><label for="Owner-name-bangla" class="col-sm-3 control-label">মালিকের নাম ( বাংলায় ) </label><div class="col-sm-3"><input type="text" name="bwname[]" value="'+frm.bwname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Gender" class="col-sm-3 control-label">লিঙ্গ</label><div class="col-sm-3"><input type="text" name="gender[]" value="'+frm.gender.value+'" class="form-control" /></div><label for="Marital-status" class="col-sm-3 control-label"> বৈবাহিক সম্পর্ক </label><div class="col-sm-3"><input type="text" name="mstatus[]" value="'+frm.mstatus.value+'" class="form-control" /></div></div></div></div><input type="hidden" name="esname[]" value="'+frm.esname.value+'" class="form-control" /><input type="hidden" name="bsname[]" value="'+frm.bsname.value+'" class="form-control" /><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Father-name-english" class="col-sm-3 control-label">পিতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="efname[]" value="'+frm.efname.value+'" class="form-control" /></div><label for="Father-name-bangla" class="col-sm-3 control-label"> পিতার নাম (বাংলায়) </label><div class="col-sm-3"><input type="text" name="bfname[]" value="'+frm.bfname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে) </label><div class="col-sm-3"><input type="text" name="emname[]" value="'+frm.emname.value+'" class="form-control" /></div><label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  </label><div class="col-sm-3"><input type="text" name="bmname[]" value="'+frm.bmname.value+'" class="form-control" /></div></div></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><div class="col-sm-3 col-sm-offset-9"><input type="button" class="btn btn-danger btn-xs" value="Remove" onclick="removeRow('+rowNum+');" /></div></div></div></div></div>';
 			}
 			jQuery('#itemRows').append(row);
 			clear_form_elements("clearall"); // this function clear all input 
@@ -291,7 +295,8 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ট্রেড লাইসেন্স আবেদন</div>
 						<div class="panel-body all-input-form">
-							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							<form action="{{route('tradelicense.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							@csrf
 								<div class="row"  style="margin-top: 10px;">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -322,7 +327,11 @@
 											<label for="Owner-type" class="col-sm-3 control-label">প্রতিষ্ঠানের মালিকানার ধরণ <span>*</span></label>
 											<div class="col-sm-3">
 												<select name="ownertype" id="type_val" class="form-control">
-                                                    >
+												<option value="">চিহ্নিত করুন</option>
+												<option value="1">ব্যক্তি মালিকানাধীন</option>
+												<option value="2">যৌথ মালিকানা</option>
+												<option value="3">কোম্পানী</option>
+												</select>
 											</div>
 											<label for="holding_no" class="col-sm-3 control-label">হোল্ডিং নং </label>
 											<div class="col-sm-3">
@@ -375,8 +384,8 @@
 												</div>
 												<label for="Marital-status" class="col-sm-3 control-label">বৈবাহিক সম্পর্ক   <span>*</span></label>
 												<div class="col-sm-3">
-													<label class="radio-inline"><input type="radio" name="mstatus[]" id="mstatus" value="বিবাহিত" onclick="bybahik_obosthan_show('1');">বিবাহিত </label>
-													<label class="radio-inline"><input type="radio" name="mstatus[]" id="mstatus" value="অবিবাহিত" onclick="bybahik_obosthan_show('2');">অবিবাহিত</label>
+													<label class="radio-inline"><input type="radio" name="mstatus[]" id="mstatus" value="1" onclick="bybahik_obosthan_show('1');">বিবাহিত </label>
+													<label class="radio-inline"><input type="radio" name="mstatus[]" id="mstatus" value="2" onclick="bybahik_obosthan_show('2');">অবিবাহিত</label>
 												</div>
 											</div>
 										</div>
@@ -810,7 +819,7 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="save" id="submit_button" class="btn btn-primary">দাখিল করুন</button>
+										<button type="submit"  id="submit_button" class="btn btn-primary">দাখিল করুন</button>
 									</div>
 								</div>
 							</form>

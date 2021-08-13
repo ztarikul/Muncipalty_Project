@@ -15,6 +15,7 @@ class CreateOarishSanadsTable extends Migration
     {
         Schema::create('oarish_sanads', function (Blueprint $table) {
             $table->id();
+            $table->string('tracking_id')->nullable();
             $table->string('delivery_type')->nullable();
             $table->string('nationid')->nullable()->unique();
             $table->string('bcno')->nullable();
