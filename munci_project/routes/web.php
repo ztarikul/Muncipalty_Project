@@ -58,9 +58,14 @@ Route::get('/jogajog', [HomeController::class, 'jogajog'])->name('jogajog.form')
 Route::resource('cityzen', CityzenController::class);
 
 Route::resource('paribarik', ParibarikController::class);
+
 Route::resource('oarish', OarishController::class);
+
 Route::resource('poshaprani', PoshaPraniController::class);
 
 Route::post('/rasta_khonon', [ProkosholController::class,'rasta_khonon_store'])->name('rasta_khonon.store'); 
 Route::post('/notun_holding', [ProkosholController::class,'notun_holding'])->name('notun_holding.store'); 
-Route::post('/holding_naam_jari', [ProkosholController::class,'holding_naam_jari_store'])->name('holding_naam_jari.store'); 
+Route::post('/holding_naam_jari', [ProkosholController::class,'holding_naam_jari_store'])->name('holding_naam_jari.store');
+
+Route::post('/emarot_pukur_application', [ProkosholController::class, 'emarot_pukur_application'])->name('prokoshol.emarot_pukur_application');
+Route::post('/vumi_bebohar_charpto', [ProkosholController::class, 'vumi_bebohar_charpto'])->name('prokoshol.vumi_bebohar_charpto');
