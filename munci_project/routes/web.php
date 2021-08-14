@@ -63,6 +63,9 @@ Route::resource('oarish', OarishController::class);
 
 Route::resource('poshaprani', PoshaPraniController::class);
 
+Route::resource('tradelicense', TradeLicenseController::class);
+Route::post('/primisis_license', 'TradeLicenseController@primisis_license_store')->name('primisis_license.store'); 
+
 Route::post('/rasta_khonon', [ProkosholController::class,'rasta_khonon_store'])->name('rasta_khonon.store'); 
 Route::post('/notun_holding', [ProkosholController::class,'notun_holding'])->name('notun_holding.store'); 
 Route::post('/holding_naam_jari', [ProkosholController::class,'holding_naam_jari_store'])->name('holding_naam_jari.store');

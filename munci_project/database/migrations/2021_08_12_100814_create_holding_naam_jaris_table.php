@@ -49,7 +49,7 @@ class CreateHoldingNaamJarisTable extends Migration
             $table->string('family_amount')->nullable();
             $table->string('condition')->nullable();
             $table->string('monthly_rantrate')->nullable();
-            $table->string('rant_lastdate')->nullable();
+            $table->date('rant_lastdate')->nullable();
             $table->string('applicant_other')->nullable();
             $table->string('gr_no_date')->nullable();
             $table->string('mobile')->nullable();

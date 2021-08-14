@@ -147,7 +147,7 @@ class HomeController extends Controller
     }
     public function primisis_sanad()
     {
-        return view('license.primisis_sanad');
+        return view('license.primisis_license');
     }
     public function posha_pranir_license()
     {
