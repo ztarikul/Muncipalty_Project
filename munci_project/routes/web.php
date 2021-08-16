@@ -84,3 +84,4 @@ Route::post('/vumi_bebohar_charpto', [ProkosholController::class, 'vumi_bebohar_
 /////////ADMIN////////////////
 
 Route::get('/admin_dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::get('/admin/nagorik_home', [AdminController::class, 'nagorik_home'])->name('admin.nagorik_home');

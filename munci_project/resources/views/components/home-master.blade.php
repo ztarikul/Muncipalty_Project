@@ -112,7 +112,7 @@
                                                 <li><a href="{{route('nagorik_sanad.form' , 7)}}">বার্ষিক আয়ের প্রত্যয়ন </a></li>                                           
                                                 <li><a href="{{route('nagorik_sanad.form' , 8)}}">একই নামের প্রত্যয়ন</a></li>                                           
                                                <li><a href="{{route('nagorik_sanad.form' , 9)}}">প্রকৃত বাঁক ও শ্রবণ প্রতিবন্ধী</a></li>                        
-                                                <li><a href="{{route('nagorik_sanad.form' , 10)}}">সনাতন ধর্ম  অবলম্বী</a></li>                                           
+                                                <li><a href="{{route('nagorik_sanad.form' , 10)}}">সনাতন ধর্ম অবলম্বী</a></li>                                           
                                                 <li><a href="{{route('nagorik_sanad.form' , 11)}}">অনুমতি পত্র</a></li>                                           
                                                 <li><a href="{{route('nagorik_sanad.form' , 12)}}">প্রত্যয়ন পত্র</a>  
                                                 <li><a href="onapotti">অনাপত্তি সনদপত্র</a>  

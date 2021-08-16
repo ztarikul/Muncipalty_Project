@@ -11,4 +11,8 @@ class AdminController extends Controller
     public function dashboard(){
         return view('admin.dashboard');
     }
+
+    public function nagorik_home(){
+        return view('admin.nagorik.nagorik_home');
+    }
 }
