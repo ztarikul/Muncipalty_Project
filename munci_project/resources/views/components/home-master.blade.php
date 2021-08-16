@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <meta name="robots" content="noodp">
-    <title>ডেমো পৌরসভা</title>
+    <title>নোয়াখালী পৌরসভা</title>
     <link rel="shortcut icon" href="{{asset('design/img/favicon.ico')}}" type="image/x-icon"/>
     <link href="{{asset('design/css/bootstrap.min.css')}}" rel="stylesheet"/>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -56,8 +56,8 @@
                             <div class="navbar-header navbar-left">
                                 <div class="navbar-brand">
                                     <a href="">
-                                    <img src="logo_images/logo.png" alt="" >
-                                    <span>ডেমো পৌরসভা</span>
+                                    <img src="{{asset('logo_images/logo.jpeg')}}" alt="" >
+                                    <span>নোয়াখালী পৌরসভা</span>
                                     </a>
                                 </div>
                             </div>

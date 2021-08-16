@@ -39,7 +39,7 @@
      <div class="brand-logo">
       <a href="index.html">
        <img src="{{asset('admin/asset/images/logo-icon.png')}}" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Dashtreme Admin</h5>
+       <h5 class="logo-text">Dashboard</h5>
      </a>
    </div>
    <ul class="sidebar-menu do-nicescrol">

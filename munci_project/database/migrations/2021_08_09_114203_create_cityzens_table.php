@@ -15,7 +15,7 @@ class CreateCityzensTable extends Migration
     public function up()
     {
         Schema::create('cityzens', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(100000);
             $table->text('file')->nullable();
             $table->string('delivery_type')->nullable();
             $table->string('nick_name')->nullable();

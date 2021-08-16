@@ -11,8 +11,8 @@
 								
 								<li><a href="javascript:void(0)">
 				<div class="slide-overley"></div>
-				<img class="lazy" data-original="all/slide/Capture.PNG" alt="" height='420' width='900'/>
-				<p class="flex-caption"></p>
+				<img class="lazy" data-original="all/slide/slide1.jpg" alt="" height='420' width='900'/>
+				<p class="flex-caption">DIGITAL BANGLADESH</p>
 				</a>
 				</li>
 								<li><a href="javascript:void(0)">
