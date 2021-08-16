@@ -85,3 +85,8 @@ Route::post('/vumi_bebohar_charpto', [ProkosholController::class, 'vumi_bebohar_
 
 Route::get('/admin_dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 Route::get('/admin/nagorik_home', [AdminController::class, 'nagorik_home'])->name('admin.nagorik_home');
+Route::get('/admin/oarish_home', [AdminController::class, 'oarish_home'])->name('admin.oarish_home');
+Route::get('/admin/license_home', [AdminController::class, 'license_home'])->name('admin.license_home');
+Route::get('/admin/prokoshol_home', [AdminController::class, 'prokoshol_home'])->name('admin.prokoshol_home');
+Route::get('/admin/member_home', [AdminController::class, 'member_home'])->name('admin.member_home');
+Route::get('/admin/prokolpo_home', [AdminController::class, 'prokolpo_home'])->name('admin.prokolpo_home');

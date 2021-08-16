@@ -19,27 +19,27 @@
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="{{route('admin.oarish_home')}}">
           <i class="zmdi zmdi-invert-colors"></i> <span>ওয়ারিশ</span>
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="{{route('admin.license_home')}}">
           <i class="zmdi zmdi-invert-colors"></i> <span>লাইসেন্স</span>
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="{{route('admin.prokoshol_home')}}">
           <i class="zmdi zmdi-invert-colors"></i> <span>প্রকৌশল সংক্রান্ত</span>
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="{{route('admin.member_home')}}">
           <i class="zmdi zmdi-invert-colors"></i> <span>কর্মকর্তাবৃন্দ</span>
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="{{route('admin.prokolpo_home')}}">
           <i class="zmdi zmdi-invert-colors"></i> <span>প্রকল্প সমূহ</span>
         </a>
       </li>
