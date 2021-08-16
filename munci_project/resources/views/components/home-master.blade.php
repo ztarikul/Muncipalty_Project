@@ -331,7 +331,9 @@
   <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
   <!-- javascript ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{asset('design/js/jquery.js')}}"></script>
+    <!-- <script src="{{asset('design/js/jquery.js')}}"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('design/js/jquery.lazyload.min.js')}}"></script>
     <script src="{{asset('design/js/jquery.easing.1.3.js')}}"></script>
     <script src="{{asset('design/js/bootstrap.min.js')}}"></script>

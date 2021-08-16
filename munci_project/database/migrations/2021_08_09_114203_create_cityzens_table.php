@@ -18,11 +18,11 @@ class CreateCityzensTable extends Migration
             $table->id();
             $table->text('file')->nullable();
             $table->string('delivery_type')->nullable();
-            $table->string('seba_type')->nullable();
+            $table->string('nick_name')->nullable();
             $table->string('holding_no')->nullable();
             $table->string('nationid')->nullable()->unique(); //
-            $table->string('birth_certificate_no')->unique();  //birthcirtificate number
-            $table->string('passport_no')->nullable()->unique(); //passport
+            $table->string('bcno')->unique();  //birthcirtificate number
+            $table->string('pno')->nullable()->unique(); //passport
             $table->date('dofb')->nullable();   //date of birth  
             $table->string('ename')->nullable();  //name in english
             $table->string('bname')->nullable();
@@ -36,7 +36,7 @@ class CreateCityzensTable extends Migration
             $table->string('bfname')->nullable();
             $table->string('emname')->nullable();
             $table->string('bmnane')->nullable();
-            $table->string('occupation')->nullable();
+            $table->string('ocupt')->nullable();
             $table->string('qualification')->nullable();
             $table->string('religion')->nullable();
             $table->string('bashinda')->nullable();
@@ -73,7 +73,7 @@ class CreateCityzensTable extends Migration
             $table->string('attachment_en')->nullable();
             $table->string('attachment_bn')->nullable();
             $table->string('status')->nullable();
-            
+            $table->string('seba')->nullable();
             $table->timestamps();
         });
     }

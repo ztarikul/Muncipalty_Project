@@ -247,7 +247,7 @@
 							 </div>
 							</div>
 						<div class="panel-body all-input-form">
-							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							<form action="{{route('cityzen.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
 								<div class="row" >
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -268,7 +268,7 @@
 									</div>
 								</div>
 								
-																<input type="hidden" name="delivery_type" value="3" checked="checked">
+								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -302,7 +302,7 @@
 																<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-																															</div>
+										</div>
 									</div>
 								</div>
 							<div class="row">
@@ -909,7 +909,7 @@
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
 									<input type="hidden" value="4" name="seba"/>
-										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-success">জমা দিন</button>
+										<button type="submit" name="save" id="submit_button" class="btn btn-success">জমা দিন</button>
 									</div>
 								</div>
 							</form>

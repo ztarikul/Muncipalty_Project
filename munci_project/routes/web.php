@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProkosholController;
 use Illuminate\Support\Facades\Route;
@@ -72,3 +73,14 @@ Route::post('/holding_naam_jari', [ProkosholController::class,'holding_naam_jari
 
 Route::post('/emarot_pukur_application', [ProkosholController::class, 'emarot_pukur_application'])->name('prokoshol.emarot_pukur_application');
 Route::post('/vumi_bebohar_charpto', [ProkosholController::class, 'vumi_bebohar_charpto'])->name('prokoshol.vumi_bebohar_charpto');
+
+
+
+
+
+
+/////////////////////////////////
+/////////////////////////////////
+/////////ADMIN////////////////
+
+Route::get('/admin_dashboard', [AdminController::class, 'dashboard'])->name('dashboard');

@@ -292,7 +292,9 @@
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-																																						</div>
+
+										<!-- image upload varification -->
+										</div>
 									</div>
 								</div>
 							<div class="row">
@@ -301,12 +303,12 @@
 											<label for="National-id-english" class="col-sm-3 control-label">ন্যাশনাল আইডি (ইংরেজিতে)  </label>
 											<div class="col-sm-3">
 												<input type="text" name="nationid" id="nid" class="form-control" maxlength='17' onkeypress="return checkaccnumber(event);"  placeholder="" />
-												<span class="text-danger error-text nationid_error"></span>
+												<span class="text-danger">@error('nationid') {{ $message }} @enderror</span>
 											</div>
 											<label for="Birth-no" class="col-sm-3 control-label">জন্ম নিবন্ধন নং ( ইংরেজিতে ) <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="birth_certificate_no" id="bcno" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" required />
-												<span class="text-danger error-text birth_certificate_no_error"></span>
+												<input type="text" name="bcno" id="bcno" class="form-control" maxlength="17" onkeypress="return checkaccnumber(event);"  placeholder="" required />
+												<span class="text-danger">@error('bcno') {{ $message }} @enderror</span>
 											</div>
 										</div>
 									</div>
@@ -317,7 +319,7 @@
 										<div class="form-group">
 											<label for="Passport-no" class="col-sm-3 control-label">পাসপোর্ট নং ( ইংরেজিতে ) </label>
 											<div class="col-sm-3">
-												<input type="text" name="passport_no" id="pno" class="form-control" maxlength='17' placeholder=""/>
+												<input type="text" name="pno" id="pno" class="form-control" maxlength='17' placeholder=""/>
 												<span class="text-danger error-text passport_no_error"></span>
 											</div>
 
@@ -438,7 +440,7 @@
 										<div class="form-group">
 											<label for="profession" class="col-sm-3 control-label">পেশা</label>
 											<div class="col-sm-3">
-												<input type="text" name="occupation" id="occupation" class="form-control" placeholder=""/>
+												<input type="text" name="ocupt" id="occupation" class="form-control" placeholder=""/>
 											</div>
 											<label for="Education-qualification" class="col-sm-3 control-label">শিক্ষাগত যোগ্যতা</label>
 											<div class="col-sm-3">
@@ -904,7 +906,7 @@
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
 									<input type="hidden" value="applied" name="status"/>
-										<button type="submit" id="submit_button"  class="btn btn-primary">জমা দিন</button>
+										<button type="submit" id="submit"  class="btn btn-primary">জমা দিন</button>
 									</div>
 								</div>
 							</form>
@@ -918,39 +920,21 @@
 
 
 
-<script src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+
 
 <script>
-$(function(){
-	$("#upform").on('submit', function(e){
-		e.preventDefault();
-		$.ajax({
-			url:$(this).attr('action'),
-			method:$(this).attr('method'),
-			data: new FormData(this),
-			processData:false,
-			dataType:'json',
-			contentType:false,
-			beforeSend:function(){
-				$(document).field('span.error-text').text('');
-
-			},
-			success:function(data){
-				if(data.status == 0){
-					console.log(data.val);
-					$.each(data.error, function(prefix, val){
-						$('span.' +prefix+ '_error').text(val[0]);
-
-					});
-				}else{
-					$('#upform')[0].reset();
-					alert(data.msg);
-				}
-
-			}
-		});
-	});
-});
+// $(function(){
+// 	$("#upform").on('submit', function(e){
+// 		e.preventDefault();
+		
+// 		jQuery.ajax({
+// 			url:"{{route('cityzen.store')}}",
+// 			data:jQuery('#upform').serialize(),
+// 			type:'post',
+			
+// 		});
+// 	});
+// });
 
 
 

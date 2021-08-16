@@ -247,7 +247,8 @@
 							 </div>
 							</div>
 						<div class="panel-body all-input-form">
-							<form action="index.php/home/profile_upload" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							<form action="{{route('cityzen.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
+							@csrf
 								<div class="row" >
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -267,7 +268,7 @@
 									</div>
 								</div>
 								
-																<input type="hidden" name="delivery_type" value="3" checked="checked">
+								<input type="hidden" name="delivery_type" value="3" checked="checked">
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -275,10 +276,10 @@
 											<div class="col-sm-3">
 												<select name="seba_type" class="form-control"  required disabled >
 													<option value=''>চিহ্নিত করুন</option>
-													<option value='1' selected >নাগরিকত্ব সনদ</option>
+													<option value='1'>নাগরিকত্ব সনদ</option>
 													<option value='2' >মৃত্যু সনদ</option>
 													<option value='3' >চারিত্রিক সনদ</option>
-													<option value='4' SELECTED>অবিবাহিত সনদ</option>
+													<option value='4' selected>অবিবাহিত সনদ</option>
 													<option value='5' >ভূমিহীন সনদ</option>
 													<option value='6' >পুনঃ বিবাহ না হওয়া সনদ </option>
 													<option value='7' >বার্ষিক আয়ের প্রত্যয়ন </option>
@@ -301,7 +302,8 @@
 																<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
-																															</div>
+											<!-- image upload varification -->
+										</div>
 									</div>
 								</div>
 							<div class="row">
@@ -329,7 +331,7 @@
 
 											<label for="Birth-date" class="col-sm-3 control-label">জম্ম  তারিখ   <span>*</span></label>
 											<div class="col-sm-3">
-												<input type="text" name="dofb" id="dofb" class="form-control" placeholder="01-01-1980" required />
+												<input type="date" name="dofb" id="dofb" class="form-control" placeholder="01-01-1980" required />
 											</div>
 
 										</div>
@@ -908,7 +910,7 @@
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
 									<input type="hidden" value="4" name="seba"/>
-										<button type="submit" name="save" id="submit_button" onclick="parsonalinfo_insert();" class="btn btn-success">জমা দিন</button>
+										<button type="submit" id="submit_button"  class="btn btn-success">জমা দিন</button>
 									</div>
 								</div>
 							</form>
