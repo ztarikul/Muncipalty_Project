@@ -44,17 +44,17 @@
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="">
           <i class="zmdi zmdi-invert-colors"></i> <span>অভিযোগ</span>
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
-          <i class="zmdi zmdi-invert-colors"></i> <span>Notice</span>
+        <a href="{{route('admin.notice')}}">
+          <i class="zmdi zmdi-invert-colors"></i> <span> নোটিশ </span>
         </a>
       </li>
       <li>
-        <a href="{{route('admin.nagorik_home')}}">
+        <a href="">
           <i class="zmdi zmdi-invert-colors"></i> <span>Features</span>
         </a>
       </li>

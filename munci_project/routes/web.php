@@ -79,6 +79,7 @@ Route::post('/vumi_bebohar_charpto', [ProkosholController::class, 'vumi_bebohar_
 
 
 
+
 /////////////////////////////////
 /////////////////////////////////
 /////////ADMIN////////////////
@@ -90,3 +91,8 @@ Route::get('/admin/license_home', [AdminController::class, 'license_home'])->nam
 Route::get('/admin/prokoshol_home', [AdminController::class, 'prokoshol_home'])->name('admin.prokoshol_home');
 Route::get('/admin/member_home', [AdminController::class, 'member_home'])->name('admin.member_home');
 Route::get('/admin/prokolpo_home', [AdminController::class, 'prokolpo_home'])->name('admin.prokolpo_home');
+Route::get('/admin/notice', [AdminController::class,'notice'])->name('admin.notice');
+Route::post('/admin/notice_form', [AdminController::class,'notice_form_store'])->name('admin.notice_form');
+Route::get('admin/notice_delete/{id}', [AdminController::class,'notice_delete'])->name('admin.notice_delete');
+Route::get('admin/notice_edit/{id}', [AdminController::class,'notice_edit'])->name('admin.notice_edit');
+Route::post('admin/notice_update/{id}', [AdminController::class,'notice_update'])->name('admin.notice_update');
