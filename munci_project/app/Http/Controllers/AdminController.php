@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Notice;
 
+
 class AdminController extends Controller
 {
     //
@@ -81,9 +82,18 @@ class AdminController extends Controller
             $inputs['file'] = $file->storeAs('notice', $originalname);
         }
 
-        $inputs->update($request->all());
+        $inputs->update($inputs->all());
         return redirect()->route('admin.notice');
         
     }
+
+    public function shokol_notice()
+    {
+        $notices = Notice::paginate(3);
+  
+        return view('admin.shokol_notice',['notices'=> $notices]);
+    }
+
+   
 
 }

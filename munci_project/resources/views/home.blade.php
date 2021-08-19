@@ -199,19 +199,14 @@
                                 <div class="col-sm-12">
 										 <div class="notice-section">
 											<ul class="latest-news">
-																									<li class="one-line"><i class="icon ion-document-text"></i>
-													<a href="main/notice/75">সাভার পৌরসভাধীন ক্বোবানীর পশু ক্রয়-বিক্রয়ের অস্থায়ী (বিশেষ) হাটা ইজারা পুনঃ বিজ্ঞপ্তি।</a></li>
-																									<li class="one-line"><i class="icon ion-document-text"></i>
-													<a href="main/notice/74">সাভার পৌরসভাধীন ক্বোরবানীর পশু ক্রয়-বিক্রয়ের অস্থায়ী (বিশেষ) হাট ইজারার  দরপত্র জমাদান বিষয়ে সংশোধিত</a></li>
-																									<li class="one-line"><i class="icon ion-document-text"></i>
-													<a href="main/notice/73">সাভার পৌরসভার ভিজিএফ এর নগদ অর্থ বিতরণের অফিস আদেশ।</a></li>
-																									<li class="one-line"><i class="icon ion-document-text"></i>
-													<a href="main/notice/72">সল্প পরিসরে অফিস চালু রাখার অফিস আদেশ।</a></li>
-																									<li class="one-line"><i class="icon ion-document-text"></i>
-													<a href="main/notice/71">সাভার পৌরসভার হাট/ঘাট/বাজার ইজারা বিজ্ঞপ্তি।</a></li>
-																							</ul>
+											@foreach($notices as $notice)
+													<li class="one-line"><i class="icon ion-document-text"></i>
+													
+													<a href="main/notice/75"></a>{{$notice->content}}</li>
+													@endforeach												
+													</ul>
 										<div class="see-alls">
-												<a href="main/all_notice" class="btn btn-see btn-sm">সকল নোটিশ</a>
+												<a href="{{route('shokol_notice.form')}}" class="btn btn-see btn-sm">সকল নোটিশ</a>
 										</div>
 									 </div>
                                 </div>

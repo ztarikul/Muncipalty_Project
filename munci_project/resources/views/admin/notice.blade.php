@@ -78,6 +78,5 @@ $row= 0;
         <span>
            {{$notices->links('pagination::bootstrap-4')}}
            </span>
-
-  @endsection
-</x-admin-master>
+ @endsection
+</x-home-master> 

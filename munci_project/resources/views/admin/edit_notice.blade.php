@@ -10,7 +10,7 @@
             <form action="{{route('admin.notice_update',$notice->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-           <img src="storage/notice/{{$notice->file}}" alt="" width=200 height= 200>
+           <img src="/storage/notice/{{$notice->file}}" alt="" width=50 height= 50>
            
            </div>
            <div class="form-group">

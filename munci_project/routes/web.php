@@ -56,6 +56,7 @@ Route::get('/holding_naam_jari_abedon', [HomeController::class, 'holding_naam_ja
 
 Route::get('/jogajog', [HomeController::class, 'jogajog'])->name('jogajog.form');
 
+
 Route::resource('cityzen', CityzenController::class);
 
 Route::resource('paribarik', ParibarikController::class);
@@ -96,3 +97,6 @@ Route::post('/admin/notice_form', [AdminController::class,'notice_form_store'])-
 Route::get('admin/notice_delete/{id}', [AdminController::class,'notice_delete'])->name('admin.notice_delete');
 Route::get('admin/notice_edit/{id}', [AdminController::class,'notice_edit'])->name('admin.notice_edit');
 Route::post('admin/notice_update/{id}', [AdminController::class,'notice_update'])->name('admin.notice_update');
+
+Route::get('/shokol_notice', [AdminController::class, 'shokol_notice'])->name('shokol_notice.form');
+// Route::get('admin/notice_show/{id}', [AdminController::class,'notice_show'])->name('notice_show');

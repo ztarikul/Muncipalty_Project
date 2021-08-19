@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Notice;
 class HomeController extends Controller
 {
     /**
@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $notices = Notice::all();
+        return view('home',['notices'=>$notices]);
     }
     public function nagorik()
     {
@@ -176,4 +177,9 @@ class HomeController extends Controller
     {
         return view('prokoshol.holding_naam_jari_abedon');
     }
+    public function jogajog()
+    {
+        return view('jogajog');
+    }
+    
 }
