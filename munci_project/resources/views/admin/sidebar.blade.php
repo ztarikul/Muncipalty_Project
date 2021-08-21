@@ -44,7 +44,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="#">
           <i class="zmdi zmdi-invert-colors"></i> <span>অভিযোগ</span>
         </a>
       </li>
@@ -54,7 +54,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="#">
           <i class="zmdi zmdi-invert-colors"></i> <span>Features</span>
         </a>
       </li>

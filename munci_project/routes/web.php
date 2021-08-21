@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ProkosholController;
 use Illuminate\Support\Facades\Route;
 
@@ -92,11 +93,14 @@ Route::get('/admin/license_home', [AdminController::class, 'license_home'])->nam
 Route::get('/admin/prokoshol_home', [AdminController::class, 'prokoshol_home'])->name('admin.prokoshol_home');
 Route::get('/admin/member_home', [AdminController::class, 'member_home'])->name('admin.member_home');
 Route::get('/admin/prokolpo_home', [AdminController::class, 'prokolpo_home'])->name('admin.prokolpo_home');
-Route::get('/admin/notice', [AdminController::class,'notice'])->name('admin.notice');
-Route::post('/admin/notice_form', [AdminController::class,'notice_form_store'])->name('admin.notice_form');
-Route::get('admin/notice_delete/{id}', [AdminController::class,'notice_delete'])->name('admin.notice_delete');
-Route::get('admin/notice_edit/{id}', [AdminController::class,'notice_edit'])->name('admin.notice_edit');
-Route::post('admin/notice_update/{id}', [AdminController::class,'notice_update'])->name('admin.notice_update');
 
-Route::get('/shokol_notice', [AdminController::class, 'shokol_notice'])->name('shokol_notice.form');
+
+
+Route::get('/admin/notice', [NoticeController::class,'notice'])->name('admin.notice');
+Route::post('/admin/notice_form', [NoticeController::class,'notice_form_store'])->name('admin.notice_form');
+Route::get('admin/notice_delete/{id}', [NoticeController::class,'notice_delete'])->name('admin.notice_delete');
+Route::get('admin/notice_edit/{id}', [NoticeController::class,'notice_edit'])->name('admin.notice_edit');
+Route::post('admin/notice_update/{id}', [NoticeController::class,'notice_update'])->name('admin.notice_update');
+
+Route::get('admin/shokol_notice', [NoticeController::class, 'shokol_notice'])->name('shokol_notice.form');
 // Route::get('admin/notice_show/{id}', [AdminController::class,'notice_show'])->name('notice_show');

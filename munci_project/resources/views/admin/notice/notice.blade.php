@@ -18,7 +18,7 @@
            </div>
         
            <div class="form-group">
-            <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Register</button>
+            <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i>Submit</button>
           </div>
           </form>
     </div>
@@ -51,7 +51,7 @@ $row= 0;
                   <tbody>
                   @foreach($notices as $notice)
                     <tr>
-                      <th scope="row">{{$row++}}</th>
+                      <th scope="row">{{++$row}}</th>
                       <td><a href="">{{$notice->content}}</a></td>
 
                       <td><a href="{{route('admin.notice_edit', $notice->id)}}" class="btn-upper btn btn-success btn-sm">Edit</a></td> 
