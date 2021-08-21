@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <meta name="robots" content="noodp">
-    <title>নোয়াখালী পৌরসভা</title>
+    <title>চৌমুহনী পৌরসভা</title>
     <link rel="shortcut icon" href="{{asset('design/img/favicon.ico')}}" type="image/x-icon"/>
     <link href="{{asset('design/css/bootstrap.min.css')}}" rel="stylesheet"/>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -57,7 +57,7 @@
                                 <div class="navbar-brand">
                                     <a href="">
                                     <img src="{{asset('logo_images/logo.jpeg')}}" alt="" >
-                                    <span>নোয়াখালী পৌরসভা</span>
+                                    <span>চৌমুহনী পৌরসভা</span>
                                     </a>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                                         </li>
 										<li><a href="javascript:void(0)">কর্মকর্তাবৃন্দ</a>
                                             <ul class="sub-menus">
-                                                <li><a href="main/get_person/1">জন  প্রতিনিধিগণ</a></li>                                           
+                                                <li><a href="{{route('jono_protinidigon')}}">জন  প্রতিনিধিগণ</a></li>                                           
                                                 <li><a href="main/get_person/2">কর্মকর্তা ও কর্মচারীগণ</a></li>                                           
                                                 <li><a href="main/get_person/3">উদ্যোক্তা</a></li>                                           
                                             </ul>

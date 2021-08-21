@@ -75,4 +75,10 @@ class NoticeController extends Controller
         return view('admin.notice.shokol_notice',['notices'=> $notices]);
     }
 
+    public function pouroshavar_tottho()
+    {
+  
+        return view('admin.notice.pouroshavar_tottho');
+    }
+
 }

@@ -10,7 +10,7 @@
           <hr>
           <div class="row">
             <div class="col-lg-6 col-xl-3 icon">
-              <a data-code="f3e9" data-name="group" href="javascript:void();"><i class="zmdi zmdi-group"></i> <span>জন প্রতিনিধিগণ</span></a>
+              <a data-code="f3e9" data-name="group" href=""><i class="zmdi zmdi-group"></i> <span>জন প্রতিনিধিগণ</span></a>
             </div>
             <div class="col-lg-6 col-xl-3 icon">
               <a data-code="f3ea" data-name="rss" href="javascript:void();"><i class="zmdi zmdi-rss"></i> <span>কর্মকর্তা ও কর্মচারীগণ</span></a>

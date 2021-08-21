@@ -102,5 +102,6 @@ Route::get('admin/notice_delete/{id}', [NoticeController::class,'notice_delete']
 Route::get('admin/notice_edit/{id}', [NoticeController::class,'notice_edit'])->name('admin.notice_edit');
 Route::post('admin/notice_update/{id}', [NoticeController::class,'notice_update'])->name('admin.notice_update');
 
-Route::get('admin/shokol_notice', [NoticeController::class, 'shokol_notice'])->name('shokol_notice.form');
-// Route::get('admin/notice_show/{id}', [AdminController::class,'notice_show'])->name('notice_show');
+Route::get('shokol_notice', [NoticeController::class, 'shokol_notice'])->name('shokol_notice.form');
+Route::get('pouroshavar_tottho', [NoticeController::class, 'pouroshavar_tottho'])->name('pouroshavar_tottho');
+Route::get('jono_protinidigon', [HomeController::class, 'jono_protinidigon'])->name('jono_protinidigon');

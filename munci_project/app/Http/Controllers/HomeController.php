@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $notices = Notice::all();
+        $notices = Notice::orderBy('id','desc')->limit(3)->get();
         return view('home',['notices'=>$notices]);
     }
     public function nagorik()
@@ -180,6 +180,11 @@ class HomeController extends Controller
     public function jogajog()
     {
         return view('jogajog');
+    }
+
+    public function jono_protinidigon()
+    {
+        return view('admin.member.jono_protinidigon');
     }
     
 }

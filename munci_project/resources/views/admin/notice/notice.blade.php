@@ -1,5 +1,6 @@
 <x-admin-master>
-    @section('admin_content')
+@section('admin_content')
+
 <div class="row mt-3">
     <div class="col-lg-12">
         <div class="card">
@@ -78,5 +79,5 @@ $row= 0;
         <span>
            {{$notices->links('pagination::bootstrap-4')}}
            </span>
- @endsection
-</x-home-master> 
+@endsection
+</x-admin-master>

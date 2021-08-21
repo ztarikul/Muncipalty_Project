@@ -4,7 +4,7 @@
 
 
  <div class="container-fluid">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div id="main-slider" class="flexslider">
                 <ul class="slides wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">
 				
@@ -43,142 +43,178 @@
                 </ul>
             </div>
         </div>
-		        <div class="col-md-4">
-            <div class="key-specials-persons">
-                <div class="our-team">
-                    <div class="persons-images">
-					                        <img src="library/profile/savarMayor12.jpg" alt="চেয়ারম্যানের ছবি"  class="img-responsive" height="160px" width="160px"/>
-						                    </div>
-                    <div class="team-prof">
-                        <h3 class="post-title">হাজী মোঃ আবদুল গনি</h3>
-                        <span class="post">মেয়র</span>
-<p>
-<p><strong><span style="font-size:16px"><span style="background-color:#F0FFFF">&nbsp;সাভার পৌরসভাকে &nbsp;ডিজিটাল ও মডেল পৌরসভা হিসেবে গড়ে &nbsp;তোলা এবং ভিশন ২০২১ বাস্তবায়� .....
-</p>
-                        <div class="view-mores">
-                            <a href="home/history" class="btn btn-sm btn-mores">বিস্তারিত</a>
-                        </div>
-                    </div>
-                </div>                         
-            </div>
-        </div>
+		        
 
     </div>
     <!-- end slider -->
-</section>  
+</section>
+
+<!-- ই-আবেদন -->
+
 <section class="notice-board-area">
+<div class="container extrawidth">
+<div class="row">
+
+<div class="col-md-4">
+	<div class="notics-cts card wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s">
+	   <div class="head-title-bar">
+			<div class="secs section-title">
+				<h2 class="s2">ই-আবেদন</h2>
+			</div>
+			
+		</div>
+			<div class="card-content">
+			  <div class="row">
+					
+				 <div class="blog-sidebar-item">
+
+					<div class="sidebar-categories mt-35">
+						 <ul>
+							<li><a href="{{route('nagorik_sanad.form', 1)}}" class=""> নাগরিক সনদের আবেদন</a></li>
+							<li><a href="{{route('trade_license_application.form')}}" class=""> ট্রেড লাইসেন্স সনদের আবেদন</a></li>
+							<li><a href="{{route('paribarik_sanad_application.form')}}" class=""> পারবারিক সনদের আবেদন</a></li>
+							<li><a href="{{route('primisis_sanad.form')}}" class=""> প্রিমিসেস লাইসেন্স</a></li>
+							<li><a href="{{route('oarish_sanad_application.form')}}" class="">  ওয়ারিশ সনদের আবেদন</a></li>
+						</ul>
+					</div>
+				</div>
+			  </div>
+			
+		   </div>
+	</div>
+</div>
+
+ <!-- সকল আবেদন যাচাই -->
+
+
+
+<div class="col-md-4">
+   <div class="notics-cts card wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s">
+		<div class="head-title-bar">
+			<div class="secs section-title">
+				<h2 class="s2">সকল আবেদন যাচাই</h2>
+			
+			</div>
+		</div>
+		  <div class="card-content">
+			<div class="row">
+						
+				<div class="blog-sidebar-item">
+
+						<div class="sidebar-categories mt-35">
+							<ul>
+								<li><a href="{{route('nagorik_sanad_abedon_jacai.form')}}" class="">  নাগরিক সনদের আবেদন যাচাই</a></li>
+								<li><a href="{{route('trade_license_abedon_jacai.form')}}" class=""> ট্রেড লাইসেন্স সনদের আবেদন যাচাই</a></li>
+								<li><a href="{{route('trade_license_nabayon_abedon.form')}}" class=""> ট্রেড লাইসেন্স নবায়ন যাচাই</a></li>
+								<li><a href="{{route('paribarik_sonoder_abedon_jachai.form')}}" class=""> পারবারিক সনদপত্র আবেদন যাচাই</a></li>
+								<li><a href="{{route('oarish_sonodpotro_jachai.form')}}" class=""> ওয়ারিশ সনদের আবেদন যাচাই</a></li>
+							</ul>
+						</div>
+				 </div>
+			</div>
+		</div>
+    </div>
+</div>
+
+
+
+	  
+
+
+
+<!-- সকল সনদ যাচাই -->
+
+<div class="col-md-4">
+   <div class="notics-cts card wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s">
+				<div class="head-title-bar">
+					<div class="secs section-title">
+						<h2 class="s2">সকল সনদ যাচাই</h2>
+
+					</div>
+				</div>
+		<div class="card-content">
+			<div class="row">
+
+						<div class="blog-sidebar-item">
+
+							<div class="sidebar-categories mt-35">
+									<ul>
+									<li><a href="{{route('nagorik_sanad_jacai.form')}}" class=""> নাগরিকত্ব সনদ পত্র  যাচাই</a></li>
+									<li><a href="{{route('oarish_sonodpotro_jachai.form')}}" class=""> ওয়ারিশ সনদ পত্র  যাচাই</a></li>
+									<li><a href="{{route('paribarik_sonodpotro_jachai.form')}}" class=""> পারিবারিক সনদ পত্র  যাচাই</a></li>
+									<li><a href="{{route('trade_license_jacai.form')}}" class="">ট্রেড লাইসেন্স  যাচাই</a></li>
+									<li><a href="{{route('nagorik_sanad.form' , 5)}}" class="">  ভূমিহীন সনদ যাচাই</a></li>
+									
+									</ul>
+							</div>
+						</div>
+				</div>
+		  </div>
+      </div>
+
+</div>
+
+
+</div>
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- <section class="notice-board-area">
     <div class="container extrawidth">
         <div class="row">	
-            <div class="col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
+            <div class="col-md-4 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
                 <div class="content-area-boxes">           
-                    <div class="about-content-section special2">
-                        
-                        <div class="about-content-full">
-                            <div class="row">
-								<div class="col-md-6 smallwidth">
-								  <div class="section-title text-left">
-										<h2 class="br3"> ই-আবেদন</h2>
-									</div>
-										<div class="row">
-                                          <div class="col-md-6">
-										  
-                                              <div class="important-links our-service-link">
-                                                  <ul>
-                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_apps">নাগরিক সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="trade_license_apps">ট্রেড লাইসেন্স সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="successor_apps"> ওয়ারিশ সনদের আবেদন </a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=2">মৃত্যু সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=3">চারিত্রিক সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=5">ভূমিহীন সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="familly_apps">পারবারিক সনদের আবেদন</a></li>
-													  <li><i class="ion-ios-redo"></i> <a href="primises_license_apps">প্রিমিসেস লাইসেন্স</a></li>  
-													  
-													   <li><i class="ion-ios-redo"></i> <a href="index.php/Home/roadpermit">রাস্তা খননের অনুমতি পত্র</a></li>  
-												       <li><i class="ion-ios-redo"></i> <a href="Home/imarotShimanaBibidoNirman">ইমারত নির্মাণ/ভরাট আবেদন</a></li>  
-                                                       <li><i class="ion-ios-redo"></i> <a href="Home/bhumiusecerti">ভূমি ব্যবহার ছাড়পত্রের আবেদন</a></li>  
-                                                 
-                                                 
-                                                  </ul>
-                                              </div>
-                                          </div>
-											<div class="col-md-6">
-                                              <div class="important-links our-service-link">
-                                                  <ul>
-                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=4">অবিবাহিত  সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=6"> পুনঃ বিবাহ না হওয়া সনদের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=7"> বার্ষিক আয়ের প্রত্যয়ন আবেদন </a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=8">একই নামের প্রত্যয়ন  আবেদন</a></li>
-													  <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=11">অনুমতি পত্রের আবেদন</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps?seba=9">প্রকৃত বাঁক ও শ্রবন প্রতিবন্ধী আবেদন</a></li>	
-													  <li><a href="new_holding_apps">নতুন হোল্ডিং আবেদন</a></li>  
-                                                      <li><a href="holding_namjari_apps">হোল্ডিং নামজারি আবেদন</a></li> 											
-                                                      <li><i class="ion-ios-redo"></i><a href="onapotti">অনাপত্তি সনদপত্র</a></li> 
-                                                      <li> <i class="ion-ios-redo"></i> 	<a href="dog_license_apps">পোষা প্রাণীর লাইসেন্স</a></li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-										</div>
-									</div>
-								<div class="col-md-6">
-										<div class="row">
-											<div class="col-md-6 smallwidth">
-											<div class="section-title text-left">
-										<h2 class="br3">সকল আবেদন যাচাই </h2>
-									</div>
-                                              <div class="important-links our-service-link">
-                                                  <ul>
-                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_apps_verify">নাগরিক সনদের আবেদন যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="trade_license_apps_verify">ট্রেড লাইসেন্স সনদের আবেদন যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="renew_apps"> ট্রেড লাইসেন্স নবায়ন যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="successor_apps_verify">ওয়ারিশ সনদের আবেদন যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps_verify"> অন্যান্য সকল  আবেদন যাচাই </a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="family_apps_verify"> পারবারিক সনদপত্র  আবেদন যাচাই </a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_apps_verify"> অনাপত্তি সনদপত্র  আবেদন যাচাই </a></li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-											<div class="col-md-6">
-											<div class="section-title text-left">
-										<h2 class="br3">সকল সনদ যাচাই </h2>
-									</div>
-                                              <div class="important-links our-service-link">
-                                                  <ul>
-                                                     <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">নাগরিক সনদ যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="trade_license_cc_verify">ট্রেড লাইসেন্স সনদ যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="successor_cc_verify"> ওয়ারিশ সনদ যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">ভূমিহীন সনদ যাচাই</a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">অন্যান্য সকল সনদ যাচাই </a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">পারবারিক সনদপত্র যাচাই </a></li>
-                                                      <li><i class="ion-ios-redo"></i> <a href="citizen_cc_verify">অনাপত্তি সনদপত্র  যাচাই </a></li>
-													  
-                                                  </ul>
-                                              </div>
-                                          </div>
-										</div>
-									</div>
-										</div>
-									</div>
-								</div>
+				<div class="blog-sidebar-item">
+          <div class="sidebar-title">
+              <h4 class="title">All Services</h4>
+          </div>
+          <div class="sidebar-categories mt-35">
+              <ul>
+                                  <li><a href="https://www.spandanit.com/service/IT-Consultation" class=" active  ">IT Consultation</a></li>
+                                    <li><a href="https://www.spandanit.com/service/Application-Development" class="">Application Development</a></li>
+                                    <li><a href="https://www.spandanit.com/service/Digital-Marketing" class="">Digital Marketing</a></li>
+                                    <li><a href="https://www.spandanit.com/service/Graphic-Design" class="">Graphic Design</a></li>
+                                    <li><a href="https://www.spandanit.com/service/Website-Development" class="">Website Development</a></li>
+                                    <li><a href="https://www.spandanit.com/service/Software-Development" class="">Software Development</a></li>
+                                </ul>
+          </div>
+        </div>
 							</div>
 						</div>
 					</div>
 				</div>
-</section> 
+
+
+
+
+</section>  -->
 <section class="notice-board-area">
     <div class="container extrawidth">
         <div class="row">
-            <div class="col-md-7 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
+            <div class="col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
                 <div class="content-area-boxes">           
                     <div class="tottho">
                         <div class="section-title text-left">
-                            <h2 class="br2">সাভার পৌরসভা তথ্য</h2>
+                            <h2 class="br2">চৌমুহনী পৌরসভা তথ্য</h2>
                         </div>
                         <div class="about-content-full">
                                   <div class="left-boxes-content">
                                       <div class="row">
-                                          <p><p>স্থাপিত-১৯৯২ইং আয়তন ১৪.০৮ বঃ কিঃমিঃ, শ্রেনী &lsquo;ক&rsquo; ওয়ার্ড-৯টি, সীমানা উত্তরে ঘোড়াদিয়া, মল্লিকের টেক, টেউটি, মদপুর, দক্ষিণ কৃষ্ণ ছলিয়া, দেওগাও, পূর্বে ধরেন্ডা মৌজা বনগাও ইউনিয়ন, দক্ষিনে কর্ণপাড়া খাল এবং পশ্চিমে বংশী নদী। জনসংখ্যা ৪,৫০,০০০, হোল্ডিং সংখ্যা ১৩১৯৮ টি, ভোটার সংখ্যা পুরুষ-৮১৭১৭, মহিলা- ৭৮৩৩৬ জন। কলেজ ৩টি, মাধ্যকি স্কুল ৪টি, প্রাথমিক বিদ্যালয় ৯টি, মাদ্রাসা ৫টি, কলেজ অব খ্র� .....</p>
+                                          <p><p>বৃহত্তর নোয়াখালীর প্রান কেন্দ্র বানিজ্যিক নগরী  চৌমুহনী পৌরসভা ১৯৭৩ খ্রিঃ প্রতিষ্ঠিত হয়। বর্তমানে  এটি ”ক” শ্রেণীর পৌরসভা......</p>
 										  <div class="see-alls">
-												<a href="home/all_history" class="btn btn-see btn-sm">আরো পড়ুন....</a>
+												<a href="{{route('pouroshavar_tottho')}}" class="btn btn-see btn-sm">আরো পড়ুন....</a>
 										</div>
                                       </div>
                                   </div>
@@ -187,7 +223,42 @@
                     </div>
                 </div>
             </div>
-                <div class="col-md-5">
+                <!-- <div class="col-md-5">
+                    <div class="notics-cts card wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s">
+                        <div class="head-title-bar">
+                            <div class="secs section-title">
+                                <h2 class="s2"><i class="icon ion-document"></i></i> নোটিশ </h2>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-sm-12">
+										 <div class="notice-section">
+											<ul class="latest-news">
+											@foreach($notices as $notice)
+													<li class="one-line"><i class="icon ion-document-text"></i>
+													
+													<a href="main/notice/75"></a>{{$notice->content}}</li>
+													@endforeach												
+													</ul>
+										<div class="see-alls">
+												<a href="{{route('shokol_notice.form')}}" class="btn btn-see btn-sm">সকল নোটিশ</a>
+										</div>
+									 </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                 </div> -->
+            </div>
+        </div>
+    </section>
+
+	<section class="notice-board-area">
+	<div class="container extrawidth">
+      <div class="row">
+     
+	      <div class="col-md-12">
                     <div class="notics-cts card wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s">
                         <div class="head-title-bar">
                             <div class="secs section-title">
@@ -214,207 +285,26 @@
                         </div>
                      </div>
                  </div>
-            </div>
-        </div>
-    </section>
-	
-    <section class="gallery-section-area" >
-    <div class="container">
-
-       <div class="row">
-	   
-           <div class="col-md-12">
-               <div class="section-title text-center border-h2">
-                    <h2>প্রধান নির্বাহী কর্মকর্তা</h2>
-                </div>
-               
-           </div>
-		  
-       </div>
-        <div class="row">
-			<div class="container" align='center'>
-			 <div class="col-md-4"></div>
-			 
-				 <div class="upimage col-md-4">
-	 <img src="library/profile/ceosir.jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>শরফ উদ্দিন আহমদ চৌধুরী</h4>
-				   <p>প্রধান নির্বাহী কর্মকর্তা(সিনিয়র সহকারী সচিব, 
-ব্যাচ -১৮তম, আইডি নং-৬৫৭১)</p>
-				   <p><a href="home/profileview?mid=a87ff679a2f3e71d9181a67b7542122c">বিস্তারিত</a></p>
-				 </div> 
-								 <div class="col-md-4"></div>
-			</div>
-    </div>
-   </div>
-		
-</section> 
 
 
-<section class="gallery-section-area">
-    <div class="container">
-       <div class="row">
-           <div class="col-md-12">
-               <div class="section-title text-center border-h2">
-                    <h2>কাউন্সিলরগণ</h2>
-                </div>
-               <div class="last-updateds text-right">
-                  
-               </div>
-           </div>
-       </div>
-        <div class="row">
-			<div class="container">
-				 <div class="upimage col-md-3">
-	 <img src="library/profile/manik molla.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>জনাব মোঃ নজরুল ইসলাম</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=6512bd43d9caa6e02c990b0a82652dca">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/salim 333.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>জনাব মোঃ সেলিম মিয়া</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=c51ce410c124a10e0db5e4b97fc2af39">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/2563.jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>সুলতানা রাজিয়া</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=02e74f10e0327ad868d138f2b4fdd6f0">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/Image (593).jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ রমজান আহমেদ</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=d3d9446802a44259755d38e6d163e820">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/3.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>জনাবা সানজিদা শারমিন</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=6f4922f45568161a8cdf4ad2299f6d23">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/4.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ নুরে আলম সিদ্দিকী</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=1f0e3dad99908345f7439f8ffabdffc4">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/565656.jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ মশিউর রহমান খান</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=70efdf2ec9b086079795c442636b55fb">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/6.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>আলহাজ্ব আব্দুস ছাত্তার</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=c74d97b01eae257e44aa9d5bade97baf">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/Image (588).jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ আঃ রহমান</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=c20ad4d76fe97759aa27a0c99bff6710">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/Image (577).jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ আনিসুজ্জামান খান</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=45c48cce2e2d7fbdea1afc51c7c6ad26">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/123.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>জনাবা ইয়াছমিন আক্তার সাথী</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=aab3238922bcc25a6f606eb525ffdc56">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/456.JPG" class="" height="160px" width="160px"/>
-				   
-				   <h4>জনাবা ডারফিন আক্তার</h4>
-				   <p>কাউন্সিলর  </p>
-				   <p><a href="home/profileview?mid=9bf31c7ff062936a96d3c8bd1f8f2ff3">বিস্তারিত</a></p>
-				 </div> 
-							</div>
-    </div>
-	
-	
-</section>
 
-    <section class="gallery-section-area">
-    <div class="container">
-       <div class="row">
-           <div class="col-md-12">
-               <div class="section-title text-center border-h2">
-                    <h2>বিভাগীয় প্রধানগণ</h2>
-                </div>
-               <div class="last-updateds text-right">
-                  
-               </div>
-           </div>
-       </div>
-        <div class="row">
-			<div class="container">
-				 <div class="upimage col-md-3">
-	 <img src="library/profile/savar_sachib.jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ আব্দুর রব</h4>
-				   <p>সচিব</p>
-				   <p><a href="home/profileview?mid=e4da3b7fbbce2345d7772b0674a318d5">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="img/default/default.jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>মোঃ শরিফুল ইমাম</h4>
-				   <p>নির্বাহী প্রকৌশলী </p>
-				   <p><a href="home/profileview?mid=1679091c5a880faf6fb5e6087eb1b2dc">বিস্তারিত</a></p>
-				 </div> 
-					 <div class="upimage col-md-3">
-	 <img src="library/profile/1.jpg" class="" height="160px" width="160px"/>
-				   
-				   <h4>ডাঃ কাজী আয়েশা সিদ্দিকা</h4>
-				   <p>মেডিকেল অফিসার</p>
-				   <p><a href="home/profileview?mid=c81e728d9d4c2f636f067f89cc14862c">বিস্তারিত</a></p>
-				 </div> 
-							</div>
-    </div>
-	
-	
-</section> 
+	    </div>
+	</div>
 
-    <section class="gallery-section-area">
-    <div class="container">
-       <div class="row">
-           <div class="col-md-12">
-               <div class="section-title text-center border-h2">
-                    <h2>অন্যান্য কর্মকর্তাগণ </h2>
-                </div>
-               <div class="last-updateds text-right">
-                  
-               </div>
-           </div>
-       </div>
-        <div class="row">
-			<div class="container">
-						</div>
-    </div>
+	</section>
+
+
+
+
 	
 	
-</section> 
+  
+
+
+
+
+
+<!--    
 
 
 <section class="removeshadow">
@@ -493,7 +383,7 @@
 									</div>
 								</div>
 							
-						</section>
+						</section> -->
 
 
 	
@@ -516,14 +406,14 @@
         </div>
     </div>
 </section>-->
-
+<!-- 
     <div class="content-area-sections">
         <div class="container">
             <div class="row">
                
             </div>
         </div>
-    </div>
+    </div> -->
 
   @endsection
 </x-home-master>  
