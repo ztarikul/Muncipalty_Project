@@ -77,27 +77,6 @@
 
 
 
-@endsection
-</x-home-master>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @endsection
 </x-home-master> 

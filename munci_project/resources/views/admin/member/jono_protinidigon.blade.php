@@ -1,10 +1,45 @@
 <x-home-master>
 @section('homecontent')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
 
+.title {
+  color: grey;
+  font-size: 12px;
+}
 
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
 
-   <!-- end header --> <section class="gallery-section-area">
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+
+<section class="gallery-section-area">
     <div class="container">
        <div class="row">
            <div class="col-md-12">
@@ -16,68 +51,137 @@
                </div>
            </div>
        </div>
-    <div class="row">
-			<div class="container">
-					<div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/zaker hossen.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>মোঃ জাকের হোসেন</h4>
-				   <p>নির্বাহী প্রকৌশলী</p>
-				   <p><a href="home/profileview?mid=02e74f10e0327ad868d138f2b4fdd6f0">বিস্তারিত</a></p>
-				 </div> 
+    <div class="row" >
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/zaker hossen.jpg')}}" alt="" height="150px" width="200px">
+			<p>মোঃ জাকের হোসেন</p>
+			<p class="title">নির্বাহী প্রকৌশলী</p>
+			<p><i class="fa fa-phone"></i> +8801711703135</p>
+			<div >
+				 
+				<p><i class="fa fa-envelope-square"></i>zhossain68@gmail.com</p> 
+			</div>
+			<p><a href="{{route('zaker_hossen.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
 
-					<div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/nurul islam.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>মোঃ নুরুল ইসলাম বাবুল</h4>
-				   <p>কাউন্সিলর</p>
-				   <p><a href="home/profileview?mid=c4ca4238a0b923820dcc509a6f75849b">বিস্তারিত</a></p>
-				 </div> 
-								 <div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/takib uddin.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>জনাব তাকিব উদ্দিন চৌধুরী</h4>
-				   <p>প্যানেল মেয়র 2 , কাউন্সিলর-02নং ওয়ার্ড</p>
-				   <p><a href="home/profileview?mid=45c48cce2e2d7fbdea1afc51c7c6ad26">বিস্তারিত</a></p>
-				 </div> 
-								 <div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/abdullah ador.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>জনাব মোঃ আবদুল্লা আদর</h4>
-				   <p>কাউন্সেলর-03</p>
-				   <p><a href="home/profileview?mid=d3d9446802a44259755d38e6d163e820">বিস্তারিত</a></p>
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/nurul islam.jpg')}}" alt="" height="150px" width="200px">
+			<p>মোঃ নুরুল ইসলাম বাবুল</p>
+			<p class="title">কাউন্সিলর</p>
+			<p><i class="fa fa-phone"></i> 01711-004686</p>
+			<div >
+				 
+			<p><i class="fa fa-envelope-square"></i></p> 
+			</div>
+			<p><a href="{{route('nurul_islam.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
 
-				 </div> 
-      </div>					 
-  </div>
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/takib uddin.jpg')}}" alt="" height="150px" width="200px">
+			<p>জনাব তাকিব উদ্দিন চৌধুরী</p>
+			<p class="title">প্যানেল মেয়র 2 , কাউন্সিলর-02নং ওয়ার্ড</p>
+			<p><i class="fa fa-phone"></i>+8801815008271</p>
+			<div >
+				 
+			<p><i class="fa fa-envelope-square"></i></p> 
+			</div>
+			<p><a href="{{route('takib_uddin.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
+
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/abdullah ador.jpg')}}" alt="" height="150px" width="200px">
+			<p>জনাব মোঃ আবদুল্লা আদর</p>
+			<p class="title">কাউন্সেলর-03</p>
+			<p><i class="fa fa-phone"></i>+8801943333493</p>
+			<div >
+			<p><i class="fa fa-envelope-square"></i></p>  
+			</div>
+			<p><a href="{{route('abdullah_ador.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
+
+			
+
+			
+  		</div>
+
+		<div class="row">
+			
+		  <div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/zaker hossen.jpg')}}" alt="John" height="150px" width="200px">
+			<h5>Jakir Hossain</h5>
+			<p class="title">নির্বাহী প্রকৌশলী</p>
+			<p>ফোন নম্বর: +8801711703135</p>
+			<div >
+				 
+				<a href="zhossain68@gmail.com"><i class="fa fa-envelope-square"></i></a> 
+			</div>
+			<p><a href="{{route('zaker_hossen.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
+
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/zaker hossen.jpg')}}" alt="John" height="150px" width="200px">
+			<h5>Jakir Hossain</h5>
+			<p class="title">নির্বাহী প্রকৌশলী</p>
+			<p>ফোন নম্বর: +8801711703135</p>
+			<div >
+				 
+				<a href="zhossain68@gmail.com"><i class="fa fa-envelope-square"></i></a> 
+			</div>
+			<p><a href="{{route('zaker_hossen.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/zaker hossen.jpg')}}" alt="John" height="150px" width="200px">
+			<h5>Jakir Hossain</h5>
+			<p class="title">নির্বাহী প্রকৌশলী</p>
+			<p>ফোন নম্বর: +8801711703135</p>
+			<div >
+				 
+				<a href="zhossain68@gmail.com"><i class="fa fa-envelope-square"></i></a> 
+			</div>
+			<p><a href="{{route('zaker_hossen.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
+			<div class="col-sm-3">
+			
+			<div class="card">
+			<img src="{{asset('storage/member/zaker hossen.jpg')}}" alt="John" height="150px" width="200px">
+			<h5>Jakir Hossain</h5>
+			<p class="title">নির্বাহী প্রকৌশলী</p>
+			<p>ফোন নম্বর: +8801711703135</p>
+			<div >
+				 
+				<a href="zhossain68@gmail.com"><i class="fa fa-envelope-square"></i></a> 
+			</div>
+			<p><a href="{{route('zaker_hossen.profileview')}}"><button class="btn btn-warning">বিস্তারিত</button></a></p>
+			</div>
+			</div>
+			
+			
+		</div>
 
 
 
-  <div class="row">
-			<div class="container">
-         
-								 <div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/jahangir alom.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>জনাব- মোঃ জাহাঙ্গীর আলম</h4>
-				   <p>কাউন্সেলর- 04</p>
-				   <p><a href="home/profileview?mid=6512bd43d9caa6e02c990b0a82652dca">বিস্তারিত</a></p>
-				 </div> 
-								 <div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/anwar hossen.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>জনাব মোঃ আনোয়ার হোসেন</h4>
-				   <p>কাউন্সেলর- 05</p>
-				   <p><a href="home/profileview?mid=c20ad4d76fe97759aa27a0c99bff6710">বিস্তারিত</a></p>
-				 </div> 
-								 <div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/enayetullah.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>জনাব মোঃ এনায়েত উল্যাহ চৌধুরী</h4>
-				   <p>কাউন্সেলর- 06</p>
-				   <p><a href="home/profileview?mid=c51ce410c124a10e0db5e4b97fc2af39">বিস্তারিত</a></p>
-				 </div> 
-								 <div class="upimage col-md-3">
-				  <img src="{{asset('storage/member/kajol.jpg')}}" class="" height="160px" width="160px"/>
-				   <h4>জনাব সাহাব উদ্দিন কাজল	</h4>
-				   <p>প্যানেল মেয়র-1, কাউন্সেলর-07</p>
-				   <p><a href="home/profileview?mid=aab3238922bcc25a6f606eb525ffdc56">বিস্তারিত</a></p>
-				 </div> 
-			</div>					 
-  </div>
+
 </section>
 
 @endsection

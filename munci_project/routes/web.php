@@ -105,3 +105,10 @@ Route::post('admin/notice_update/{id}', [NoticeController::class,'notice_update'
 Route::get('shokol_notice', [NoticeController::class, 'shokol_notice'])->name('shokol_notice.form');
 Route::get('pouroshavar_tottho', [NoticeController::class, 'pouroshavar_tottho'])->name('pouroshavar_tottho');
 Route::get('jono_protinidigon', [HomeController::class, 'jono_protinidigon'])->name('jono_protinidigon');
+
+
+// Route::get('profileview', [MemberController::class, 'zaker_hossen_profileview'])->name('zaker_hossen_profileview');
+Route::get('profileview/zaker_hossen', 'MembersController@zaker_hossen_profileview')->name('zaker_hossen.profileview'); 
+Route::get('profileview/nurul_islam', 'MembersController@nurul_islam_profileview')->name('nurul_islam.profileview'); 
+Route::get('profileview/takib_uddin', 'MembersController@takib_uddin_profileview')->name('takib_uddin.profileview'); 
+Route::get('profileview/abdullah_ador', 'MembersController@abdullah_ador_profileview')->name('abdullah_ador.profileview'); 

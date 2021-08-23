@@ -81,4 +81,28 @@ class MembersController extends Controller
     {
         //
     }
+
+    public function zaker_hossen_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.zaker_hossen');
+    }
+
+    
+    public function nurul_islam_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.nurul_islam');
+    }
+
+    public function takib_uddin_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.takib_uddin');
+    }
+    public function abdullah_ador_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.abdullah_ador');
+    }
 }
