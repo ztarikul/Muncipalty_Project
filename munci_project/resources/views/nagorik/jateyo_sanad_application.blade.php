@@ -62,6 +62,9 @@
 		onload_hide_fun();
 	});
 
+
+
+
 	
 	// function parsonalinfo_insert()
 	// {
@@ -108,6 +111,27 @@
 
 	// 	return false;
 	// }
+
+	function validateImage() {
+		var formData = new FormData();
+		var file = document.getElementById("file").files[0];
+		formData.append("Filedata", file);
+		var t = file.type.split('/').pop().toLowerCase();
+		if (t != "jpeg" && t != "jpg" && t != "png" && t != "bmp" && t != "gif") {
+			alert('Please select a valid image file');
+			document.getElementById("file").value = '';
+			return false;
+		}
+		
+		var fsize = (file.size / 1024 / 1024).toFixed(.5);  
+		console.log(fsize);
+		if (fsize > .5 ) {
+			alert('Max Upload size is 500kb only');
+			document.getElementById(id).value = '';
+			return false;
+		}
+		return true;
+	}
 
 	 function onload_hide_fun(){
 		  $("#wife").hide();
@@ -243,7 +267,7 @@
 										<div class="form-group">
 											<label for="Picture" class="col-sm-3 control-label">ছবি</label>
 											<div class="col-sm-5" style="margin-top:3px;">
-												<input type="file" name="file" class="form-control input-file-sm" />
+												<input type="file" name="file" id="file" onchange="validateImage()" class="form-control input-file-sm" />
 											</div>
 											
 											<div class="clearfix"> </div>
