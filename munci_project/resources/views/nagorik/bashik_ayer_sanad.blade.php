@@ -236,7 +236,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">নাগরিক আবেদন</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">নাগরিক আবেদন</div>
 						<div class="row" >
 							 <div class="col-sm-12"> 
 							  <div style="margin-top:20px;">

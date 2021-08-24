@@ -304,7 +304,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">পারিবারিক সনদের আবেদন </div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">পারিবারিক সনদের আবেদন </div>
 						<div class="panel-body all-input-form">
 						
 							<form action="{{route('paribarik.store')}}" method="post" enctype="multipart/form-data" id="warish" class="form-horizontal">

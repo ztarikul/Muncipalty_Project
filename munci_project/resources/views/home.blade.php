@@ -6,7 +6,7 @@
  <div class="container-fluid">
         <div class="col-md-12">
             <div id="main-slider" class="flexslider">
-                <ul class="slides wow fadeIn" data-wow-duration="1s" data-wow-delay=".4s">
+                <ul class="slides wow fadeIn" data-wow-duration="1s" data-wow-delay=".2s">
 				
 								
 								<li><a href="javascript:void(0)">
@@ -53,17 +53,22 @@
 
     <div class="container-fluid">
         <div class="row">	
-            <div class="col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
+            <div class="col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay=".1s">
                 <div class="content-area-boxes">           
                     <div class="about-content-section special2">
                         
                         <div class="about-content-full">
                             <div class="row">
 							<div class="col-sm-4">
-							<img src="{{asset('storage/member/khaled saifullah.jpg')}}" width="150" height="150" alt="">
+							<img  src="{{asset('storage/member/khaled saifullah.jpg')}}" style="border:3px solid black" width="180" height="180" alt="">
 							</div>
 							<div class="col-sm-8">
-							<p></p>
+							<div class="meyor_bani">
+							
+							<h2 style=color:white >মেয়র শুভেচ্ছা বাণী</h2>
+							<p style=color:white>“২০২৫ সালের মধ্যে চৌমুহনী পৌরসভাকে আধুনিক সুযোগ সুবিধা সম্বলিত, সুখী সমৃদ্ধ সিটি কর্পোরেশন হিসাবে গড়তে চাই। যেখানে প্রাশ্চাত্যের শহরগুলোর মত সুন্দর ও মনোরম পরিবেশ থাকবে এবং পৌরসভা একটি ডিজিটাল নগরীতে উন্নীত হবে।”</p>
+							<p  style=color:white;text-align:right>―মোঃ খালেদ সাইফুল্লাহ</p>
+							</div>
 							</div>	
 								
 							</div>

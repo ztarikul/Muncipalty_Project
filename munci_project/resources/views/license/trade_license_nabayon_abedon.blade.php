@@ -70,7 +70,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ট্রেড লাইসেন্স নবায়ন আবেদন ফরম</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">ট্রেড লাইসেন্স নবায়ন আবেদন ফরম</div>
 						<div class="panel-body all-input-form" style="min-height: 608px;">
 							<form action="index.php/home/license_renew" method="post" id="renew" enctype="multipart/form-data" class="form-horizontal">
 								

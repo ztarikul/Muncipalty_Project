@@ -31,6 +31,8 @@
  <!-- Owl Carousel Assets -->
     <link href="{{asset('owl-carousel/owl.carousel.css')}}" rel="stylesheet">
     <link href="{{asset('owl-carousel/owl.theme.css')}}" rel="stylesheet">
+    <link href="https://fonts.maateen.me/ekushey-lohit/font.css" rel="stylesheet">
+    <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
 	
 	<!--- picture uplaod js ---->
 	<script type="text/javascript" src="{{asset('library/upload/ajaxupload.js')}}"></script>
@@ -61,7 +63,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <nav id="elg-main-menu" role="navigation" class="elg-menu pull-right">
+                            <nav style="background:red;" id="elg-main-menu" role="navigation" class="elg-menu pull-right">
                                     <ul class="desktop-menu">
                                         <li><a href="{{route('home')}}">হোম </a></li>
                                         <li><a href="javascript:void(0)">নাগরিক</a>

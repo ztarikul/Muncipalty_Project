@@ -477,7 +477,7 @@ nav#elg-main-menu {
     margin-top: 32px;
 	/*margin-right: -79px;*/
     position: relative;
-    padding-right: 30px;
+    /* padding-right: 30px; */
 }
 
 .elg-menu ul {
@@ -508,7 +508,7 @@ nav#elg-main-menu {
 	border:0px;
 }
 .elg-menu ul li a:hover {
-    color:#ec8906;
+    color:#175e0a;
     /*background: #00A750;*/
 	
 }
@@ -636,7 +636,7 @@ nav#elg-main-menu {
     color: #353535;
 }
 .elg-menu ul li .sub-menus li a:hover{    
-    background-color: #ff9147;
+    background-color: #f10f0f;
     color: #fff;
 }
 
@@ -5180,8 +5180,12 @@ div.clearfix{
   background-color: #428bca;
   padding : 5px 15px;
 }
-
-
+  .meyor_bani{
+    font-family: 'EkusheyLohit', sans-serif;
+  }
+  .meyor_bani h2{
+    font-family: 'CharuChandanHardStroke', sans-serif;
+  }
 
 
 

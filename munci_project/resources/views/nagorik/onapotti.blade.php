@@ -253,7 +253,7 @@
 				<div class="col-md-12">
 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">অনাপত্তি পত্রের আবেদন
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">অনাপত্তি পত্রের আবেদন
 						
 						</div>
 						

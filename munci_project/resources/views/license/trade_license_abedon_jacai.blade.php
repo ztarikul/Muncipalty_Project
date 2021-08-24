@@ -28,7 +28,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ট্রেড লাইসেন্স আবেদন যাচাই</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">ট্রেড লাইসেন্স আবেদন যাচাই</div>
 						<div class="panel-body all-input-form"  style="min-height:330px;">
 							<form action="javascript:void(0)" method="post" enctype="multipart/form-data" class="form-horizontal">
 								<div class="row">
