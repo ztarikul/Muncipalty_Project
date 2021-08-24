@@ -47,7 +47,37 @@
 
     </div>
     <!-- end slider -->
-</section>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">	
+            <div class="col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">
+                <div class="content-area-boxes">           
+                    <div class="about-content-section special2">
+                        
+                        <div class="about-content-full">
+                            <div class="row">
+							<div class="col-sm-4">
+							<img src="{{asset('storage/member/khaled saifullah.jpg')}}" width="150" height="150" alt="">
+							</div>
+							<div class="col-sm-8">
+							<p>sdfghjkl;'dfghjkl</p>
+							</div>	
+								
+							</div>
+						</div>
+					</div>
+				</div>
+</section> 
+
+
+
+
+
+
+
 
 <!-- ই-আবেদন -->
 

@@ -8,13 +8,13 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="team-details-thumb">
-                    <img src="{{asset('storage/member/takib uddin.jpg')}}" width="250" height="280" alt="">
+                    <img src="{{asset('storage/member/anwar hossen.jpg')}}" width="250" height="280" alt="">
                 </div>
             </div>
             <div class="col-sm-8">
                 
-                    <h4 class="title">জনাব তাকিব উদ্দিন চৌধুরী</h4>
-                    <span style="color:blue;"><b>প্যানেল মেয়র 2 , কাউন্সিলর-02নং ওয়ার্ড</b></span>
+                    <h4 class="title">জনাব মোঃ আনোয়ার হোসেন</h4>
+                    <span style="color:blue;"><b>কাউন্সেলর-03</b></span>
                    
                     
                 
@@ -29,12 +29,12 @@
                         <p><b>যোগদান এর তারিখ:</b></p>
                     </div>
                     <div class="col-sm-9">
-                    <p>3</p>
-                    <p>জনাব তাকিব উদ্দিন চৌধুরী</p>
-                    <p>প্যানেল মেয়র 2 , কাউন্সিলর-02নং ওয়ার্ড</p>
-                    <p>মৃত চৌধুরী মিয়া</p>
-                    <p>+8801711703135</p>
-                    <p>কাউন্সিলর এর বাড়ির ঠিকানাঃ মোক্তার বাড়ী, 02নং ওয়ার্ড, চৌমুহনী পৌরসভা, নোয়াখালী।</p>
+                    <p>6</p>
+                    <p>জনাব মোঃ আনোয়ার হোসেন</p>
+                    <p>কাউন্সেলর- 05</p>
+                    <p>khali</p>
+                    <p>+8801712023842</p>
+                    <p>khali</p>
                     <p>23-02-2021</p>
                     </div>
                     <!-- <a href="">

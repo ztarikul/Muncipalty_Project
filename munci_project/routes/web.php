@@ -112,3 +112,7 @@ Route::get('profileview/zaker_hossen', 'MembersController@zaker_hossen_profilevi
 Route::get('profileview/nurul_islam', 'MembersController@nurul_islam_profileview')->name('nurul_islam.profileview'); 
 Route::get('profileview/takib_uddin', 'MembersController@takib_uddin_profileview')->name('takib_uddin.profileview'); 
 Route::get('profileview/abdullah_ador', 'MembersController@abdullah_ador_profileview')->name('abdullah_ador.profileview'); 
+Route::get('profileview/jahangir_alom', 'MembersController@jahangir_alom_profileview')->name('jahangir_alom.profileview'); 
+Route::get('profileview/anwar_hossen', 'MembersController@anwar_hossen_profileview')->name('anwar_hossen.profileview'); 
+Route::get('profileview/anayetullah', 'MembersController@anayetullah_profileview')->name('anayetullah.profileview');
+Route::get('profileview/kajol', 'MembersController@kajol_profileview')->name('kajol.profileview');

@@ -99,7 +99,7 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 .btn-see{
-	background: #ff9147;
+	background: #e90505;
     color: #fff;
 	}
 
@@ -4183,7 +4183,7 @@ section.key-person-area-section {
 	padding:37px;	
 	background: #43cea2; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #c5de59 , #7bbd83); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to left, #ed0f0f  , #7bbd83); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
 }
 .news-boxes-contents, .course-materils-list{

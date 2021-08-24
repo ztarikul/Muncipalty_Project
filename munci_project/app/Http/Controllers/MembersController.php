@@ -105,4 +105,28 @@ class MembersController extends Controller
         //
         return view('member.jonoprotinidi.abdullah_ador');
     }
+
+    public function jahangir_alom_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.jahangir_alom');
+    }
+
+    public function anwar_hossen_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.anwar_hossen');
+    }
+
+    public function anayetullah_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.anayetullah');
+    }
+
+    public function kajol_profileview()
+    {
+        //
+        return view('member.jonoprotinidi.kajol');
+    }
 }
