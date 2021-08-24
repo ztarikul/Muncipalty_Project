@@ -63,7 +63,7 @@
 							<img src="{{asset('storage/member/khaled saifullah.jpg')}}" width="150" height="150" alt="">
 							</div>
 							<div class="col-sm-8">
-							<p>sdfghjkl;'dfghjkl</p>
+							<p></p>
 							</div>	
 								
 							</div>
