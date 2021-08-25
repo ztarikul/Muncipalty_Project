@@ -59,7 +59,7 @@
                         
                         <div class="about-content-full">
                             <div class="row">
-							<div class="col-sm-4">
+							<div class="elg-menu pull-right">
 							<img  src="{{asset('storage/member/khaled saifullah.jpg')}}" style="border:3px solid black" width="180" height="180" alt="">
 							</div>
 							<div class="col-sm-8">

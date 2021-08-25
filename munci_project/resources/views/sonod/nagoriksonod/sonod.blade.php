@@ -54,84 +54,85 @@
 				<!-----------header area end--------------->
 			
 				<!-----------application area start--------------->
-			
+				
 			<div class="app_area">
 				<div class="fix structure app_section">
 					<div id="app_section_left">
+					
 						<form>
-							<p>           ট্র্যাকিং আইডি নং - </p><span> <input type="text" name="tra_no" id="" readonly value='' /> </span>
+							<p> ট্র্যাকিং আইডি নং - </p><span> <input type="text" name="id" id="" readonly value="{{$cityzens->id}}" /> </span>
 						</form>
 					</div>
 					<div id="app_section_right" style="max-height:515px ! important">
 						<table class="table1">
 							<tr>
 								<td colspan="1">&nbsp; নাম (বাংলা)</td>
-								<td colspan="2" style="border-left:none;border-bottom:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td colspan="2" style="border-left:none;border-bottom:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->bname}}</td>
 								<td  colspan="1" style="border-left:none;border-bottom:none;">&nbsp; নাম  (ইংরেজী)</td>
-								<td colspan="2" style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td colspan="2" style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->ename}}</td>
 							</tr>
 							
 							<tr>
 														
 								<td colspan="1">&nbsp;পিতার নাম</td>
-								<td colspan="2" style="border-left:none;"><span>&nbsp;:&nbsp; </span></td>
+								<td colspan="2" style="border-left:none;"><span>&nbsp;:&nbsp; </span>{{$cityzens->bfname}}</td>
 							
 							
 								<td colspan="1" style="border-left:none;border-bottom:none;">&nbsp;মাতার নাম</td>
-								<td colspan="2" style="border-left:none;border-bottom:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td colspan="2" style="border-left:none;border-bottom:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->bmname}}</td>
 							</tr>
 
 								<tr>
 								<td>&nbsp;ধর্ম</td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->religion}}</td>
 								<td style="border-left:none;">জন্মসনদ নং </td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->bcno}}</td>
 								<td style="border-left:none;">হোল্ডিং  নং </td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->holding_no}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;পেশা</td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->ocupt}}</td>
 								<td style="border-left:none;">শিক্ষাগত যোগ্যতা</td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->qualification}}</td>
 								<td style="border-left:none;">লিঙ্গ </td>
 								
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->gender}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;মোবাইল</td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->mob}}</td>
 								<td style="border-left:none;">ই-মেইল</td>
-								<td style="border-left:none;" colspan="3"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;" colspan="3"><span>&nbsp;:&nbsp;</span>{{$cityzens->email}}</td>
 								
 							</tr>
 							<tr>
 								<td>&nbsp;বৈবাহিক অবস্থা </td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->mstatus}}</td>
 								<td style="border-left:none;border-bottom:none;">পাসপোর্ট নং </td>
-								<td style="border-left:none;border-bottom:none;"><span>&nbsp;:&nbsp;</span></td>
+								<td style="border-left:none;border-bottom:none;"><span>&nbsp;:&nbsp;</span>{{$cityzens->pno}}</td>
 							</tr>
 							
 							<tr style="height:100px;">
 								<td valign="top" width="105px">&nbsp;বর্তমান ঠিকানা</td>
 								<td colspan="5" style="border-left:none;">
 									<p> 
-										&nbsp;:&nbsp; পাড়া/মহল্লা  : ,&nbsp;&nbsp;রোড/ব্লক/সেক্টর  : ,
-										&nbsp;&nbsp;পোষ্ট অফিস :,&nbsp;&nbsp;ওয়ার্ড নং : ,
-										&nbsp;&nbsp;থানা : ,
-										&nbsp;&nbsp;উপজেলা : ,
-										&nbsp;&nbsp;জেলা  : 									</p>
+										&nbsp;:&nbsp; পাড়া/মহল্লা  :{{$cityzens->pb_gram}} ,&nbsp;&nbsp;রোড/ব্লক/সেক্টর  :{{$cityzens->pb_rbs}} ,
+										&nbsp;&nbsp;পোষ্ট অফিস :{{$cityzens->pb_postof}},&nbsp;&nbsp;ওয়ার্ড নং :{{$cityzens->pb_wordno}} ,
+										&nbsp;&nbsp;থানা :{{$cityzens->pb_thana}} ,
+										&nbsp;&nbsp;উপজেলা :{{$cityzens->pb_upazila}} ,
+										&nbsp;&nbsp;জেলা  :{{$cityzens->pb_dis}} 									</p>
 								</td>
 							</tr>
 							<tr style="height:100px;">
 								<td valign="top" style="border-bottom:none;">&nbsp;স্থায়ী ঠিকানা</td>
 								<td colspan="5" style="border-left:none; border-bottom:none;">
 									<p> 
-										&nbsp;:&nbsp; পাড়া/মহল্লা: ,&nbsp;&nbsp;রোড/ব্লক/সেক্টর  : ,
-										&nbsp;&nbsp;পোষ্ট অফিস :,&nbsp;&nbsp;ওয়ার্ড নং : ,
-										&nbsp;&nbsp;থানা : , 
-										&nbsp;&nbsp;উপজেলা : ,
-										&nbsp;&nbsp;জেলা  : 					
+										&nbsp;:&nbsp; পাড়া/মহল্লা:{{$cityzens->perb_gram}} ,&nbsp;&nbsp;রোড/ব্লক/সেক্টর  :{{$cityzens->perb_rbs}} ,
+										&nbsp;&nbsp;পোষ্ট অফিস :{{$cityzens->perb_postof}},&nbsp;&nbsp;ওয়ার্ড নং :{{$cityzens->perb_wordno}} ,
+										&nbsp;&nbsp;থানা :{{$cityzens->perb_thana}} , 
+										&nbsp;&nbsp;উপজেলা :{{$cityzens->perb_upazila}} ,
+										&nbsp;&nbsp;জেলা  :{{$cityzens->perb_dis}} 					
                                     </p>
 								</td>
 							</tr>
@@ -140,10 +141,11 @@
 					</div>
 				</div>
 			</div>
+		
 				<!-----------application area end--------------->
 			<div class="attach_area"> 
 				<div class="fix structure attach_section"> 
-					<table border='0' class="attach_table" width='95%' height='40px' cellpadding='0' cellspacing='0' style="border-collapse:collapse;margin:0px auto;table-layout:fixed;"> 
+					<table border='0' class="attach_table" width='95%' value="{{$cityzens->attachment_bn}}" height='40px' cellpadding='0' cellspacing='0' style="border-collapse:collapse;margin:0px auto;table-layout:fixed;"> 
 						<tr valign='top'> 
 							<td width='8%' style="font-size:18px;font-weight:700;font-style:normal;text-indent:20px;">সংযুক্তি</td>
 							<td width='91%' style='font-size:16px;font-weight:normal;font-style:normal;text-indent:5px;'>:&nbsp;  </td>

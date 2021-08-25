@@ -117,7 +117,7 @@ class OarishController extends Controller
             $oarish_sanad->oarishgon()->create($oarish_inputs);
         }
     
-        return redirect()->route('home');
+        return view('sonod.warishsonod',['oarish_sanad'=>  $oarish_sanad]);
     }
 
     /**

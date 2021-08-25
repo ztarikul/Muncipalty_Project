@@ -769,7 +769,7 @@
 											<div class="col-sm-12"> 
 												<div class="form-group">
 													<label for="Road-Block-Sector-bangla" class="col-sm-6 control-label">রোড/ব্লক/সেক্টর</label>
-													<div class="col-sm-6">
+													<div class="col-sm-6">perb_rbs
 														<input type="text" name="perb_rbs" id="perb_rbs" class="form-control" placeholder=""/>
 													</div>
 												</div>
