@@ -117,7 +117,7 @@
                                                 <li><a href="{{route('nagorik_sanad.form' , 10)}}">সনাতন ধর্ম অবলম্বী</a></li>                                           
                                                 <li><a href="{{route('nagorik_sanad.form' , 11)}}">অনুমতি পত্র</a></li>                                           
                                                 <li><a href="{{route('nagorik_sanad.form' , 12)}}">প্রত্যয়ন পত্র</a>  
-                                                <li><a href="onapotti">অনাপত্তি সনদপত্র</a>  
+                                                <li><a href="{{route('onapotti.form')}}">অনাপত্তি সনদপত্র</a>  
                                            </ul>
                                         </li>
 										<li><a href="javascript:void(0)">কর্মকর্তাবৃন্দ</a>

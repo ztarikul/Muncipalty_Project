@@ -237,7 +237,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">রাস্তা খননের অনুমতি </div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">রাস্তা খননের অনুমতি </div>
 						<div class="panel-body all-input-form">
 							<form action="{{route('rasta_khonon.store')}}" method="post" id="info" class="form-horizontal">
 								@csrf
@@ -297,7 +297,7 @@
 												<div class="form-group">
 													<label  class="col-sm-6 control-label">উপজেলা/থানা/পৌরসভা  <span> *</span></label>
 													<div class="col-sm-6">
-														<input type="text" name="thana" value="সাভার" id="thana" class="form-control" placeholder="উপজেলা/থানা/পৌরসভা" required/>
+														<input type="text" name="thana" value="চৌমুহনী" id="thana" class="form-control" placeholder="উপজেলা/থানা/পৌরসভা" required/>
 													</div>
 												</div>
 											</div>
@@ -317,7 +317,7 @@
 												<div class="form-group">
 													<label class="col-sm-4 control-label">জেলা <span> *</span> </label>
 													<div class="col-sm-6">
-														<input type="text" name="jela" value="ঢাকা" id="p_dis" class="form-control" placeholder="জেলা " required/>
+														<input type="text" name="jela" value="নোয়াখালী" id="p_dis" class="form-control" placeholder="জেলা " required/>
 													</div>
 												</div>
 										

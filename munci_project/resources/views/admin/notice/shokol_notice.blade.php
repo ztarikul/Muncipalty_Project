@@ -50,9 +50,9 @@
                       <td><a href="">{{$notice->content}}</a></td>
 
                       <td><span class="label label-primary">{{date('d M Y',strtotime($notice->created_at))}}</span></td> 
-                     
+       
                   
-                      <td><a href="" class="btn-upper btn btn-danger btn-sm ">View</a></td> 
+                      <td><a href="{{asset('storage/'.$notice->file)}}" class="btn-upper btn btn-danger btn-sm">View</a></td> 
                           
                           
                     </tr>

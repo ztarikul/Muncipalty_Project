@@ -624,7 +624,7 @@
 							
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" name="submit" id="submit_button" onclick="parsonalinfo_insert()"  class="btn btn-primary">দাখিল করুন</button>
+										<button type="submit" name="submit" id="submit_button" onclick="parsonalinfo_insert()"  class="btn btn-success">দাখিল করুন</button>
 									</div>
 								</div>
 							</form>

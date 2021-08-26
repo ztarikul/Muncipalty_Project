@@ -703,7 +703,7 @@
 												<div class="form-group">
 													<label for="Thana" class="col-sm-6 control-label">উপজেলা </label>
 													<div class="col-sm-6">
-														<input type="text" name="be_upazila" id="be_upazila" value="Savar" class="form-control" placeholder=""/>
+														<input type="text" name="be_upazila" id="be_upazila" value="Chowmohoni" class="form-control" placeholder=""/>
 													</div>
 												</div>
 											</div>
@@ -715,7 +715,7 @@
 												<div class="form-group">
 													<label for="District" class="col-sm-6 control-label">জেলা </label>
 													<div class="col-sm-6">
-														<input type="text" name="be_dis" value="Dhaka" id="be_dis" class="form-control" placeholder=""/>
+														<input type="text" name="be_dis" value="Noakhali" id="be_dis" class="form-control" placeholder=""/>
 													</div>
 												</div>
 											</div>
@@ -801,7 +801,7 @@
 												<div class="form-group">
 													<label for="Thana-bangla" class="col-sm-6 control-label">উপজেলা </label>
 													<div class="col-sm-6">
-														<input type="text" name="bb_upazila" id="bb_upazila" value="সাভার" class="form-control" placeholder=""/>
+														<input type="text" name="bb_upazila" id="bb_upazila" value="চৌমুহনী" class="form-control" placeholder=""/>
 													</div>
 												</div>
 											</div>
@@ -813,7 +813,7 @@
 												<div class="form-group">
 													<label for="District-bangla" class="col-sm-6 control-label">জেলা </label>
 													<div class="col-sm-6">
-														<input type="text" name="bb_dis" id="bb_dis" value="ঢাকা" class="form-control" placeholder=""/>
+														<input type="text" name="bb_dis" id="bb_dis" value="নোয়াখালী" class="form-control" placeholder=""/>
 													</div>
 												</div>
 											</div>

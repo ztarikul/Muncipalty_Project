@@ -168,7 +168,7 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#ff860a;text-align:center;">ভূমি ব্যবহার ছাড়পত্রের আবেদন পত্র</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">ভূমি ব্যবহার ছাড়পত্রের আবেদন পত্র</div>
 						<div class="panel-body all-input-form">
 							<form action="{{route('prokoshol.vumi_bebohar_charpto')}}" method="post" id="info" class="form-horizontal">
 								
@@ -573,7 +573,7 @@
 	
 								<div class="row">
 									<div class="col-sm-offset-6 col-sm-6 button-style"> 
-										<button type="submit" id="submit_button"   class="btn btn-primary">জমা দিন</button>
+										<button type="submit" id="submit_button"   class="btn btn-success">জমা দিন</button>
 									</div>
 								</div>
 							</form>

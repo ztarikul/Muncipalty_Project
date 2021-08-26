@@ -14,7 +14,7 @@ class CreateTradeLicensesTable extends Migration
     public function up()
     {
         Schema::create('trade_licenses', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(100000);
             $table->text('file')->nullable();
             $table->string('delivery_type')->nullable();
             $table->string('ownertype')->nullable();

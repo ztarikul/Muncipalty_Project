@@ -33,7 +33,7 @@
 						<h2>চৌমুহনী পৌরসভা</h2>
 						<p>চৌমুহনী<br/>
 						
-							চৌমুহনী,&nbsp;নোয়াখালী-১৩৪০ <br />
+							চৌমুহনী,&nbsp;নোয়াখালী-3850<br />
 							ফোন : ০০৮৮,&nbsp;০১৮						</p>
 											</div>
 					<div id="top_right">
@@ -370,8 +370,8 @@
 							E-mail&nbsp;:&nbsp;@						</p>
 					</div>
 					<div id="footer_section_right">
-						<p> Develop By: Innovation IT <br />
-							www.innovationit.com.bd
+						<p> Develop By: Spandan IT <br />
+						https://www.spandanit.com/
 						</p>
 					</div>
 				</div>

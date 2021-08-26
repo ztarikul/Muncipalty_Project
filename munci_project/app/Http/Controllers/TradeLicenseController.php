@@ -102,7 +102,7 @@ class TradeLicenseController extends Controller
             $trade_license->owners()->create($owner_inputs);
         }
 
-        return redirect()->route('home');
+        return view('sonod.trade_license_sonod',['owner_inputs'=> $owner_inputs]);
     }
 
     public function primisis_license_store(Request $request)

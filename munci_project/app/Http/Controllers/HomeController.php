@@ -186,5 +186,10 @@ class HomeController extends Controller
     {
         return view('admin.member.jono_protinidigon');
     }
+
+    public function onapotti()
+    {
+        return view('nagorik.onapotti');
+    }
     
 }
