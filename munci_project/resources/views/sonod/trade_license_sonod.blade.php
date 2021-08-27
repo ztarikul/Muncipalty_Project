@@ -66,7 +66,7 @@
 			<div class="header_area">
 				<div class="fix structure header_section"> 
 					<h2> ট্রেড লাইসেন্স এর আবেদন  </h2>
-					<span> আবেদনের তারিখ: <input type="text" name="" id="" readonly value="২৬/০৮/২০২১" /></span>
+					<span> আবেদনের তারিখ: <input type="text" name="" id="" readonly value="{{date('d M Y',strtotime($trade_license->created_at))}}" /></span>
 				</div>
 			</div>
 				<!-----------header area end--------------->
@@ -77,66 +77,67 @@
 				<div class="fix structure app_section">
 					<div id="app_section_left">
 						<form>
-							<p> ট্র্যাকিং আইডি নং - </p><span> <input type="text" name="tra_no" id="" value="{{$owner_inputs->id}}"  /> </span>
+							<p> ট্র্যাকিং আইডি নং - </p><span> <input type="text" name="tra_no" id="" value="{{$trade_license->id}}"/> </span>
 						</form>
 					</div>
 					<div id="app_section_right">
 						<table class="table1">
 							<tr>
 								<td>&nbsp;প্রতিষ্ঠানের নাম (বাংলা)</td>
-								<td style="border-left:none;border-bottom:none;">&nbsp;:&nbsp;{{$owner_inputs->bcomname}}</td>
+								<td style="border-left:none;border-bottom:none;">&nbsp;:&nbsp;{{$trade_license->bcomname}}</td>
 								<td>&nbsp;প্রতিষ্ঠানের নাম  (ইংরেজী)</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->ecomname}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->ecomname}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;মালিকের নাম (বাংলা)</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;</td>
+
+								<td style="border-left:none;">&nbsp;:&nbsp;@foreach($trade_license->owners as $owner) {{$owner->bwname}},  @endforeach</td>
 								<td>&nbsp;মালিকের নাম (ইংরেজী)</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;@foreach($trade_license->owners as $owner) {{$owner->ewname}},  @endforeach</td>
 							</tr>
 							<tr>
 								<td>&nbsp;মালিকের বর্তমান ঠিকানা</td>
-								<td style="border-left:none;" colspan="3">&nbsp;:&nbsp;{{$owner_inputs->owner_preadd_bng}}</td>
+								<td style="border-left:none;" colspan="3">&nbsp;:&nbsp;{{$trade_license->owner_preadd_bng}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;মালিকের স্থায়ী ঠিকানা</td>
-								<td style="border-left:none;" colspan="3">&nbsp;:&nbsp;{{$owner_inputs->owner_permadd_bng}}</td>
+								<td style="border-left:none;" colspan="3">&nbsp;:&nbsp;{{$trade_license->owner_permadd_bng}}</td>
 							</tr>
 							
 							<tr>
 								<td>&nbsp;ভ্যাট  আয়কর</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->vatkor}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->vatkor}}</td>
 								<td>&nbsp;টি,আই,নং</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->tino}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->tino}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;সাইন বোর্ড দৈর্ঘ্য</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->sign_lenth}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->sign_lenth}}</td>
 								<td>&nbsp;সাইন বোর্ড প্রস্থ</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->sign_width}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->sign_width}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;সাধারন সাইনবোর্ড</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->normal_sign}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->normal_sign}}</td>
 								<td>&nbsp;আলোক সজ্জিত সাইনবোর্ড</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->light_sign}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->light_sign}}</td>
 							</tr>
 							<tr>
 								<td>&nbsp;ব্যবসার ধরন</td>
 								<td style="border-left:none;">&nbsp;:&nbsp;
-								{{$owner_inputs->business_type}}								</td>
+								{{$trade_license->business_type}}								</td>
 								<td>&nbsp;মালিকানার ধরন</td>
 								<td style="border-left:none;">&nbsp;:&nbsp;
-								{{$owner_inputs->ownertype}}							</td>
+								{{$trade_license->ownertype}}							</td>
 							</tr>
 							<tr style="height:60px;">
 								<td valign="top">&nbsp;ব্যবসার ঠিকানা</td>
 								<td colspan="3" style="border-left:none;">
 								<span> &nbsp;:&nbsp;
-									গ্রাম/মহল্লা  :{{$owner_inputs->bb_gram}}	&nbspjhgf,&nbsp; &nbsp;রোড/ব্লক/সেক্টর  : {{$owner_inputs->bb_rbs}}	&nbsp;&nbsp;									&nbsp;&nbsp;পোষ্ট অফিস :&nbsp;gfd,&nbsp;&nbsp;ওয়ার্ড নং :&nbsp;3 
-									&nbsp;&nbsp;থানা :{{$owner_inputs->bb_thana}}	&nbsp;fds,
-									&nbsp;&nbsp;উপজেলা :{{$owner_inputs->bb_upazila}}	&nbsp;সাভার,
-									&nbsp;&nbsp;জেলা :{{$owner_inputs->bb_dis}}	&nbsp;ঢাকা। 
+									গ্রাম/মহল্লা  :{{$trade_license->bb_gram}}	&nbspjhgf,&nbsp; &nbsp;রোড/ব্লক/সেক্টর  :{{$trade_license->bb_rbs}}	&nbsp;&nbsp;									&nbsp;&nbsp;পোষ্ট অফিস :&nbsp;gfd,&nbsp;&nbsp;ওয়ার্ড নং :&nbsp;3 
+									&nbsp;&nbsp;থানা :{{$trade_license->bb_thana}}	&nbsp;fds,
+									&nbsp;&nbsp;উপজেলা :{{$trade_license->bb_upazila}}	&nbsp;সাভার,
+									&nbsp;&nbsp;জেলা :{{$trade_license->bb_dis}}	&nbsp;ঢাকা। 
 									
 								</span>
 									<!-----------------
@@ -146,17 +147,17 @@
 							</tr>
 							<tr>
 								<td>&nbsp;ওয়ার্ড নং</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->bb_wordno}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->bb_wordno}}</td>
 								<td style="border-left:none;">হোল্ডিং  নং</td>
-								<td style="border-left:none;"><span>&nbsp;:&nbsp;{{$owner_inputs->holding_no}}</span></td>
+								<td style="border-left:none;"><span>&nbsp;:&nbsp;{{$trade_license->holding_no}}</span></td>
 
 								
 							</tr>
 							<tr>
 								<td>&nbsp;জাতীয় পরিচয়/জন্ম নিবন্ধন নং </td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->bcno}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->bcno}}</td>
 								<td>&nbsp;মোবাইল</td>
-								<td style="border-left:none;">&nbsp;:&nbsp;{{$owner_inputs->mob}}</td>
+								<td style="border-left:none;">&nbsp;:&nbsp;{{$trade_license->mob}}</td>
 							</tr>
 
 						</table>

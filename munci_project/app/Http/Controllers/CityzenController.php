@@ -161,4 +161,12 @@ class CityzenController extends Controller
     {
         //
     }
+
+    public function nagorik_tracking_page(Request $request)
+    {
+        //
+        $cityzens = Cityzen::find($request->tid);
+        return view('sonod.nagoriksonod.sonod',['cityzens'=> $cityzens]);
+
+    }
 }

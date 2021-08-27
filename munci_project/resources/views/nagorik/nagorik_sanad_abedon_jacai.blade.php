@@ -26,9 +26,10 @@
 			<div class="row">
 				<div class="col-md-12"> 
 					<div class="panel panel-primary">
-						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0as;text-align:center;">নাগরিক আবেদন যাচাই</div>
+						<div class="panel-heading" style="font-weight: bold; font-size: 15px;background:#175e0a;text-align:center;">নাগরিক আবেদন যাচাই</div>
 						<div class="panel-body all-input-form"  style="min-height:330px;">
-							<form action="javascript:void(0)" method="post" enctype="multipart/form-data" class="form-horizontal">
+							<form action="{{route('nagorik_tracking_page')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+							@csrf
 								<div class="row">
 									<div class="col-sm-12"> 
 										<div class="form-group">
@@ -36,7 +37,7 @@
 												<input type="text" name="tid" id="tid" class="form-control" placeholder="আপনার নাগরিক আবেদনের ট্র্যাকিং নম্বরটি  ইংরেজিতে প্রবেশ করুন"   onkeypress="return numtest();" />
 											</div>
 											<div class="col-sm-3" style="margin-top:5px;"> 
-												<input type="Submit" value="খোঁজ করুন"  class="btn btn-success" name='perinfo' onclick="htmlData('index.php/show/searchNagorickInformation','tid='+tid.value)"/>
+												<input type="Submit" value="খোঁজ করুন"  class="btn btn-success"/>
 											</div>
 										</div>
 									</div>

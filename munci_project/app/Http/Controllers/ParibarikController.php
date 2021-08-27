@@ -112,7 +112,7 @@ class ParibarikController extends Controller
                  $paribarik_sanad->paribarikmembers()->create( $member_inputs);
                  
              }
-           return redirect()->route('home');  
+             return view('sonod.paribarik_sonod',['paribarik_sanad'=> $paribarik_sanad]);
     }
 
     /**

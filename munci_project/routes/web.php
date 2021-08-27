@@ -59,6 +59,7 @@ Route::get('/jogajog', [HomeController::class, 'jogajog'])->name('jogajog.form')
 
 
 Route::resource('cityzen', CityzenController::class);
+Route::post('nagorik_abedon_tracking_page', 'CityzenController@nagorik_tracking_page')->name('nagorik_tracking_page');
 
 Route::resource('paribarik', ParibarikController::class);
 
